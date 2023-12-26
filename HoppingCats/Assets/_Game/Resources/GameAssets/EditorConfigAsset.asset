@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d39300cf055037b45af27d84173f429e, type: 3}
+  m_Name: EditorConfigAsset
+  m_EditorClassIdentifier: 
+  exportConfig:
+    exportFileId: 
+    exportChest: 0
+    exportArena: 0
+    exportBattlePass: 0
+  scopes:
+  - scope: Unlock Condition
+    intConfigs:
+    - nameCode: -1966746889
+      value: 10
+    stringConfigs: []
+  - scope: Location Definition
+    intConfigs:
+    - nameCode: -1966746889
+      value: 10
+    stringConfigs: []
+  - scope: Action Definition
+    intConfigs:
+    - nameCode: -1966746889
+      value: 10
+    stringConfigs: []
+  - scope: Enums
+    intConfigs:
+    - nameCode: -1966746889
+      value: 10
+    stringConfigs: []
+  - scope: Navigation Path
+    intConfigs:
+    - nameCode: -1966746889
+      value: 10
+    stringConfigs: []
+  - scope: Shop
+    intConfigs:
+    - nameCode: -1966746889
+      value: 10
+    stringConfigs: []
+  - scope: Achievement Group
+    intConfigs:
+    - nameCode: 1281475570
+      value: 0
+    - nameCode: -2057518226
+      value: 0
+    - nameCode: -1966746889
+      value: 10
+    stringConfigs: []

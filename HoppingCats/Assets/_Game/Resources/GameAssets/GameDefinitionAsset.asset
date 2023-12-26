@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad814f0ef27eb7f42a3777c1219eb00c, type: 3}
+  m_Name: GameDefinitionAsset
+  m_EditorClassIdentifier: 
+  features:
+  - id: 59406574
+    name: OnlineReward
+    displayName: 
+    icon: {fileID: 0}
+    uiPrefab: {fileID: 0}
+    locked: 0
+    unlockConditionId: -1
+    description: 
+    canEditName: 0
+  - id: 1238962621
+    name: Achievement
+    displayName: 
+    icon: {fileID: 0}
+    uiPrefab: {fileID: 0}
+    locked: 0
+    unlockConditionId: -1
+    description: 
+    canEditName: 0
+  - id: 1333894906
+    name: Arena
+    displayName: 
+    icon: {fileID: 0}
+    uiPrefab: {fileID: 0}
+    locked: 0
+    unlockConditionId: -1
+    description: 
+    canEditName: 0
+  - id: 420829438
+    name: Gatcha
+    displayName: 
+    icon: {fileID: 0}
+    uiPrefab: {fileID: 0}
+    locked: 0
+    unlockConditionId: -1
+    description: 
+    canEditName: 0
+  currencies:
+  - id: 1233651234
+    name: Cash
+    type: 0
+    numericType: 0
+    icon: {fileID: 0}
+    bigIcon: {fileID: 0}
+    initialValue: 0
+    maxValue: 99999999
+    description: 
+    growOverTime: 0
+    growValue: 1
+    growMaxValue: 20
+    growPeriod: 600
+    sync: 1
+  - id: 1214100052
+    name: Coin
+    type: 1
+    numericType: 0
+    icon: {fileID: 0}
+    bigIcon: {fileID: 0}
+    initialValue: 0
+    maxValue: 99999999
+    description: 
+    growOverTime: 0
+    growValue: 1
+    growMaxValue: 20
+    growPeriod: 600
+    sync: 1
+  currencyExchanges: []
+  actions:
+  - id: 2004625552
+    name: Login Day
+    deletable: 0
+    paramTypes: 000000000000000000000000
+    enumTypes: 000000000000000000000000
+  - id: 1980997796
+    name: Use Currency
+    deletable: 0
+    paramTypes: 010000000000000000000000
+    enumTypes: 000000000000000000000000
+  - id: 234417996
+    name: Open Chest
+    deletable: 0
+    paramTypes: 030000000000000000000000
+    enumTypes: 000000000000000000000000
+  - id: 245162442
+    name: Complete Quest In Group
+    deletable: 0
+    paramTypes: 070000000000000000000000
+    enumTypes: 000000000000000000000000
+  enums: []
+  locations: []
+  events: []
+  categories: []

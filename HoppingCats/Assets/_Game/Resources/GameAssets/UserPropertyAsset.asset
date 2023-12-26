@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdc34e06ec4b24f4f82670c0036e8574, type: 3}
+  m_Name: UserPropertyAsset
+  m_EditorClassIdentifier: 
+  properties:
+    id: 0
+    name: 
+    stats:
+    - id: 1127161456
+      name: Vip
+      displayName: Vip
+      displayIcon: {fileID: 0}
+      type: 0
+      initValue:
+        m_Type: 0
+        m_IntValue: 0
+      safe: 1
+      deletable: 0
+      sync: 1
+      layer: 0
+      progress: 0
+      progressType: 0
+      lockContent: 0
+      savable: 0
+      distinct: 0
+      colWidth: 80
+    attributes:
+    - id: 903866561
+      name: UserId
+      displayName: UserId
+      displayIcon: {fileID: 0}
+      deletable: 0
+      sync: 0
+      type: 0
+      initValue:
+        type: 0
+        text: 
+        sprite: {fileID: 0}
+        prefab: {fileID: 0}
+      colWidth: 80
+    - id: 1503393957
+      name: Name
+      displayName: Name
+      displayIcon: {fileID: 0}
+      deletable: 0
+      sync: 1
+      type: 0
+      initValue:
+        type: 0
+        text: 
+        sprite: {fileID: 0}
+        prefab: {fileID: 0}
+      colWidth: 80
+    - id: 955106809
+      name: Language
+      displayName: Language
+      displayIcon: {fileID: 0}
+      deletable: 0
+      sync: 1
+      type: 0
+      initValue:
+        type: 0
+        text: English
+        sprite: {fileID: 0}
+        prefab: {fileID: 0}
+      colWidth: 80
+    assetRefs: []
+    refs: []
+    enums: []

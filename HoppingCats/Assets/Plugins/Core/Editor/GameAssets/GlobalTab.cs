@@ -1,0 +1,180 @@
+﻿using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
+
+namespace moonNest.editor
+{
+    internal class GlobalConfigTab : TabContent
+    {
+        readonly TabContainer tabContainer;
+        static GlobalConfig globalConfig;
+
+        public GlobalConfigTab()
+        {
+            globalConfig = GlobalConfig.Ins;
+            if (Profiles.Ins.profiles.Count == 0)
+            {
+                Profiles.Ins.profiles = new List<ProfileConfig> { new ProfileConfig("Default") };
+                globalConfig.selectedProfileId = Profiles.Ins.profiles[0].id;
+            }
+
+            tabContainer = new TabContainer();
+            tabContainer.AddTab("General", new GeneralTab());
+            tabContainer.AddTab("Profiles", new ProfileConfigTab());
+            tabContainer.AddTab("Language", new LanguageTab());
+            tabContainer.AddTab("Sound", new SoundTab());
+            tabContainer.AddTab("Import/Export", new ImportExportTab());
+            tabContainer.AddTab("Game ID", new GameIdTab());
+        }
+
+        public override void DoDraw()
+        {
+            Undo.RecordObject(GlobalConfig.Ins, "Global Config");
+            tabContainer.DoDraw();
+            if (GUI.changed) Draw.SetDirty(GlobalConfig.Ins);
+        }
+
+        public override bool DoDrawWindow()
+        {
+            return tabContainer.DoDrawWindow();
+        }
+
+        private class GeneralTab : TabContent
+        {
+            public override void DoDraw()
+            {
+                Draw.BeginHorizontal();
+
+                Draw.BeginVertical();
+                DrawLeft();
+                Draw.EndVertical();
+
+                Draw.Space(40);
+                Draw.BeginVertical();
+                DrawMid();
+                Draw.EndVertical();
+
+                Draw.Space(40);
+                Draw.BeginVertical();
+                //DrawRight();
+                Draw.EndVertical();
+
+                Draw.FlexibleSpace();
+
+                Draw.EndHorizontal();
+            }
+
+            private void DrawLeft()
+            {
+                Draw.BeginChangeCheck();
+                Draw.LabelBoldBox("Selected Profile", Color.yellow);
+                globalConfig.selectedProfileId = Draw.IntPopupField("Profile", globalConfig.selectedProfileId, Profiles.Ins.profiles, "name", "id", 250);
+                if (Draw.EndChangeCheck())
+                {
+                    var profile = Profiles.Ins.profiles.Find(p => p.id == globalConfig.selectedProfileId);
+                    if (profile)
+                    {
+                        if (profile.cheatEnabled) DrawUtilities.AddSymbolsOnAllPlatform("ENABLE_CHEAT");
+                        else DrawUtilities.RemoveSymbolsOnAllPlatform("ENABLE_CHEAT");
+                    }
+                }
+
+                Draw.SpaceAndLabelBoldBox("Custom Services", Color.yellow);
+                globalConfig.DRMServer = Draw.TextField("DRM Server", globalConfig.DRMServer, 250);
+                globalConfig.trackingServer = Draw.TextField("Tracking Server", globalConfig.trackingServer, 250);
+
+                Draw.SpaceAndLabelBoldBox("Resolution Scaling", Color.yellow);
+                globalConfig.resolutionScaling = Draw.ToggleField("Enabled", globalConfig.resolutionScaling, 60);
+                if (globalConfig.resolutionScaling)
+                    globalConfig.targetDPI = Draw.IntField("Taget DPI", globalConfig.targetDPI, 250);
+            }
+
+            private static void DrawMid()
+            {
+                Draw.LabelBoldBox("Platforms", Color.yellow);
+                globalConfig.iosAppId = Draw.TextField("iOS App Id", globalConfig.iosAppId, 200);
+                globalConfig.googlePlayLicense = Draw.TextField("Google Play License", globalConfig.googlePlayLicense, 200);
+                globalConfig.googleWebClientId = Draw.TextField("Google Play Client Id", globalConfig.googleWebClientId, 200);
+
+                Draw.SpaceAndLabelBoldBox("IAP", Color.yellow);
+                globalConfig.appStorePromotionPurchase = Draw.ToggleField("AppStore Promotion", globalConfig.appStorePromotionPurchase, 100);
+                globalConfig.verifyPurchasingOnline = Draw.ToggleField("Verify Online", globalConfig.verifyPurchasingOnline, 100);
+                //globalConfig.fakeStoreMode = Draw.EnumField("Fake Mode", globalConfig.fakeStoreMode, 200);
+
+                Draw.SpaceAndLabelBoldBox("Ads", Color.yellow);
+                globalConfig.adsEnabled = Draw.ToggleField("Enable Ads", globalConfig.adsEnabled, 100);
+            }
+        }
+
+        private class LanguageTab : TabContent
+        {
+            private TableDrawer<Language> table;
+
+            public LanguageTab()
+            {
+                table = new TableDrawer<Language>();
+                table.AddCol("Code", 120, ele => ele.code = Draw.Text(ele.code, 120));
+                table.AddCol("Text", 240, ele => ele.text = Draw.Text(ele.text, 240));
+                table.elementCreator = () => new Language();
+            }
+
+            public override void DoDraw()
+            {
+                if (globalConfig.languages.Count == 0)
+                {
+                    globalConfig.languages.Add(new Language("English", "TXT_ENGLISH"));
+                    globalConfig.languages.Add(new Language("Vietnamese", "TXT_VIETNAMESE"));
+                    globalConfig.languages.Add(new Language("French", "TXT_FRENCH"));
+                    globalConfig.languages.Add(new Language("German", "TXT_GERMAN"));
+                    globalConfig.languages.Add(new Language("Spanish", "TXT_SPANISH"));
+                    globalConfig.languages.Add(new Language("Portugese", "TXT_PORTUGUESE"));
+                    globalConfig.languages.Add(new Language("Russian", "TXT_RUSSIAN"));
+                    globalConfig.languages.Add(new Language("Chinese Simplified", "TXT_CHINESE_SIMPLIFIED"));
+                    globalConfig.languages.Add(new Language("Chinese Traditional", "TXT_CHINESE_TRADITIONAL"));
+                    globalConfig.languages.Add(new Language("Japanese", "TXT_JAPANESE"));
+                    globalConfig.languages.Add(new Language("Korean", "TXT_KOREAN"));
+                    globalConfig.languages.Add(new Language("Arabic", "TXT_ARABIC"));
+                    globalConfig.languages.Add(new Language("Hindi", "TXT_HINDI"));
+                    globalConfig.languages.Add(new Language("Philipine", "TXT_PHILIPPINE"));
+                    globalConfig.languages.Add(new Language("Indo", "TXT_INDONESIA"));
+                    globalConfig.languages.Add(new Language("Thai", "TXT_THAI"));
+                    globalConfig.languages.Add(new Language("Italian", "TXT_ITALIAN"));
+                    globalConfig.languages.Add(new Language("Turkis", "TXT_TURKISH"));
+                }
+                table.DoDraw(globalConfig.languages);
+            }
+        }
+
+        private class SoundTab : TabContent
+        {
+            public override void DoDraw()
+            {
+                globalConfig.mainMixer = Draw.ObjectField("Main Mixer", globalConfig.mainMixer, 120);
+                globalConfig.musicParam = Draw.TextField("Music Param", globalConfig.musicParam, 120);
+                globalConfig.sfxParam = Draw.TextField("Sfx Param", globalConfig.sfxParam, 120);
+                globalConfig.ingameSfxParam = Draw.TextField("Ingame-Sfx Param", globalConfig.ingameSfxParam, 120);
+            }
+        }
+    }
+
+    internal class GameIdTab : TabContent
+    {
+        public override void DoDraw()
+        {
+            Draw.BeginDisabledGroup(true);
+            GlobalConfig.Ins.gameId = Draw.TextField("Game Id", GlobalConfig.Ins.gameId, 125);
+            Draw.EndDisabledGroup();
+
+            Draw.Space();
+            if (GlobalConfig.Ins.gameId == "TEMPLATE"
+                || GlobalConfig.Ins.gameId == "DYI5SF")
+            {
+                if (Draw.Button("Create Game ID", Color.blue, 200))
+                {
+                    GlobalConfig.Ins.gameId = StringExt.RandomAlphabetWithNumber(6);
+                    Draw.SetDirty(GlobalConfig.Ins);
+                }
+            }
+        }
+    }
+}
