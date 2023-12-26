@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JumpGenerator
 {
-    public static bool GenerateJumpsStep(List<int> prevJumpsStep)
+    public static bool GenerateJumpsStep(List<JumpStep> prevJumpsStep)
     {
 
         return true;
