@@ -12,6 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f270278c1fe6784fba3cd4893e66f3e, type: 3}
   m_Name: ItemAsset
   m_EditorClassIdentifier: 
-  definitions: []
+  definitions:
+  - id: 1647102683
+    name: JumpStep
+    stats: []
+    attributes: []
+    assetRefs: []
+    refs: []
+    enums: []
+    sellInShop: 0
+    unlockedByProgress: 0
+    init: 0
+    capacity: -1
+    storageType: 0
+    uiPrefab: {fileID: 0}
+    drawMethod: 0
+    itemFilter:
+      statFilters: []
+      enumFilters: []
+      searchName: 
+      itemDefininitionId: -1
+      show: 0
+    showDisplayName: 0
+    showInitAmount: 0
+    showCapacity: 0
+    scriptableCastName: JumpConfig
+    showExtended: 1
   items: []
   itemRandoms: []

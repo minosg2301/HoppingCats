@@ -6,21 +6,43 @@ using UnityEngine.Pool;
 
 public class GameController : MonoBehaviour
 {
-    public JumpManager jumpContainer;
+    public JumpManager jumpManager;
     public GameObject cat;
 
     public float jumpPower = 1f;
     public float jumpDuration = 0.2f;
 
+    private bool started = false;
+
+    public void Prepare()
+    {
+        InitJumpSteps();
+        started = true;
+    }
+
+    private void InitJumpSteps()
+    {
+        jumpManager.Clear();
+        jumpManager.InitJumpSteps();
+    }
+
+    private void GenerateNextJumpStep()
+    {
+
+    }
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (started)
         {
-            DoMove(MoveType.Left);
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            DoMove(MoveType.Right);
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                DoMove(MoveType.Left);
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                DoMove(MoveType.Right);
+            }
         }
     }
 
@@ -42,22 +64,23 @@ public class GameController : MonoBehaviour
         }
 
         // Process Jump Manager (Add - remove step, Gen new jump steps, ...)
+        GenerateNextJumpStep();
     }
 
     private void MoveRight()
     {
-        Vector3 targetPos = jumpContainer.transform.position;
+        Vector3 targetPos = jumpManager.transform.position;
         targetPos.x -= 1;
         targetPos.y -= 1;
-        jumpContainer.transform.DOJump3D(targetPos, -jumpPower, jumpDuration);
+        jumpManager.transform.DOJump3D(targetPos, -jumpPower, jumpDuration);
     }
 
     private void MoveLeft()
     {
-        Vector3 targetPos = jumpContainer.transform.position;
+        Vector3 targetPos = jumpManager.transform.position;
         targetPos.x += 1;
         targetPos.y -= 1;
-        jumpContainer.transform.DOJump3D(targetPos, -jumpPower, jumpDuration);
+        jumpManager.transform.DOJump3D(targetPos, -jumpPower, jumpDuration);
     }
 
     private enum MoveType

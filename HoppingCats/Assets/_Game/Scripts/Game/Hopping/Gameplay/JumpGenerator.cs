@@ -21,23 +21,24 @@ public class JumpGenerator
             if (!jumpSteps.Exists(e => e.index == rightIndex)) jumpSteps.Add(GenerateSafeJumpStep(rightIndex));
         }
 
+        for (int i = limitLeftIndex; i <= limitRightIndex; i++)
+        {
+            if (!jumpSteps.Exists(e => e.index == i))
+                jumpSteps.Add(GenerateRandomJumpStep(i));
+        }
+
         return jumpSteps;
     }
 
     private static JumpStep GenerateSafeJumpStep(int index)
     {
-        JumpStep step = new();
-
-
-
+        var safeJumpSteps =  JumpManagerConfig.Ins.jumpSteepConfigs.FindAll(e => e.safeJumpType);
+        JumpStep step = new(index, safeJumpSteps.Random());
         return step;
     }
 
-    private static JumpStep GeneRateRandomJumpStep(int index)
+    private static JumpStep GenerateRandomJumpStep(int index)
     {
-        JumpStep step = new();
-
-
-        return step;
+        return new JumpStep(index, JumpManagerConfig.Ins.jumpSteepConfigs.Random());
     }
 }

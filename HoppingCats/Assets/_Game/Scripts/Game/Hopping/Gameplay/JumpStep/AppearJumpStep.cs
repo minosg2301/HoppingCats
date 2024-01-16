@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class AppearJumpStep : JumpStep
 {
+    public AppearJumpStep(int index, JumpConfig config) : base(index, config)
+    {
+
+    }
+
     protected override void Active()
     {
         base.Active();

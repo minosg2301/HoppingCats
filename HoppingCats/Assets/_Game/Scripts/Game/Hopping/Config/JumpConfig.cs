@@ -7,7 +7,7 @@ using UnityEngine;
 public class JumpConfig : BaseScriptableObject
 {
 #if UNITY_EDITOR
-    [MenuItem("Moons/Create Create Jump Step")]
+    [MenuItem("Moons/Create Jump Step")]
     static void Create()
     {
         CreateAsset<JumpConfig>("Create Jump Step", "JumpConfig");

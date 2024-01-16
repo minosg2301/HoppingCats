@@ -10,6 +10,12 @@ public class JumpStep : MonoBehaviour
     private bool deadJump;
     public bool DeadJump => deadJump;
 
+    public JumpStep(int index, JumpConfig config)
+    {
+        this.config = config;
+        this.index = index;
+    }
+
     protected virtual void Active()
     {
 
