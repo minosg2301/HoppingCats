@@ -1,12 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class JumpStep : MonoBehaviour
 {
     public JumpConfig config;
+    public int index;
     public Vector2 jumpPosition;
-    public bool deadJump;
+
+
+    private bool deadJump;
+    public bool DeadJump => deadJump;
 
     protected virtual void Active()
     {
@@ -18,8 +20,8 @@ public class JumpStep : MonoBehaviour
 
     }
 
-    protected virtual void SetDeadjump(bool value)
+    protected virtual void ApplyJumpStep()
     {
-        deadJump = value;
+
     }
 }

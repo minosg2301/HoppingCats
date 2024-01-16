@@ -14,8 +14,9 @@ public class JumpConfig : BaseScriptableObject
     }
 #endif
 
-    [SerializeField] private JumpType jumpType;
-    [SerializeField] private Sprite jumpImage;
+    public JumpType jumpType;
+    public Sprite jumpImage;
+    public bool safeJumpType;
 }
 
 public enum JumpType
