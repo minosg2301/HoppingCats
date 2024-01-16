@@ -2579,7 +2579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6660e3677d1861941952d87d1deaac02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpContainer: {fileID: 652714208}
+  jumpManager: {fileID: 652714208}
   cat: {fileID: 419243187}
   jumpPower: 1
   jumpDuration: 0.2
