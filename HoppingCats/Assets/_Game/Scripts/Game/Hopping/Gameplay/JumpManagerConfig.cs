@@ -5,5 +5,5 @@ using UnityEngine;
 
 public class JumpManagerConfig : SingletonScriptObject<JumpManagerConfig>
 {
-    public List<JumpConfig> jumpSteepConfigs;
+    public List<JumpConfig> jumpStepConfigs;
 }

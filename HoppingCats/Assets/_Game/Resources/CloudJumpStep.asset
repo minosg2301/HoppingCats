@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CloudJumpStep
   m_EditorClassIdentifier: 
   jumpType: 2
-  deadJump: 0
-  jumpImage: {fileID: 0}
+  jumpStep: {fileID: 1521236475324458702, guid: f742ee950dde6f2488eefae0a38f426c, type: 3}
+  safeJumpType: 0

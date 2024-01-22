@@ -26,14 +26,21 @@ public class GameController : MonoBehaviour
         jumpManager.InitJumpSteps();
     }
 
-    private void GenerateNextJumpStep()
+    private void GenerateNextJumpStep(bool moveLeft)
     {
-
+        jumpManager.SpawnNextJumpSteps(moveLeft);
     }
 
     private void Update()
     {
-        if (started)
+        if (!started)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Prepare();
+            }
+        }
+        else
         {
             if (Input.GetKeyDown(KeyCode.A))
             {
@@ -64,23 +71,23 @@ public class GameController : MonoBehaviour
         }
 
         // Process Jump Manager (Add - remove step, Gen new jump steps, ...)
-        GenerateNextJumpStep();
+        GenerateNextJumpStep(type == MoveType.Left);
     }
 
     private void MoveRight()
     {
-        Vector3 targetPos = jumpManager.transform.position;
+        Vector3 targetPos = jumpManager.container.position;
         targetPos.x -= 1;
-        targetPos.y -= 1;
-        jumpManager.transform.DOJump3D(targetPos, -jumpPower, jumpDuration);
+        targetPos.y -= 2;
+        jumpManager.container.DOJump3D(targetPos, -jumpPower, jumpDuration);
     }
 
     private void MoveLeft()
     {
-        Vector3 targetPos = jumpManager.transform.position;
+        Vector3 targetPos = jumpManager.container.position;
         targetPos.x += 1;
-        targetPos.y -= 1;
-        jumpManager.transform.DOJump3D(targetPos, -jumpPower, jumpDuration);
+        targetPos.y -= 2;
+        jumpManager.container.DOJump3D(targetPos, -jumpPower, jumpDuration);
     }
 
     private enum MoveType

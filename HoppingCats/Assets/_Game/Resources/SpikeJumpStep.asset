@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SpikeJumpStep
   m_EditorClassIdentifier: 
   jumpType: 4
-  deadJump: 0
-  jumpImage: {fileID: 0}
+  jumpStep: {fileID: 5058513718683120631, guid: 5fe00f03e7cfc6340bafaf1bae417281, type: 3}
+  safeJumpType: 0

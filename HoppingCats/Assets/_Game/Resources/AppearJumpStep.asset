@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: AppearJumpStep
   m_EditorClassIdentifier: 
   jumpType: 5
-  jumpImage: {fileID: 0}
+  jumpStep: {fileID: 6940255903130397594, guid: 97c8b09976fac8d41bc38e3fc72202cc, type: 3}
   safeJumpType: 1

@@ -15,8 +15,9 @@ public class JumpConfig : BaseScriptableObject
 #endif
 
     public JumpType jumpType;
-    public Sprite jumpImage;
+    public JumpStep jumpStep;
     public bool safeJumpType;
+    public Sprite jumpImage;
 }
 
 public enum JumpType
@@ -26,6 +27,7 @@ public enum JumpType
     Cloud,
     Temp,
     Spike,
-    Appear
+    Appear,
+    First
 }
 
