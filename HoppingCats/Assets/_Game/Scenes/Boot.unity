@@ -281,8 +281,8 @@ Canvas:
   m_GameObject: {fileID: 607627292}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1506918394}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -322,9 +322,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 607627292}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba015e1cad157fd4dab1d27aab9772c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c25c7e58ec7efa4088f621080a7bc90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraName: Main Camera
 --- !u!1 &693038413
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,8 +667,8 @@ Canvas:
   m_GameObject: {fileID: 2131431171}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1506918394}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -707,9 +708,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2131431171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba015e1cad157fd4dab1d27aab9772c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c25c7e58ec7efa4088f621080a7bc90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraName: Main Camera
 --- !u!1001 &1698988507888890641
 PrefabInstance:
   m_ObjectHideFlags: 0
