@@ -29,12 +29,40 @@ public class JumpGenerator
         var limitLeftIndex = prevJumpsStep.MinBy(e => e.index).index + (spawnLeft ? -1 : 1);
         var limitRightIndex = prevJumpsStep.MaxBy(e => e.index).index + (spawnLeft ? -1 : 1);
 
+
         foreach (var step in prevCanSpawnJumpSteps)
         {
             var leftIndex = step.index - 1;
             var rightIndex = step.index + 1;
-            if ((leftIndex >= limitLeftIndex) && !jumpSteps.Exists(e => e.index == leftIndex)) jumpSteps.Add(GenerateSafeJumpStep(leftIndex));
-            if ((rightIndex <= limitRightIndex) && !jumpSteps.Exists(e => e.index == rightIndex)) jumpSteps.Add(GenerateSafeJumpStep(rightIndex));
+
+            bool canSpawnLeft = !jumpSteps.Exists(e => e.index == leftIndex) && leftIndex >= limitLeftIndex;
+            bool canSpawnRight = !jumpSteps.Exists(e => e.index == rightIndex) && rightIndex <= limitRightIndex;
+            bool haveLeftSafe = leftIndex < limitLeftIndex ? true : (!canSpawnLeft ? jumpSteps.Find(e => e.index == leftIndex).config.safeJumpType : false);
+            bool haveRightSafe = rightIndex > limitRightIndex ? true : (!canSpawnRight ? jumpSteps.Find(e => e.index == rightIndex).config.safeJumpType : false);
+            bool haveSafeStep = haveLeftSafe || haveRightSafe;
+
+            if (haveSafeStep)
+            {
+                if (canSpawnLeft) jumpSteps.Add(GenerateRandomJumpStep(leftIndex));
+                if (canSpawnRight) jumpSteps.Add(GenerateRandomJumpStep(rightIndex));
+            }
+            else
+            {
+                if (canSpawnLeft && canSpawnRight)
+                {
+                    var spawnSafeLeft = Random.Range(0, 2) == 0;
+                    jumpSteps.Add(GenerateSafeJumpStep(spawnSafeLeft ? leftIndex : rightIndex));
+                    jumpSteps.Add(GenerateRandomJumpStep(spawnSafeLeft ? rightIndex : leftIndex));
+                }
+                else if (canSpawnLeft)
+                {
+                    jumpSteps.Add(GenerateSafeJumpStep(leftIndex));
+                }
+                else if (canSpawnRight)
+                {
+                    jumpSteps.Add(GenerateSafeJumpStep(rightIndex));
+                }
+            }
         }
 
         for (int i = limitLeftIndex; i <= limitRightIndex; i += 2)
