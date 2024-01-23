@@ -35,10 +35,10 @@ public class JumpGenerator
             var leftIndex = step.index - 1;
             var rightIndex = step.index + 1;
 
-            bool canSpawnLeft = !jumpSteps.Exists(e => e.index == leftIndex);
-            bool canSpawnRight = !jumpSteps.Exists(e => e.index == rightIndex);
-            bool haveLeftSafe = !canSpawnLeft ? jumpSteps.Find(e => e.index == leftIndex).config.safeJumpType : false;
-            bool haveRightSafe = !canSpawnRight ? jumpSteps.Find(e => e.index == rightIndex).config.safeJumpType : false;
+            bool canSpawnLeft = !jumpSteps.Exists(e => e.index == leftIndex) && leftIndex >= limitLeftIndex;
+            bool canSpawnRight = !jumpSteps.Exists(e => e.index == rightIndex) && rightIndex <= limitRightIndex;
+            bool haveLeftSafe = leftIndex < limitLeftIndex ? true : (!canSpawnLeft ? jumpSteps.Find(e => e.index == leftIndex).config.safeJumpType : false);
+            bool haveRightSafe = rightIndex > limitRightIndex ? true : (!canSpawnRight ? jumpSteps.Find(e => e.index == rightIndex).config.safeJumpType : false);
             bool haveSafeStep = haveLeftSafe || haveRightSafe;
 
             if (haveSafeStep)
@@ -58,7 +58,7 @@ public class JumpGenerator
                 {
                     jumpSteps.Add(GenerateSafeJumpStep(leftIndex));
                 }
-                else
+                else if (canSpawnRight)
                 {
                     jumpSteps.Add(GenerateSafeJumpStep(rightIndex));
                 }
