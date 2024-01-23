@@ -162,8 +162,8 @@ TextureImporter:
       name: 9Scale-ResourceBarFrame
       rect:
         serializedVersion: 2
-        x: 218
-        y: 46
+        x: 240
+        y: 319
         width: 242
         height: 76
       alignment: 0
@@ -180,53 +180,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Button-BtnClose
-      rect:
-        serializedVersion: 2
-        x: 218
-        y: 124
-        width: 76
-        height: 77
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5584416}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80964728950a3ff4d9c50654be3d1bdf
-      internalID: 135912203
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Button-BtnYellow
-      rect:
-        serializedVersion: 2
-        x: 153
-        y: 295
-        width: 215
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 532ca85bdba0eab4dae1ac04035fac5b
-      internalID: 1478582861
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Icon-Egg
       rect:
         serializedVersion: 2
-        x: 218
-        y: 203
+        x: 153
+        y: 305
         width: 85
         height: 90
       alignment: 9
@@ -267,7 +225,7 @@ TextureImporter:
       name: Button-btnHome
       rect:
         serializedVersion: 2
-        x: 1
+        x: 123
         y: 132
         width: 215
         height: 113
@@ -288,7 +246,7 @@ TextureImporter:
       name: Button-btnPlay
       rect:
         serializedVersion: 2
-        x: 1
+        x: 218
         y: 17
         width: 215
         height: 113
@@ -309,8 +267,8 @@ TextureImporter:
       name: Tile-Tile
       rect:
         serializedVersion: 2
-        x: 296
-        y: 153
+        x: 153
+        y: 255
         width: 156
         height: 48
       alignment: 0
@@ -322,6 +280,48 @@ TextureImporter:
       bones: []
       spriteID: 85eb8904495f3d0458fff7bdc62fdf5e
       internalID: -1001234231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button-btnClose
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 114
+        width: 120
+        height: 131
+      alignment: 9
+      pivot: {x: 0.5, y: 0.519084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 493fa4043c02e3d478fc18e5ecda9ae6
+      internalID: -874795230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button-btnYellow
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 12
+        width: 215
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b7305297a23a44397fa922443f6cf5
+      internalID: -1277325435
       vertices: []
       indices: 
       edges: []
@@ -340,10 +340,10 @@ TextureImporter:
       9Scale-PopupBanner: 1773028145
       9Scale-PopupFrame: 994121911
       9Scale-ResourceBarFrame: 1069809813
-      Button-BtnClose: 135912203
-      Button-BtnYellow: 1478582861
+      Button-btnClose: -874795230
       Button-btnHome: 605517336
       Button-btnPlay: -1265972287
+      Button-btnYellow: -1277325435
       Icon-Egg: -716383924
       Icon-Star: 1244455008
       Tile-Tile: -1001234231
