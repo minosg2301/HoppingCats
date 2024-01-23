@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc2e4fe40afed4e47bc60f0c98e902bb, type: 3}
-  m_Name: NoneJumpStep
+  m_Name: FirstJumpStep
   m_EditorClassIdentifier: 
-  jumpType: 1
-  jumpStep: {fileID: 416802887497921237, guid: d2db9b4fbfa38b84a866f7ed483ebfbc, type: 3}
-  safeJumpType: 0
+  jumpType: 6
+  jumpStep: {fileID: 3777409526900253707, guid: 50653a601c0ace84abd804d35e085c58, type: 3}
+  safeJumpType: 1
+  jumpImage: {fileID: 0}

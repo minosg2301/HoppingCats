@@ -2,18 +2,14 @@ using UnityEngine;
 
 public class JumpStep : MonoBehaviour
 {
-    public JumpConfig config;
-    public int index;
-    public Vector2 jumpPosition;
-
+    public JumpStepData data;
 
     private bool deadJump;
     public bool DeadJump => deadJump;
 
-    public JumpStep(int index, JumpConfig config)
+    public JumpStep(JumpStepData data)
     {
-        this.config = config;
-        this.index = index;
+        this.data = data;
     }
 
     protected virtual void Active()

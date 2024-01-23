@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AppearJumpStep : JumpStep
 {
-    public AppearJumpStep(int index, JumpConfig config) : base(index, config)
+    public AppearJumpStep(JumpStepData data) : base(data)
     {
 
     }
