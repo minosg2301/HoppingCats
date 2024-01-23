@@ -1,0 +1,11 @@
+version: 2
+tpsheetFileNames:
+- Assets/_Game/Sprites/UI.tpsheet
+- Assets/ExternalAssets/TexturePackerImporter/Example/SpriteSheet/sprites.tpsheet
+textureFileNames:
+- Assets/_Game/Sprites/UI.png
+- Assets/ExternalAssets/TexturePackerImporter/Example/SpriteSheet/sprites.png
+normalmapFileNames:
+- 
+- Assets/ExternalAssets/TexturePackerImporter/Example/SpriteSheet/sprites_n.png
+enableDebugOutput: 0
