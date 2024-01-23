@@ -1,0 +1,15 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:8f9a94773a70952f091a75c4c500a2f7:6a77e0eba61c74697028256ae8b546af:fbce5c993e512fe6cdef514c6e5d7a6c$
+#
+:format=40300
+:texture=Cats.png
+:size=256x512
+:pivotpoints=enabled
+:borders=disabled
+
+CatTest;1;252;199;259; 0.5;0.5; 0;0;0;0; 12;176;247;192;203;199;142;183;102;154;68;140;0;52;0;42;75;0;122;7;213;27;248;122;259; 10;9;10;11;7;9;11;7;8;9;4;5;7;5;6;7;3;4;7;2;3;7;2;7;11;1;2;11;0;1;11

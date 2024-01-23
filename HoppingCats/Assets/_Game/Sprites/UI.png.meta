@@ -162,8 +162,8 @@ TextureImporter:
       name: 9Scale-ResourceBarFrame
       rect:
         serializedVersion: 2
-        x: 166
-        y: 67
+        x: 218
+        y: 46
         width: 242
         height: 76
       alignment: 0
@@ -183,8 +183,8 @@ TextureImporter:
       name: Button-BtnClose
       rect:
         serializedVersion: 2
-        x: 88
-        y: 66
+        x: 218
+        y: 124
         width: 76
         height: 77
       alignment: 9
@@ -204,8 +204,8 @@ TextureImporter:
       name: Button-BtnYellow
       rect:
         serializedVersion: 2
-        x: 1
-        y: 145
+        x: 153
+        y: 295
         width: 215
         height: 100
       alignment: 0
@@ -225,8 +225,8 @@ TextureImporter:
       name: Icon-Egg
       rect:
         serializedVersion: 2
-        x: 1
-        y: 53
+        x: 218
+        y: 203
         width: 85
         height: 90
       alignment: 9
@@ -263,6 +263,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Button-btnHome
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 132
+        width: 215
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f402c62b8ac520a4e9e350705e71d249
+      internalID: 605517336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button-btnPlay
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 17
+        width: 215
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0be0663e71b86fe448ec40db2fe7a514
+      internalID: -1265972287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile-Tile
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 153
+        width: 156
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85eb8904495f3d0458fff7bdc62fdf5e
+      internalID: -1001234231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -279,8 +342,11 @@ TextureImporter:
       9Scale-ResourceBarFrame: 1069809813
       Button-BtnClose: 135912203
       Button-BtnYellow: 1478582861
+      Button-btnHome: 605517336
+      Button-btnPlay: -1265972287
       Icon-Egg: -716383924
       Icon-Star: 1244455008
+      Tile-Tile: -1001234231
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
