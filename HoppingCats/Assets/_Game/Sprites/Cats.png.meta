@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CatTest
+      name: Cat_Body_Default
       rect:
         serializedVersion: 2
         x: 1
-        y: 252
-        width: 199
-        height: 259
+        y: 123
+        width: 454
+        height: 388
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e706a86dce6c764298e3c09319bd8ed
-      internalID: -1734212221
+      spriteID: eb93574774162b245afb117cb472cd9d
+      internalID: -1190831133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Face_Default_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 27
+        width: 277
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539ecc19e8668504c8a2fdb7aed6191e
+      internalID: -145287463
       vertices: []
       indices: 
       edges: []
@@ -148,7 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CatTest: -1734212221
+      Cat_Body_Default: -1190831133
+      Cat_Face_Default_1: -145287463
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
