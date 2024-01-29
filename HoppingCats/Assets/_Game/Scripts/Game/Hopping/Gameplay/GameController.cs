@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,11 +13,16 @@ public class GameController : MonoBehaviour
     public float jumpPower = 1f;
     public float jumpDuration = 0.2f;
 
+    private List<MoveType> listMove = new();
+    private bool moving = false;
+
     private bool started = false;
 
     public void Prepare()
     {
         InitJumpSteps();
+        listMove = new();
+        moving = false;
         started = true;
     }
 
@@ -44,34 +50,47 @@ public class GameController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.A))
             {
-                DoMove(MoveType.Left);
+                AddMove(MoveType.Left);
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
-                DoMove(MoveType.Right);
+                AddMove(MoveType.Right);
             }
+
+            DoMove();
         }
     }
 
-    private void DoMove(MoveType type)
+    private void AddMove(MoveType type)
     {
-        // Check status of cat
+        listMove.Add(type);
+    }
 
-        // Cat do animation jump
-
-        // Jump container do move
-        switch (type)
+    private void DoMove()
+    {
+        if (!moving && listMove.Count > 0)
         {
-            case MoveType.Left:
-                MoveLeft();
-                break;
-            case MoveType.Right:
-                MoveRight();
-                break;
-        }
+            moving = true;
+            var type = listMove.Shift();
 
-        // Process Jump Manager (Add - remove step, Gen new jump steps, ...)
-        GenerateNextJumpStep(type == MoveType.Left);
+            // Check status of cat
+
+            // Cat do animation jump
+
+            // Jump container do move
+            switch (type)
+            {
+                case MoveType.Left:
+                    MoveLeft();
+                    break;
+                case MoveType.Right:
+                    MoveRight();
+                    break;
+            }
+
+            // Process Jump Manager (Add - remove step, Gen new jump steps, ...)
+            GenerateNextJumpStep(type == MoveType.Left);
+        }
     }
 
     private void MoveRight()
@@ -79,7 +98,7 @@ public class GameController : MonoBehaviour
         Vector3 targetPos = jumpManager.container.position;
         targetPos.x -= 1;
         targetPos.y -= 2;
-        jumpManager.container.DOJump3D(targetPos, -jumpPower, jumpDuration);
+        jumpManager.container.DOJump3D(targetPos, -jumpPower, jumpDuration).OnComplete(() => moving = false);
     }
 
     private void MoveLeft()
@@ -87,7 +106,7 @@ public class GameController : MonoBehaviour
         Vector3 targetPos = jumpManager.container.position;
         targetPos.x += 1;
         targetPos.y -= 2;
-        jumpManager.container.DOJump3D(targetPos, -jumpPower, jumpDuration);
+        jumpManager.container.DOJump3D(targetPos, -jumpPower, jumpDuration).OnComplete(() => moving = false);
     }
 
     private enum MoveType

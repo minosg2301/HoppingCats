@@ -10,9 +10,10 @@ public class JumpManager : MonoBehaviour
     private const int firstGenerateCount = 10;
     private const int rowCount = 20;
 
-    public List<List<JumpStepData>> jumpSteps;
-    public Transform container;
+    private Dictionary<int, List<JumpStepData>> jumpStepsByRow;
+    private List<List<JumpStepData>> jumpSteps;
 
+    public Transform container;
     public GameObject firstStep;
 
     public void Clear()
