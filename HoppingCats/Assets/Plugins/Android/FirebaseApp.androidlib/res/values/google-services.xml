@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id" xmlns:tools="http://schemas.android.com/tools">
+  <string name="firebase_database_url" translatable="false">https://my-bisco.firebaseio.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">328546668411</string>
+  <string name="google_storage_bucket" translatable="false">my-bisco.appspot.com</string>
+  <string name="project_id" translatable="false">my-bisco</string>
+  <string name="google_api_key" translatable="false">AIzaSyDtiBVt0cQv4VwIBTYDYXp-IwI4o6bKD1M</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDtiBVt0cQv4VwIBTYDYXp-IwI4o6bKD1M</string>
+  <string name="google_app_id" translatable="false">1:328546668411:android:c9f10675c5d3bc43b0f7de</string>
+  <string name="default_web_client_id" translatable="false">328546668411-vtoubuk2o0910hsqqtthbs8dpcgipmd7.apps.googleusercontent.com</string>
+</resources>

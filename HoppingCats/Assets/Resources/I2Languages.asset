@@ -22,7 +22,7 @@ MonoBehaviour:
     mTerm_AppName: 
     mLanguages: []
     IgnoreDeviceLanguage: 0
-    _AllowUnloadingLanguages: 0
+    _AllowUnloadingLanguages: 1
     Google_WebServiceURL: 
     Google_SpreadsheetKey: 
     Google_SpreadsheetName: 
@@ -30,8 +30,7 @@ MonoBehaviour:
     Google_Password: change_this
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2
-    GoogleUpdateSynchronization: 1
-    GoogleUpdateDelay: 0
+    GoogleUpdateDelay: 5
     Assets: []
     Spreadsheet_LocalFileName: 
     Spreadsheet_LocalCSVSeparator: ','

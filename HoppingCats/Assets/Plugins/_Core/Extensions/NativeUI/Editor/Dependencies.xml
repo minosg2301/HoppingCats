@@ -1,0 +1,9 @@
+<dependencies>
+    <androidPackages>
+        <androidPackage spec="com.sglib.easymobile:easy-mobile-lite:1.0.0">
+            <repositories>
+                <repository>Assets/Plugins/_Core/Extensions/NativeUI/Editor/m2repository</repository>
+            </repositories>
+        </androidPackage>
+    </androidPackages>
+</dependencies>

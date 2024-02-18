@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -107981364, guid: 0b4dfedb4dda84ac38c7eb6a553ef819, type: 3}
+  m_Name: UDP Settings
+  m_EditorClassIdentifier: 
+  UnityProjectID: 83da94ee-989a-4db8-87ab-e43a0b68214f
+  UnityClientID: WfKTP0E5mKVjkoy_5lwcuw
+  UnityClientKey: aKt2atvLBandfN4eCJrF43GYroRl_I6qjdJ45DtqESs
+  UnityClientRSAPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsc29hCdehJMV5V5v4dUOA1xBHZ4ZAiIR1vgUw6vMVYzcijftTfP4UBuvysBNN+KHh29EwIw7LWRmIm6qvWyh6A6gL1u1QFskEmEfXEqqGWPxWrXdDH4k77N0CZhs5EIGBCkT4DLOdOffuyMo5a2/ZyCPVIp+OVRFQ304sLNQY7LZQQoZP4c92p15V6drE9FFXCQJe+krpMN/5ivZ7u6IqffiU3VOQKrNYSlqVPhgyQjmxXxbhZE03CpMNdpD9pNUCmcSLw/HejZixKiB5RvOIrnqQikVi69AFaqj64plOmIKhTPQODlWfUbPhOn3+/txcDResO8SEGgynCSE9GSkqQIDAQAB
+  AppName: Chess TD
+  AppSlug: 9cf06c5a-83f4-4894-96de-6a8c972165e2
+  AppItemId: 5f8d84dd686af3001f0f4f28
+  Permission: 

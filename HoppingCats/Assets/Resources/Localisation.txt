@@ -1,3 +1,0 @@
-"key","en","vn"
-"1","Hello","xin chào"
-"2","Bye","tạm biệt"

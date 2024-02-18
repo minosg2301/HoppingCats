@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c2d9ce944146ff90950f0f03051619, type: 3}
+  m_Name: _SoundyDatabase
+  m_EditorClassIdentifier: 
+  DatabaseNames:
+  - General
+  - Music
+  - Sfx
+  SoundDatabases:
+  - {fileID: 11400000, guid: ae0197dc073980349bbd97724d9a8037, type: 2}
+  - {fileID: 11400000, guid: 78bc932c620bb8f4f87f4d846229c984, type: 2}
+  - {fileID: 11400000, guid: 7948d6872192c8841bdca6ca587d0c87, type: 2}

@@ -1,0 +1,11 @@
+version: 2
+tpsheetFileNames:
+- Assets/_Game/Sprites/Cats.tpsheet
+- Assets/_Game/Sprites/UI.tpsheet
+textureFileNames:
+- Assets/_Game/Sprites/Cats.png
+- Assets/_Game/Sprites/UI.png
+normalmapFileNames:
+- 
+- 
+enableDebugOutput: 0

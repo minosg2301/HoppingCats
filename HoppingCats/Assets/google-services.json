@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "328546668411",
+    "firebase_url": "https://my-bisco.firebaseio.com",
+    "project_id": "my-bisco",
+    "storage_bucket": "my-bisco.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328546668411:android:c9f10675c5d3bc43b0f7de",
+        "android_client_info": {
+          "package_name": "com.vgame.sample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328546668411-vtoubuk2o0910hsqqtthbs8dpcgipmd7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtiBVt0cQv4VwIBTYDYXp-IwI4o6bKD1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "328546668411-vtoubuk2o0910hsqqtthbs8dpcgipmd7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "328546668411-lpa2suttp5j2oee5krvk6jalutqmpuok.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.vgame.sample"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

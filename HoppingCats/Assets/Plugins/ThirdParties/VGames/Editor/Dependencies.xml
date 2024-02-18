@@ -1,0 +1,27 @@
+<dependencies>
+    <androidPackages>
+        <androidPackage spec="com.vgames:vgames-lib:1.0.0">
+            <repositories>
+                <repository>Assets/Plugins/ThirdParties/VGames/Editor/m2repository</repository>
+            </repositories>
+        </androidPackage>
+    </androidPackages>    
+    <!-- Admob Mediation -->
+    <androidPackages>
+        <androidPackage spec="com.google.ads.mediation:facebook:6.16.0.0"></androidPackage>
+        <androidPackage spec="com.google.ads.mediation:pangle:5.6.0.3.0">
+          <repositories>
+            <repository>https://artifact.bytedance.com/repository/pangle/</repository>
+          </repositories>
+        </androidPackage>
+        <!-- <androidPackage spec="com.google.ads.mediation:inmobi:10.1.2.1"></androidPackage> -->
+    </androidPackages>
+    <iosPods>
+        <iosPod name="GoogleMobileAdsMediationFacebook" />
+		<!-- <iosPod name="GoogleMobileAdsMediationPangle" path="Assets/Plugins/ThirdParties/VGames/Editor/LocalPod"> -->
+        <!-- </iosPod> -->
+        <!-- <iosPod name="GoogleMobileAdsMediationPangle" /> -->
+        <!-- <iosPod name="GoogleMobileAdsMediationInMobi" /> -->
+        <iosPod name="Google-Mobile-Ads-SDK" version="10.14.0" /> 
+    </iosPods>
+</dependencies>

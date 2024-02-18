@@ -17,8 +17,8 @@ PlayerSettings:
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
-  m_ShowUnitySplashScreen: 0
-  m_ShowUnitySplashLogo: 0
+  m_ShowUnitySplashScreen: 1
+  m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
   m_SplashScreenLogoStyle: 1
@@ -667,22 +667,22 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: dUI_TextMeshPro;TextMeshPro
-    EmbeddedLinux: dUI_TextMeshPro;TextMeshPro
-    GameCoreScarlett: dUI_TextMeshPro
-    GameCoreXboxOne: dUI_TextMeshPro;TextMeshPro
-    LinuxHeadlessSimulation: dUI_TextMeshPro
-    Lumin: dUI_TextMeshPro;TextMeshPro
-    Nintendo Switch: dUI_TextMeshPro;TextMeshPro
-    PS4: dUI_TextMeshPro;TextMeshPro
-    PS5: dUI_TextMeshPro;TextMeshPro
-    Stadia: dUI_TextMeshPro;TextMeshPro
-    Standalone: dUI_TextMeshPro;TextMeshPro
-    WebGL: dUI_TextMeshPro;TextMeshPro
-    Windows Store Apps: dUI_TextMeshPro;TextMeshPro
-    XboxOne: dUI_TextMeshPro;TextMeshPro
-    iPhone: dUI_TextMeshPro;TextMeshPro
-    tvOS: dUI_TextMeshPro;TextMeshPro
+    Android: TextMeshPro;gameanalytics_max_enabled;gameanalytics_admob_enabled;dUI_MANAGER
+    EmbeddedLinux: TextMeshPro;dUI_MANAGER
+    GameCoreScarlett: dUI_MANAGER
+    GameCoreXboxOne: TextMeshPro;dUI_MANAGER
+    LinuxHeadlessSimulation: dUI_MANAGER
+    Lumin: TextMeshPro;dUI_MANAGER
+    Nintendo Switch: TextMeshPro;dUI_MANAGER
+    PS4: TextMeshPro;dUI_MANAGER
+    PS5: TextMeshPro;dUI_MANAGER
+    Stadia: TextMeshPro;dUI_MANAGER
+    Standalone: TextMeshPro;dUI_MANAGER
+    WebGL: TextMeshPro;dUI_MANAGER
+    Windows Store Apps: TextMeshPro;dUI_MANAGER
+    XboxOne: TextMeshPro;dUI_MANAGER
+    iPhone: TextMeshPro;gameanalytics_max_enabled;gameanalytics_admob_enabled;dUI_MANAGER
+    tvOS: TextMeshPro;dUI_MANAGER
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

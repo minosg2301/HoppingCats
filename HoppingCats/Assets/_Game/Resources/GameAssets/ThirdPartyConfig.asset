@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7636009f347d81488997131db6c776e, type: 3}
+  m_Name: ThirdPartyConfig
+  m_EditorClassIdentifier: 
+  mobileDefine:
+    useGoogleMobileAds: 0
+    useIronSrcAds: 0
+    useUnityAds: 0
+    useNativeAdmob: 0
+    useAppFlyer: 0
+    useAdjust: 0
+    useMaxSDK: 0
+    useFacebookSDK: 0
+    useFBInstant: 0
+    useFBInstantAds: 0
+    useLionSDK: 0
+    useAmazonSDK: 0
+    useGameAnalytic: 0
+    isUseAmazonMediation: 0
+  webGLDefine:
+    useGoogleMobileAds: 0
+    useIronSrcAds: 0
+    useUnityAds: 0
+    useNativeAdmob: 0
+    useAppFlyer: 0
+    useAdjust: 0
+    useMaxSDK: 0
+    useFacebookSDK: 0
+    useFBInstant: 0
+    useFBInstantAds: 0
+    useLionSDK: 0
+    useAmazonSDK: 0
+    useGameAnalytic: 0
+    isUseAmazonMediation: 0
+  trackingConfig:
+    debugLog: 0
+    appFlyerKey: 
+    iosAdjustKey: 
+    androidAdjustKey: 
+    huaweiAdjustKey: 
+    vendors: []
+    customEvents: []
+  adsConfig:
+    maxSDKDebug: 0
+    adsReloadInterval: 3
+    skipAds: 1
+    skipAdsDuration: 90
+    simulateAdsTest: 0
+    simulateShowFailed: 0
+    simulateNoInterstitial: 0
+    simulateNoRewardAds: 0
+    simulateNoRewardInterAds: 0
+    nativeAds:
+      noDelayRefresh: 0
+      delayRefreshSeconds: 30
+    networks: []
+    ios:
+      formats: []
+      usages: []
+    android:
+      formats: []
+      usages: []
+    web:
+      formats: []
+      usages: []
+    huawei:
+      formats: []
+      usages: []
+  pushNotiConfig:
+    hourToPush: 8
+    days: 7
+    contents: []
+  firbaseConfig:
+    dynamicLinkDomain: 
+    dynamicLinkPrefix: 
