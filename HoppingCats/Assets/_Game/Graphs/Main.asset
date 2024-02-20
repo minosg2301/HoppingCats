@@ -38,6 +38,13 @@ MonoBehaviour:
       m_inputSocketId: 7bed1b1a-30d7-4489-a3ad-71b579a3e035
       m_outputNodeId: 0c75802d-8046-4d94-a8b0-f7503433890b
       m_outputSocketId: b0e0b80b-aa4b-4cd3-8df3-2dbe126b1f54
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: 1ffcfd4e-68e0-499d-ba9a-d3a7a8462d06
+      m_inputNodeId: 1391111f-f82a-4341-b879-b9f10997984c
+      m_inputSocketId: 7bed1b1a-30d7-4489-a3ad-71b579a3e035
+      m_outputNodeId: 0c75802d-8046-4d94-a8b0-f7503433890b
+      m_outputSocketId: 857144ae-609a-413e-add4-e250d7439763
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 202, y: 4}
@@ -352,6 +359,32 @@ MonoBehaviour:
     m_value: '{"ButtonCategory":"General","ButtonName":"Back","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
     m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp-firstpass,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_connectionMode: 0
+    m_connections:
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: 1ffcfd4e-68e0-499d-ba9a-d3a7a8462d06
+      m_inputNodeId: 1391111f-f82a-4341-b879-b9f10997984c
+      m_inputSocketId: 7bed1b1a-30d7-4489-a3ad-71b579a3e035
+      m_outputNodeId: 0c75802d-8046-4d94-a8b0-f7503433890b
+      m_outputSocketId: 857144ae-609a-413e-add4-e250d7439763
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 1
+    m_canBeDeleted: 1
+    m_canBeReordered: 1
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 86
+    m_id: 857144ae-609a-413e-add4-e250d7439763
+    m_nodeId: 0c75802d-8046-4d94-a8b0-f7503433890b
+    m_socketName: OutputSocket_1
+    m_value: '{"ButtonCategory":"General","ButtonName":"Unnamed","GameEvent":"GoToMain","TimeDelay":3.0,"Trigger":3}'
+    m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_nodeType: 4
   m_allowDuplicateNodeName: 0
   m_allowEmptyNodeName: 0
@@ -360,7 +393,7 @@ MonoBehaviour:
   m_useFixedUpdate: 0
   m_useLateUpdate: 0
   m_useUpdate: 0
-  m_height: 128
+  m_height: 152
   m_width: 216
   m_x: 504
   m_y: 120
@@ -626,7 +659,7 @@ MonoBehaviour:
   m_version: 1
   m_description: 
   m_id: 780468bc-ed56-4bd8-b992-d7a3107259a0
-  m_lastModified: 133529094584740155
+  m_lastModified: 133529138693474505
 --- !u!114 &798461669557360058
 MonoBehaviour:
   m_ObjectHideFlags: 1
