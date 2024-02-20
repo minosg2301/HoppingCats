@@ -1,9 +1,16 @@
 using Doozy.Engine;
 using Doozy.Engine.UI;
+using UnityEngine;
 
 public class InGameView : BaseViewExt
 {
     public UIButton lobbyButton;
+    public UIButton shopButton;
+
+    public RectTransform starGroup;
+    public RectTransform eggGroup;
+    public RectTransform healthGroup;
+
     public static void Show()
     {
         GameEventMessage.SendEvent(DoozyEventDefine.kGoToInGame);
@@ -12,5 +19,23 @@ public class InGameView : BaseViewExt
     {
         base.Awake();
         if(lobbyButton) lobbyButton.OnClick.OnTrigger.Event.AddListener(() => MainView.Show());
+
+        ShowReadyUI();
+    }
+
+    public void ShowReadyUI()
+    {
+        healthGroup.gameObject.SetActive(false);
+        lobbyButton.gameObject.SetActive(true);
+        shopButton.gameObject.SetActive(true);
+        eggGroup.gameObject.SetActive(true);
+    }
+
+    public void ShowIngameUI()
+    {
+        healthGroup.gameObject.SetActive(true);
+        lobbyButton.gameObject.SetActive(false);
+        shopButton.gameObject.SetActive(false);
+        eggGroup.gameObject.SetActive(false);
     }
 }
