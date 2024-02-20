@@ -16,6 +16,8 @@ MonoBehaviour:
   DatabaseType: 2
   Names:
   - AdMob
+  - Ingame
+  - IngameHoppingCat
   - Leaderboard
   - Main
   - Splash

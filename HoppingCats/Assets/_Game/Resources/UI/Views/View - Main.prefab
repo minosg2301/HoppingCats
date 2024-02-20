@@ -1312,7 +1312,7 @@ MonoBehaviour:
   UpdateHideProgressorOnShow: 0
   UpdateShowProgressorOnHide: 0
   UseCustomStartAnchoredPosition: 1
-  ViewCategory: Game
+  ViewCategory: Custom
   ViewName: MainMenu
 --- !u!114 &5761166631246874717
 MonoBehaviour:
