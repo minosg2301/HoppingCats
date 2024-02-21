@@ -120,8 +120,8 @@ TextureImporter:
       name: Cat_Body_Default
       rect:
         serializedVersion: 2
-        x: 1
-        y: 123
+        x: 1048
+        y: 862
         width: 454
         height: 388
       alignment: 0
@@ -141,8 +141,8 @@ TextureImporter:
       name: Cat_Face_Default_1
       rect:
         serializedVersion: 2
-        x: 1
-        y: 27
+        x: 1680
+        y: 1818
         width: 277
         height: 94
       alignment: 0
@@ -158,6 +158,468 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Cat_Body_Astronaut
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 1142
+        width: 473
+        height: 515
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99793fa2de1196047bc872ed6a2817f3
+      internalID: 410406933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Body_Donut
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 1662
+        width: 533
+        height: 385
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a358fd78482bb4e8d240954537d9e1
+      internalID: -1609051230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Body_Emo
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 1238
+        width: 403
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd26e40c0158c4d47bef79398e2651b7
+      internalID: -1048743214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Body_Halloween
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 1252
+        width: 480
+        height: 408
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f194d35a208e94cb03e285c5df7c59
+      internalID: -2109594985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Body_Mermaid
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 1659
+        width: 570
+        height: 388
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6832910772bc3d4458d3668be6f9fd27
+      internalID: 1588972286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Body_Minion
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 850
+        width: 403
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56fe700d136aa1e4da276b46b3b9acbf
+      internalID: -101679774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Body_StrawHat
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1058
+        width: 471
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9478f0e43da63f4eaf050712ba1bc2e
+      internalID: -1039040641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Body_Taiyaki
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1527
+        width: 570
+        height: 520
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a756b49159dba4f839a270e9a1589c
+      internalID: 459676005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Face_Astronaut
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1722
+        width: 253
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 676becca7ff5217459ed4a2334ea2ebb
+      internalID: -254238557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Face_Default_2
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1626
+        width: 248
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e738524030225742905bfc534d7e38e
+      internalID: -646289703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Face_Emo
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 1022
+        width: 218
+        height: 71
+      alignment: 9
+      pivot: {x: 0.45183486, y: 0.6126761}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b324a9531bba49e409b49fb86487fc10
+      internalID: -905387288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Face_Halloween
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1046
+        width: 248
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 199eaf65fae6dd04aa34173aaba2d543
+      internalID: -1823106470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Face_Minion
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1914
+        width: 298
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3403f6d0b6125c64fad15c07e8a41276
+      internalID: -1325687527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Face_StrawHat
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 1095
+        width: 219
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5bef53dc915384cb685ccddbe5f5a9
+      internalID: -1222676995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Hair_Emo
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 733
+        width: 149
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a220c7cebd5a27c49a71f723ee06ca17
+      internalID: -1236751118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Tail_Astronaut
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 802
+        width: 161
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5183a954547e5949af4f6f9bffdfc36
+      internalID: 366764700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Tail_Donut
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 801
+        width: 161
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792d77e7f7eaca74fb1b8b7814dc4b8c
+      internalID: 964086654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Tail_Emo
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 929
+        width: 162
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a8d4ecddbaba844b0a62e33a7d94f8
+      internalID: -417249411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Tail_Halloween
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 919
+        width: 161
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439d3423bddf52f4c82257bfd87ce6f9
+      internalID: -675013250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Tail_Minion
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 917
+        width: 161
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0261af59835da4e4cb8a9c2fb4a5b801
+      internalID: 1588055423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Tail_StrawHat
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 895
+        width: 161
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c603e8c59d989ec4583bfa495b7538e1
+      internalID: -445346143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Tail_Taiyaki
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 928
+        width: 162
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805e12101e5539643b7ae990e2c6418c
+      internalID: -1459818976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -169,8 +631,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Cat_Body_Astronaut: 410406933
       Cat_Body_Default: -1190831133
+      Cat_Body_Donut: -1609051230
+      Cat_Body_Emo: -1048743214
+      Cat_Body_Halloween: -2109594985
+      Cat_Body_Mermaid: 1588972286
+      Cat_Body_Minion: -101679774
+      Cat_Body_StrawHat: -1039040641
+      Cat_Body_Taiyaki: 459676005
+      Cat_Face_Astronaut: -254238557
       Cat_Face_Default_1: -145287463
+      Cat_Face_Default_2: -646289703
+      Cat_Face_Emo: -905387288
+      Cat_Face_Halloween: -1823106470
+      Cat_Face_Minion: -1325687527
+      Cat_Face_StrawHat: -1222676995
+      Cat_Hair_Emo: -1236751118
+      Cat_Tail_Astronaut: 366764700
+      Cat_Tail_Donut: 964086654
+      Cat_Tail_Emo: -417249411
+      Cat_Tail_Halloween: -675013250
+      Cat_Tail_Minion: 1588055423
+      Cat_Tail_StrawHat: -445346143
+      Cat_Tail_Taiyaki: -1459818976
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
