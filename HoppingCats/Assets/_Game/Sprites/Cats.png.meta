@@ -120,10 +120,10 @@ TextureImporter:
       name: Cat_Body_Default
       rect:
         serializedVersion: 2
-        x: 1048
-        y: 862
-        width: 454
-        height: 388
+        x: 1617
+        y: 851
+        width: 403
+        height: 385
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,8 +267,8 @@ TextureImporter:
       name: Cat_Body_Minion
       rect:
         serializedVersion: 2
-        x: 1504
-        y: 850
+        x: 1048
+        y: 864
         width: 403
         height: 386
       alignment: 0
@@ -456,8 +456,8 @@ TextureImporter:
       name: Cat_Hair_Emo
       rect:
         serializedVersion: 2
-        x: 492
-        y: 733
+        x: 164
+        y: 745
         width: 149
         height: 184
       alignment: 0
@@ -477,8 +477,8 @@ TextureImporter:
       name: Cat_Tail_Astronaut
       rect:
         serializedVersion: 2
-        x: 165
-        y: 802
+        x: 1
+        y: 931
         width: 161
         height: 125
       alignment: 0
@@ -498,8 +498,8 @@ TextureImporter:
       name: Cat_Tail_Donut
       rect:
         serializedVersion: 2
-        x: 1
-        y: 801
+        x: 327
+        y: 919
         width: 161
         height: 125
       alignment: 0
@@ -519,8 +519,8 @@ TextureImporter:
       name: Cat_Tail_Emo
       rect:
         serializedVersion: 2
-        x: 165
-        y: 929
+        x: 1453
+        y: 993
         width: 162
         height: 127
       alignment: 0
@@ -540,7 +540,7 @@ TextureImporter:
       name: Cat_Tail_Halloween
       rect:
         serializedVersion: 2
-        x: 492
+        x: 490
         y: 919
         width: 161
         height: 125
@@ -561,8 +561,8 @@ TextureImporter:
       name: Cat_Tail_Minion
       rect:
         serializedVersion: 2
-        x: 329
-        y: 917
+        x: 1453
+        y: 864
         width: 161
         height: 127
       alignment: 0
@@ -582,8 +582,8 @@ TextureImporter:
       name: Cat_Tail_StrawHat
       rect:
         serializedVersion: 2
-        x: 655
-        y: 895
+        x: 1
+        y: 804
         width: 161
         height: 125
       alignment: 0
@@ -603,8 +603,8 @@ TextureImporter:
       name: Cat_Tail_Taiyaki
       rect:
         serializedVersion: 2
-        x: 1
-        y: 928
+        x: 1453
+        y: 1122
         width: 162
         height: 128
       alignment: 0
@@ -616,6 +616,27 @@ TextureImporter:
       bones: []
       spriteID: 805e12101e5539643b7ae990e2c6418c
       internalID: -1459818976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Tail_Default
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 931
+        width: 161
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027f4851ca9b5704f948ac86e3bca230
+      internalID: -1295932263
       vertices: []
       indices: 
       edges: []
@@ -649,6 +670,7 @@ TextureImporter:
       Cat_Face_StrawHat: -1222676995
       Cat_Hair_Emo: -1236751118
       Cat_Tail_Astronaut: 366764700
+      Cat_Tail_Default: -1295932263
       Cat_Tail_Donut: 964086654
       Cat_Tail_Emo: -417249411
       Cat_Tail_Halloween: -675013250
