@@ -59,7 +59,7 @@
     <file>Assets/GeneratedLocalRepo/Plugins/ThirdParties/VGames/Editor/m2repository/com/vgames/vgames-lib/1.0.0/vgames-lib-1.0.0.pom</file>
   </files>
   <settings>
-    <setting name="androidAbis" value="armeabi-v7a" />
+    <setting name="androidAbis" value="arm64-v8a,armeabi-v7a" />
     <setting name="bundleId" value="com.DefaultCompany.HoppingCats" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
