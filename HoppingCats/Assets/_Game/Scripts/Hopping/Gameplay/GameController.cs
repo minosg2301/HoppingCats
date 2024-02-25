@@ -17,10 +17,10 @@ public class GameController : MonoBehaviour
     private bool moving = false;
 
     private bool started = false;
-
     public void Prepare()
     {
         InitJumpSteps();
+        InGameView.Ins.ShowIngameUI();
         listMove = new();
         moving = false;
         started = true;
@@ -95,6 +95,7 @@ public class GameController : MonoBehaviour
 
     private void MoveRight()
     {
+        Turn(true);
         Vector3 targetPos = jumpManager.container.position;
         targetPos.x -= 1;
         targetPos.y -= 2;
@@ -103,12 +104,19 @@ public class GameController : MonoBehaviour
 
     private void MoveLeft()
     {
+        Turn(false);
         Vector3 targetPos = jumpManager.container.position;
         targetPos.x += 1;
         targetPos.y -= 2;
         jumpManager.container.DOJump3D(targetPos, -jumpPower, jumpDuration).OnComplete(() => moving = false);
     }
-
+    private void Turn(bool faceRight)
+    {
+        Vector3 scale = cat.transform.localScale;
+        if (faceRight) scale.x = -Mathf.Abs(scale.x);
+        else scale.x = Mathf.Abs(scale.x);
+        cat.transform.localScale = scale;
+    }
     private enum MoveType
     {
         Left,
