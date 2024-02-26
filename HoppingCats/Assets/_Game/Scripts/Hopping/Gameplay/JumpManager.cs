@@ -13,6 +13,8 @@ public class JumpManager : MonoBehaviour
     private Dictionary<int, List<JumpStepData>> jumpStepsByRow;
     private List<List<JumpStepData>> jumpSteps;
 
+    private int rowIndex;
+
     public Transform container;
     public GameObject firstStep;
 
@@ -20,14 +22,21 @@ public class JumpManager : MonoBehaviour
     {
         container.RemoveAllChildren();
         jumpSteps = new();
+        jumpStepsByRow = new();
+        rowIndex = 0;
     }
 
     public void InitJumpSteps()
     {
         AddInitJumpStep();
-        foreach (var steps in jumpSteps)
+        //foreach (var steps in jumpSteps)
+        //{
+        //    InstantiateJumpStep(steps, jumpSteps.IndexOf(steps) * 2);
+        //}
+
+        foreach (var step in jumpStepsByRow)
         {
-            InstantiateJumpStep(steps, jumpSteps.IndexOf(steps) * 2);
+            InstantiateJumpStep(step.Value, step.Key * 2);
         }
     }
 
@@ -43,21 +52,40 @@ public class JumpManager : MonoBehaviour
 
     private void AddInitJumpStep()
     {
-        jumpSteps.Add(JumpGenerator.GenerateFirstJumpSteps());
+        jumpStepsByRow.Add(rowIndex++, JumpGenerator.GenerateFirstJumpSteps());
+        //jumpSteps.Add(JumpGenerator.GenerateFirstJumpSteps());
         for (int i = 0; i < firstGenerateCount; i++)
         {
-            jumpSteps.Add(JumpGenerator.GenerateJumpsStep(jumpSteps[i], i % 2 == 0));
+            jumpStepsByRow.Add(rowIndex++, JumpGenerator.GenerateJumpsStep(jumpStepsByRow[i], i % 2 == 0));
+            //jumpSteps.Add(JumpGenerator.GenerateJumpsStep(jumpSteps[i], i % 2 == 0));
         }
     }
 
     public void SpawnNextJumpSteps(bool moveLeft)
     {
-        jumpSteps.Add(JumpGenerator.GenerateJumpsStep(jumpSteps[jumpSteps.Count -1], moveLeft));
+        var listKeys = jumpStepsByRow.Keys;
+        var lastRow = listKeys.MaxBy(e => e);
+        var lastJumpStepsByRow = jumpStepsByRow[lastRow];
+        jumpStepsByRow.Add(rowIndex++, JumpGenerator.GenerateJumpsStep(lastJumpStepsByRow, moveLeft));
+        jumpStepsByRow = jumpStepsByRow.OrderBy(e => e.Key).ToDictionary(obj => obj.Key, obj => obj.Value);
+        //jumpSteps.Add(JumpGenerator.GenerateJumpsStep(jumpSteps[jumpSteps.Count -1], moveLeft));
         container.RemoveAllChildren();
-        foreach (var steps in jumpSteps)
+        //foreach (var steps in jumpSteps)
+        //{
+        //    InstantiateJumpStep(steps, jumpSteps.IndexOf(steps) * 2);
+        //}
+
+        foreach (var step in jumpStepsByRow)
         {
-            InstantiateJumpStep(steps, jumpSteps.IndexOf(steps) * 2);
+            InstantiateJumpStep(step.Value, step.Key * 2);
         }
+    }
+
+    public void RemoveFirstJumpStep()
+    {
+        var listSteps = jumpStepsByRow.Keys.ToList();
+        var fistStepIdx = listSteps.Shift();
+        jumpStepsByRow.Remove(fistStepIdx);
     }
 }
 

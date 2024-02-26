@@ -34,6 +34,7 @@ public class GameController : MonoBehaviour
 
     private void GenerateNextJumpStep(bool moveLeft)
     {
+        jumpManager.RemoveFirstJumpStep();
         jumpManager.SpawnNextJumpSteps(moveLeft);
     }
 
