@@ -36,11 +36,7 @@ namespace moonNest
 
         public LeaderboardRestAPI(string leaderboardName)
         {
-#if KEEP_GAME_CODE // keep game code for old leaderboard -  remove in future
-            this.leaderboardName = GlobalConfig.Ins.gameCode + ":" + leaderboardName;
-#else
-            this.leaderboardName = GlobalConfig.Ins.gameId + ":" + leaderboardName;
-#endif
+            this.leaderboardName = leaderboardName;
         }
 
         public static void UpdateURL()
@@ -52,7 +48,7 @@ namespace moonNest
 
         static string ToServerId(string leaderboardId)
         {
-            return $"{GlobalConfig.Ins.gameId}:{leaderboardId}";
+            return $"{leaderboardId}";
         }
 
         internal static async Task<LeaderboardDataInternal> LoadScoresByRange(string userId, string leaderboardId, ulong minScore, ulong maxScore, int fromRow, int maxRow)

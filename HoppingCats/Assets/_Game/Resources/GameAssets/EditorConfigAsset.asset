@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d39300cf055037b45af27d84173f429e, type: 3}
   m_Name: EditorConfigAsset
   m_EditorClassIdentifier: 
+  neverAskUploadSymbol: 0
   exportConfig:
     exportFileId: 
     exportChest: 0

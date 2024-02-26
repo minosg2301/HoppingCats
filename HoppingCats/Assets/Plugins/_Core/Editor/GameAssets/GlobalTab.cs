@@ -24,7 +24,6 @@ namespace moonNest.editor
             tabContainer.AddTab("Language", new LanguageTab());
             tabContainer.AddTab("Sound", new SoundTab());
             tabContainer.AddTab("Import/Export", new ImportExportTab());
-            tabContainer.AddTab("Game ID", new GameIdTab());
             tabContainer.AddTab("Build", new BuildTab());
         }
 
@@ -185,69 +184,6 @@ namespace moonNest.editor
             Undo.RecordObject(EditorConfigAsset.Ins, "Global Config");
             EditorConfigAsset.Ins.neverAskUploadSymbol = !Draw.ToggleField("Ask Upload Symbol", !EditorConfigAsset.Ins.neverAskUploadSymbol, 100);
             if (GUI.changed) Draw.SetDirty(EditorConfigAsset.Ins);
-        }
-    }
-
-    internal class GameIdTab : TabContent
-    {
-        public override async void DoDraw()
-        {
-            var globalConfig = GlobalConfig.Ins;
-            Draw.BeginDisabledGroup(true);
-            globalConfig.gameId = Draw.TextField("Game Id", globalConfig.gameId, 125);
-            Draw.EndDisabledGroup();
-
-            Draw.Space();
-            if (globalConfig.gameId == "TEMPLATE")
-            {
-                if (Draw.Button("Create Game ID", Color.blue, 200))
-                {
-                    globalConfig.gameId = StringExt.RandomAlphabetWithNumber(6);
-                    Draw.SetDirty(globalConfig);
-                }
-            }
-            else
-            {
-                Draw.LabelBoldBox("Selected Profile", Color.yellow, 200);
-                globalConfig.selectedProfileId = Draw.IntPopup(globalConfig.selectedProfileId, Profiles.Ins.profiles, "name", "id", 250);
-                if (Draw.EndChangeCheck())
-                {
-                    var profile = Profiles.Ins.profiles.Find(p => p.id == globalConfig.selectedProfileId);
-                    if (profile)
-                    {
-                        if (profile.cheatEnabled) DrawUtilities.AddSymbolsOnAllPlatform("ENABLE_CHEAT");
-                        else DrawUtilities.RemoveSymbolsOnAllPlatform("ENABLE_CHEAT");
-                    }
-                    globalConfig.SelectedProfile = profile;
-                    LeaderboardRestAPI.UpdateURL();
-                    Draw.SetDirty(globalConfig);
-                }
-
-                if (Draw.Button("Check GameID", 120))
-                {
-                    var gameId = globalConfig.gameId;
-                    var ret = await LeaderboardRestAPI.RegisterGameID(globalConfig.gameId, Application.identifier);
-                    if (ret != null)
-                    {
-                        if (ret.code == 0)
-                        {
-                            Draw.DisplayDialog("MATCHED", $"GameId [{gameId}]\nAppId [{ret.appId}]\nSAME WITH SERVER", "OK");
-                        }
-                        else if (ret.code == -1)
-                        {
-                            if (Draw.DisplayDialog("EXISTS", $"GameId {gameId}\nUSED BY {ret.appId}", "CHANGE Game Id", "KEEP Game Id"))
-                            {
-                                globalConfig.gameId = StringExt.RandomAlphabetWithNumber(6);
-                                Draw.SetDirty(globalConfig);
-                            }
-                        }
-                        else if (ret.code == -2)
-                        {
-                            Draw.DisplayDialog("EMPTY", $"GameId and Application.Identifier must not empty!!", "OK");
-                        }
-                    }
-                }
-            }
         }
     }
 }
