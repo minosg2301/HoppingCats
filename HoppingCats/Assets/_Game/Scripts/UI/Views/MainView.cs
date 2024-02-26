@@ -13,6 +13,14 @@ public class MainView : BaseViewExt
     protected override void Awake()
     {
         base.Awake();
-        if (playButton) playButton.OnClick.OnTrigger.Event.AddListener(() => InGameView.Show());
+        if (playButton) playButton.OnClick.OnTrigger.Event.AddListener(OnPlayClick);
+    }
+
+    private void OnPlayClick()
+    {
+        SwitchViewController.Ins.Show(()=> 
+        {
+            InGameView.Show();
+        });
     }
 }

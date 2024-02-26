@@ -22,8 +22,7 @@ public class InGameView : BaseViewExt
     {
         base.Awake();
         if (!Ins) Ins = this;
-        if(lobbyButton) lobbyButton.OnClick.OnTrigger.Event.AddListener(() => MainView.Show());
-
+        if(lobbyButton) lobbyButton.OnClick.OnTrigger.Event.AddListener(OnLobbyClick);
         ShowReadyUI();
     }
 
@@ -41,5 +40,12 @@ public class InGameView : BaseViewExt
         lobbyButton.gameObject.SetActive(false);
         shopButton.gameObject.SetActive(false);
         eggGroup.gameObject.SetActive(false);
+    }
+    private void OnLobbyClick()
+    {
+        SwitchViewController.Ins.Show(()=>
+        {
+            MainView.Show();
+        });
     }
 }
