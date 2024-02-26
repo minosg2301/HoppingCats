@@ -111,11 +111,6 @@ namespace moonNest
 #endif
 
         /// <summary>
-        /// Used for services
-        /// </summary>
-        public string gameId = "";
-
-        /// <summary>
         /// Leaderboard URL
         /// </summary>
         public string LeaderboardURL => SelectedProfile.leaderboardUrl;

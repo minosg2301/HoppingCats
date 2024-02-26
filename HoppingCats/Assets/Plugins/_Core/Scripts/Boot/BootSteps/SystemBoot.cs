@@ -3,8 +3,6 @@ using System;
 using System.Globalization;
 using UnityEngine;
 using moonNest;
-using moonNest.ads;
-using moonNest.tracking;
 
 public class SystemBoot : BootStep
 {
@@ -26,7 +24,6 @@ public class SystemBoot : BootStep
         if (!CustomRequestConsentInfo())
         {
 #if UNITY_EDITOR
-            Ads.Init();
             Complete();
 #else
 #if UNITY_ANDROID || UNITY_IOS
@@ -47,8 +44,6 @@ public class SystemBoot : BootStep
     protected void OnUpdateConsentCompleted(bool result)
     {
         ConsentInfoUpdator.OnUpdateCompleted -= OnUpdateConsentCompleted;
-        Ads.GDPRConsent = result;
-        Ads.Init();
 
 #if UNITY_IOS
         StartCoroutine(iOSAuthorizationRequest.RequestAuthorization());

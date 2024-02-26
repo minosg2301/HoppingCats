@@ -12,20 +12,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0362e7bbe15f3c047998e74b54bf2ded, type: 3}
   m_Name: GlobalConfig
   m_EditorClassIdentifier: 
-  selectedProfileId: 0
+  selectedProfileId: 1725220592
   adsEnabled: 1
+  autoUpdate: 0
+  updateType: 0
+  stalenessDays: 1
+  simulateAutoUpdate: 0
   screenSleepMode: -1
   appStorePromotionPurchase: 0
+  fakeStoreMode: 0
   verifyPurchasingOnline: 0
-  gameId: 
   DRMServer: http://vgamestd.com:30003
   trackingServer: https://promote.vgamestd.com:8080
   iosAppId: 
+  useGameCenter: 0
+  useSignInWithApple: 0
   googlePlayLicense: 
   resolutionScaling: 0
   targetDPI: 360
   googleWebClientId: WEB_CLIENTID
-  languages: []
+  languages:
+  - code: English
+    text: TXT_ENGLISH
+  - code: Vietnamese
+    text: TXT_VIETNAMESE
+  - code: French
+    text: TXT_FRENCH
+  - code: German
+    text: TXT_GERMAN
+  - code: Spanish
+    text: TXT_SPANISH
+  - code: Portugese
+    text: TXT_PORTUGUESE
+  - code: Russian
+    text: TXT_RUSSIAN
+  - code: Chinese Simplified
+    text: TXT_CHINESE_SIMPLIFIED
+  - code: Chinese Traditional
+    text: TXT_CHINESE_TRADITIONAL
+  - code: Japanese
+    text: TXT_JAPANESE
+  - code: Korean
+    text: TXT_KOREAN
+  - code: Arabic
+    text: TXT_ARABIC
+  - code: Hindi
+    text: TXT_HINDI
+  - code: Philipine
+    text: TXT_PHILIPPINE
+  - code: Indo
+    text: TXT_INDONESIA
+  - code: Thai
+    text: TXT_THAI
+  - code: Italian
+    text: TXT_ITALIAN
+  - code: Turkis
+    text: TXT_TURKISH
   mainMixer: {fileID: 0}
   musicParam: music
   sfxParam: sfx

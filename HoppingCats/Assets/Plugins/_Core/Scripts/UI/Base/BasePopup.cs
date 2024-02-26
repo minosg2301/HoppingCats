@@ -1,7 +1,6 @@
 ﻿using Doozy.Engine.UI;
 using System;
 using UnityEngine;
-using moonNest.tracking;
 
 namespace moonNest
 {
@@ -106,7 +105,6 @@ namespace moonNest
 
         static void ShowPopup_Internal(string name, UIPopup popup, PopupShowMethod showMethod)
         {
-            //TrackingManager.OnOpenPopup(name);
             switch (showMethod)
             {
                 case PopupShowMethod.NO_QUEUE: UIPopupManager.ShowPopup(popup, false, false); break;
