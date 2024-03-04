@@ -19,7 +19,6 @@ public class JumpManager : MonoBehaviour
     public void Clear()
     {
         container.RemoveAllChildren();
-        jumpSteps = new();
         jumpStepsByRow = new();
         rowIndex = 0;
     }
