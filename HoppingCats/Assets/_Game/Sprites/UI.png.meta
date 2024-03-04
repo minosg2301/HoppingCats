@@ -183,8 +183,8 @@ TextureImporter:
       name: Icon-Egg
       rect:
         serializedVersion: 2
-        x: 410
-        y: 1019
+        x: 836
+        y: 971
         width: 85
         height: 90
       alignment: 9
@@ -204,8 +204,8 @@ TextureImporter:
       name: Icon-Star
       rect:
         serializedVersion: 2
-        x: 833
-        y: 913
+        x: 344
+        y: 961
         width: 150
         height: 148
       alignment: 9
@@ -267,8 +267,8 @@ TextureImporter:
       name: Button-btnClose
       rect:
         serializedVersion: 2
-        x: 833
-        y: 780
+        x: 344
+        y: 828
         width: 120
         height: 131
       alignment: 9
@@ -390,69 +390,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icon-pillowGreen
-      rect:
-        serializedVersion: 2
-        x: 410
-        y: 474
-        width: 325
-        height: 287
-      alignment: 9
-      pivot: {x: 0.5030769, y: 0.5069686}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85e2f61739397494e852e89c0499c94c
-      internalID: 1642337709
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icon-pillowViolet
-      rect:
-        serializedVersion: 2
-        x: 497
-        y: 763
-        width: 334
-        height: 298
-      alignment: 9
-      pivot: {x: 0.502994, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c2f79c82d7856b48a4b377c540a0800
-      internalID: -546069883
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icon-pillowYellow
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 735
-        width: 407
-        height: 374
-      alignment: 9
-      pivot: {x: 0.5085995, y: 0.5013369}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6ef051b5b59dd94aa3d2db201cafc40
-      internalID: 995099902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: titleGame
       rect:
         serializedVersion: 2
@@ -469,6 +406,48 @@ TextureImporter:
       bones: []
       spriteID: 259a68a46b9b5f845b9c43bef715a937
       internalID: 928493690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon-pillow1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 828
+        width: 341
+        height: 281
+      alignment: 9
+      pivot: {x: 0.5043988, y: 0.50711745}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4afed17d4faf1f84798d866732136a9f
+      internalID: -1849479192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon-pillow2
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 780
+        width: 338
+        height: 281
+      alignment: 9
+      pivot: {x: 0.5029586, y: 0.5053381}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3872e67f14773564e8d131e3ebcb3949
+      internalID: -1255114082
       vertices: []
       indices: 
       edges: []
@@ -497,9 +476,8 @@ TextureImporter:
       Button-btnYellow: -1277325435
       Icon-Egg: -716383924
       Icon-Star: 1244455008
-      Icon-pillowGreen: 1642337709
-      Icon-pillowViolet: -546069883
-      Icon-pillowYellow: 995099902
+      Icon-pillow1: -1849479192
+      Icon-pillow2: -1255114082
       titleGame: 928493690
   spritePackingTag: 
   pSDRemoveMatte: 0

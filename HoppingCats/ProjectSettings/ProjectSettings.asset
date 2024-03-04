@@ -668,7 +668,7 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: TextMeshPro;gameanalytics_max_enabled;gameanalytics_admob_enabled;dUI_MANAGER
+    Android: TextMeshPro;gameanalytics_max_enabled;gameanalytics_admob_enabled;dUI_MANAGER;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1
     EmbeddedLinux: TextMeshPro;dUI_MANAGER
     GameCoreScarlett: dUI_MANAGER
     GameCoreXboxOne: TextMeshPro;dUI_MANAGER
