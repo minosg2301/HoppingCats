@@ -2844,8 +2844,10 @@ MonoBehaviour:
   - serializedVersion: 2
     rgba: 4291139071
   pillowsSprite:
-  - {fileID: -1849479192, guid: 5d90a72ff5b242c40adcf2f6f4075464, type: 3}
-  - {fileID: -1255114082, guid: 5d90a72ff5b242c40adcf2f6f4075464, type: 3}
+  - {fileID: 1366679367, guid: 5d90a72ff5b242c40adcf2f6f4075464, type: 3}
+  - {fileID: 1560629829, guid: 5d90a72ff5b242c40adcf2f6f4075464, type: 3}
+  - {fileID: -395939512, guid: 5d90a72ff5b242c40adcf2f6f4075464, type: 3}
+  - {fileID: -1959188323, guid: 5d90a72ff5b242c40adcf2f6f4075464, type: 3}
   pillowColors:
   - serializedVersion: 2
     rgba: 4291554810

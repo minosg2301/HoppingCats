@@ -107,9 +107,6 @@ public class SwitchViewController : SingletonMono<SwitchViewController>
             int spriteIndex = Random.Range(0, pillowsSprite.Count);
             pillowPoolOjs[currentIndex].icon.sprite = pillowsSprite[spriteIndex];
 
-            int colorIndex = Random.Range(0, pillowColors.Count);
-            pillowPoolOjs[currentIndex].icon.color = pillowColors[colorIndex];
-
             float scaleValue = Random.Range(.7f, 2f);
             pillowPoolOjs[currentIndex].icon.rectTransform.DOScale(scaleValue, 0);
 

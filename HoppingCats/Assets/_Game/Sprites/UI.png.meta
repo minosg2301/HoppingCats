@@ -120,8 +120,8 @@ TextureImporter:
       name: 9Scale-PopupBanner
       rect:
         serializedVersion: 2
-        x: 515
-        y: 1304
+        x: 377
+        y: 970
         width: 440
         height: 128
       alignment: 0
@@ -142,7 +142,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 1111
+        y: 1421
         width: 512
         height: 626
       alignment: 0
@@ -162,8 +162,8 @@ TextureImporter:
       name: 9Scale-ResourceBarFrame
       rect:
         serializedVersion: 2
-        x: 732
-        y: 1971
+        x: 379
+        y: 1102
         width: 242
         height: 76
       alignment: 0
@@ -183,8 +183,8 @@ TextureImporter:
       name: Icon-Egg
       rect:
         serializedVersion: 2
-        x: 836
-        y: 971
+        x: 891
+        y: 1957
         width: 85
         height: 90
       alignment: 9
@@ -204,8 +204,8 @@ TextureImporter:
       name: Icon-Star
       rect:
         serializedVersion: 2
-        x: 344
-        y: 961
+        x: 858
+        y: 1583
         width: 150
         height: 148
       alignment: 9
@@ -225,8 +225,8 @@ TextureImporter:
       name: Button-btnHome
       rect:
         serializedVersion: 2
-        x: 708
-        y: 1454
+        x: 377
+        y: 803
         width: 315
         height: 165
       alignment: 0
@@ -246,8 +246,8 @@ TextureImporter:
       name: Button-btnPlay
       rect:
         serializedVersion: 2
-        x: 732
-        y: 1856
+        x: 694
+        y: 855
         width: 215
         height: 113
       alignment: 0
@@ -267,8 +267,8 @@ TextureImporter:
       name: Button-btnClose
       rect:
         serializedVersion: 2
-        x: 344
-        y: 828
+        x: 858
+        y: 1450
         width: 120
         height: 131
       alignment: 9
@@ -288,8 +288,8 @@ TextureImporter:
       name: Button-btnYellow
       rect:
         serializedVersion: 2
-        x: 732
-        y: 1754
+        x: 716
+        y: 260
         width: 215
         height: 100
       alignment: 0
@@ -309,8 +309,8 @@ TextureImporter:
       name: Button-btnGreen
       rect:
         serializedVersion: 2
-        x: 515
-        y: 1063
+        x: 379
+        y: 1180
         width: 425
         height: 239
       alignment: 0
@@ -330,8 +330,8 @@ TextureImporter:
       name: Button-btnStore
       rect:
         serializedVersion: 2
-        x: 515
-        y: 1434
+        x: 806
+        y: 1257
         width: 191
         height: 191
       alignment: 0
@@ -351,8 +351,8 @@ TextureImporter:
       name: Button-btnLeaderboard
       rect:
         serializedVersion: 2
-        x: 732
-        y: 1621
+        x: 806
+        y: 1124
         width: 210
         height: 131
       alignment: 0
@@ -372,8 +372,8 @@ TextureImporter:
       name: Button-btnSelectCharacter
       rect:
         serializedVersion: 2
-        x: 515
-        y: 1627
+        x: 716
+        y: 362
         width: 210
         height: 110
       alignment: 0
@@ -394,7 +394,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 1739
+        y: 474
         width: 729
         height: 308
       alignment: 9
@@ -411,11 +411,95 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icon-pillow1
+      name: Icon-pillow_1
       rect:
         serializedVersion: 2
         x: 1
-        y: 828
+        y: 784
+        width: 374
+        height: 314
+      alignment: 9
+      pivot: {x: 0.5013369, y: 0.5063694}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0505e5913b2774ea7ea244709b0846
+      internalID: 1366679367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon-pillow_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 158
+        width: 373
+        height: 314
+      alignment: 9
+      pivot: {x: 0.5013405, y: 0.5047771}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8972d5d6ad6a9ca46a2f84c39ed34909
+      internalID: 1560629829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon-pillow_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1100
+        width: 376
+        height: 319
+      alignment: 9
+      pivot: {x: 0.49867022, y: 0.5141066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc353e1f894569944b3a4ddd809acf08
+      internalID: -395939512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon-pillow_4
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1733
+        width: 374
+        height: 314
+      alignment: 9
+      pivot: {x: 0.5066845, y: 0.5063694}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a49d2fbcc65774b88da0def3aa24b0
+      internalID: -1959188323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon-pillow_w_1
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1450
         width: 341
         height: 281
       alignment: 9
@@ -425,18 +509,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4afed17d4faf1f84798d866732136a9f
-      internalID: -1849479192
+      spriteID: c6b3435093f22fe4b986a8efbadb58db
+      internalID: 1127410553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icon-pillow2
+      name: Icon-pillow_w_2
       rect:
         serializedVersion: 2
-        x: 496
-        y: 780
+        x: 376
+        y: 191
         width: 338
         height: 281
       alignment: 9
@@ -446,8 +530,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3872e67f14773564e8d131e3ebcb3949
-      internalID: -1255114082
+      spriteID: 9fd69c630d525b94ab3d8e347a83df13
+      internalID: -781043992
       vertices: []
       indices: 
       edges: []
@@ -476,8 +560,12 @@ TextureImporter:
       Button-btnYellow: -1277325435
       Icon-Egg: -716383924
       Icon-Star: 1244455008
-      Icon-pillow1: -1849479192
-      Icon-pillow2: -1255114082
+      Icon-pillow_1: 1366679367
+      Icon-pillow_2: 1560629829
+      Icon-pillow_3: -395939512
+      Icon-pillow_4: -1959188323
+      Icon-pillow_w_1: 1127410553
+      Icon-pillow_w_2: -781043992
       titleGame: 928493690
   spritePackingTag: 
   pSDRemoveMatte: 0
