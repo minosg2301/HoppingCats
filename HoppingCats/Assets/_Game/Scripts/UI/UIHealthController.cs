@@ -15,7 +15,6 @@ public class UIHealthController : SingletonMono<UIHealthController>
     protected override void Start()
     {
         base.Start();
-
         currentCatHP = catInitialHP;
 
     }
