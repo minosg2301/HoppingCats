@@ -4,7 +4,8 @@ using UnityEngine;
 using moonNest;
 public class UserSaveData : BaseUserData
 {
-    
+    public static UserSaveData Ins => LocalData.Get<UserSaveData>();
+
     public int topScore;
 
     protected override void OnInit()

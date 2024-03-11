@@ -23,11 +23,22 @@ public class UIScoreHandler : SingletonMono<UIScoreHandler>
         scoreTxt.SetText(score.ToString());
     }
 
-    public void SetTopScore()
+    private void SetTopScore()
     {
-        topScoreTxt.text = ("Top Score: " );
+        topScoreTxt.text = ("Top Score: " + UserSaveData.Ins.topScore);
     }
 
-    
+    public void OnRunEnd()
+    {
+        CheckIfScoreIsHigherThanHighScore();
+    }
+
+    private void CheckIfScoreIsHigherThanHighScore()
+    {
+        if (score > UserSaveData.Ins.topScore)
+        {
+            UserSaveData.Ins.SetTopScore(score);    
+        }
+    }
 
 }
