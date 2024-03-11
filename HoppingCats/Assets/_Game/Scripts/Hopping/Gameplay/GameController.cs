@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
     {
         InitJumpSteps();
         InGameView.Ins.ShowIngameUI();
+        UIScoreHandler.Ins.SetUpScore();
         listMove = new();
         moving = false;
         started = true;
@@ -88,6 +89,9 @@ public class GameController : MonoBehaviour
                     MoveRight();
                     break;
             }
+
+            //AddScore
+            UIScoreHandler.Ins.AddScore();
 
             // Process Jump Manager (Add - remove step, Gen new jump steps, ...)
             GenerateNextJumpStep(type == MoveType.Left);

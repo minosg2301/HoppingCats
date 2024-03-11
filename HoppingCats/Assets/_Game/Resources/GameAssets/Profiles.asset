@@ -16,9 +16,9 @@ MonoBehaviour:
   - id: 1725220592
     name: Default
     usePhoton: 0
-    verboseLog: 0
-    debugLog: 0
-    logRestApi: 0
+    verboseLog: 1
+    debugLog: 1
+    logRestApi: 1
     cheatEnabled: 0
     cheatNewDay: 0
     syncDate: 0

@@ -37,6 +37,7 @@ public class JumpManager : MonoBehaviour
         foreach(var step in jumpSteps)
         {
             var stepIns = Instantiate(step.config.jumpStep, container);
+            stepIns.SetData(step);
             var pos = new Vector2(step.index, row - 4);
             stepIns.transform.SetLocalPositionAndRotation(pos, Quaternion.identity);
         }
