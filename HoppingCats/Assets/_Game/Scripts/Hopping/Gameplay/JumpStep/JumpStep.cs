@@ -21,17 +21,18 @@ public class JumpStep : MonoBehaviour
     {
         CreateItem();
     }
+
     private void CreateItem()
     {
-        if(data.config.safeJumpType && ShouldExecuteRandomly(.1f))
+        if (data.config.safeJumpType && ShouldExecuteRandomly(.1f))
         {
             item.gameObject.SetActive(true);
-        }        
+        }
     }
 
     protected virtual void Active()
     {
-
+        // Change Type of Jump step (sprite, data)
     }
 
     protected virtual void Deactive()
@@ -41,7 +42,9 @@ public class JumpStep : MonoBehaviour
 
     protected virtual void ApplyJumpStep()
     {
-
+        // Temp jump
+        // Apply item
+        // Apply dead jump
     }
 
     bool ShouldExecuteRandomly(float percentage)

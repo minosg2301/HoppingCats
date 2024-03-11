@@ -1,6 +1,3 @@
-using DG.Tweening;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -34,7 +31,7 @@ public class JumpManager : MonoBehaviour
 
     private void InstantiateJumpStep(List<JumpStepData> jumpSteps, int row)
     {
-        foreach(var step in jumpSteps)
+        foreach (var step in jumpSteps)
         {
             var stepIns = Instantiate(step.config.jumpStep, container);
             stepIns.SetData(step);

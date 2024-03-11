@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -76,7 +75,7 @@ public class JumpGenerator
 
     private static JumpStepData GenerateSafeJumpStep(int index)
     {
-        var safeJumpSteps =  JumpManagerConfig.Ins.jumpStepConfigs.FindAll(e => e.safeJumpType && e.jumpType != JumpType.First);
+        var safeJumpSteps = JumpManagerConfig.Ins.jumpStepConfigs.FindAll(e => e.safeJumpType && e.jumpType != JumpType.First);
         JumpStepData step = new(index, safeJumpSteps.Random());
         return step;
     }
