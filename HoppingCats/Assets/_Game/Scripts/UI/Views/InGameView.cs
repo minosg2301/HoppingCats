@@ -46,7 +46,7 @@ public class InGameView : BaseViewExt
     }
     private void OnLobbyClick()
     {
-        SwitchViewController.Ins.Show(()=>
+        TransitionEffectController.Ins.Show(()=>
         {
             MainView.Show();
         });

@@ -7,17 +7,13 @@ using DG.Tweening;
 using UnityEngine.UI;
 using System.Linq;
 using Random = UnityEngine.Random;
+using Doozy.Engine.UI;
 
-public class SwitchViewController : SingletonMono<SwitchViewController>
+public class TransitionEffectController : SingletonMono<TransitionEffectController>
 {
+    public RectTransform canvasRectt;
+    public UICanvas uiCanvas;
     public RectTransform container;
-    public Animator switchViewAnimator;
-    public float showDuration = 1.5f;
-    public float hideDuration = 1.1f;
-
-
-    public const string kShow = "show";
-    public const string kHide = "hide";
 
     public static Action onShowDone;
     public static Action onHideDone;
@@ -36,7 +32,11 @@ public class SwitchViewController : SingletonMono<SwitchViewController>
     private List<UIPillow> pillowPoolOjs = new();
     public RectTransform logoGameRectt;
 
-    public AnimationCurve titleAnimationCurve;
+    private List<Vector2> topPosLs = new();
+    private List<Vector2> bottomPosLs = new();
+
+    public AnimationCurve showAnimCurve;
+    public AnimationCurve hideAnimCurve;
 
 #if UNITY_EDITOR
     [Sirenix.OdinInspector.Button]
@@ -44,6 +44,8 @@ public class SwitchViewController : SingletonMono<SwitchViewController>
     {
         pillowRectts.Clear();
         pillowRectts = pillowRecttContainer.GetComponentsInChildren<RectTransform>().ToList();
+        pillowRectts.RemoveAt(0);
+        pillowRectts.ForEach(e => e.gameObject.name = $"Pillow - { pillowRectts.IndexOf(e)}");
     }
 #endif
 
@@ -52,10 +54,22 @@ public class SwitchViewController : SingletonMono<SwitchViewController>
         base.Awake();
         container.gameObject.SetActive(false);
 
+        var hideValue = Screen.height * 4;
+        Debug.Log($"T--- screen height {hideValue}"); 
+
         for(int i = 0; i < pillowRectts.Count; i ++)
         {
+            //Set Top Pos-----
+            topPosLs.Add(new Vector3(pillowRectts[i].anchoredPosition.x, pillowRectts[i].anchoredPosition.y + hideValue));
+            //Set Bottom Pos-----
+            bottomPosLs.Add(new Vector3(pillowRectts[i].anchoredPosition.x, pillowRectts[i].anchoredPosition.y - hideValue));
+
+            //Inst Pillows
             var newPillow = Instantiate(pillowPrefab, pillowPrefab.rectTransform.parent);
-            Debug.Log($"T--- Pillow {i}");
+            var pillowName = $"T--- Pillow {i} ---";
+
+            newPillow.rectTransform.DOAnchorPos(topPosLs[i], 0);
+
             pillowPoolOjs.Add(newPillow);
         }    
     }
@@ -63,22 +77,17 @@ public class SwitchViewController : SingletonMono<SwitchViewController>
     public void Show(Action onDone = null)
     {
         container.gameObject.SetActive(true);
-        //switchViewAnimator.SetTrigger(kShow);
         GetRandomBGColor();
         //Dat - May cai sprite pillow ko cung size nen goi nhin bi ky`
         //AssignRandomSpritesToPillows();
-        StartCoroutine(DoMoveIn());
-
-        DOVirtual.DelayedCall(showDuration, () =>
+        StartCoroutine(DoMoveIn(()=> 
         {
-            onShowDone?.Invoke();
-            onDone?.Invoke();
-            switchViewAnimator.SetTrigger(kHide);
-            DOVirtual.DelayedCall(hideDuration, () =>
+            StartCoroutine(DoMoveOut(()=>
             {
-                OnHideDone();
-            });
-        });
+                onDone?.Invoke();
+                container.gameObject.SetActive(false);
+            }));
+        }));
     }
 
     public void GetRandomBGColor()
@@ -92,18 +101,14 @@ public class SwitchViewController : SingletonMono<SwitchViewController>
         bg.color = randomColor;
     }
 
-    private void OnHideDone()
-    {
-        container.gameObject.SetActive(false);
-        onHideDone?.Invoke();
-    }
-
-    public IEnumerator DoMoveIn()
+    public IEnumerator DoMoveIn(Action onDone = null)
     {
         logoGameRectt.DOScale(0, 0);
+        bg.DOFade(1, 1f);
         for (int i = 0; i < pillowPoolOjs.Count; i++)
         {
             var currentIndex = i;
+
             int spriteIndex = Random.Range(0, pillowsSprite.Count);
             pillowPoolOjs[currentIndex].icon.sprite = pillowsSprite[spriteIndex];
 
@@ -113,7 +118,7 @@ public class SwitchViewController : SingletonMono<SwitchViewController>
             float rotationValue = Random.Range(-25, 25f);
             pillowPoolOjs[currentIndex].icon.rectTransform.DORotate(new Vector3(0, 0, rotationValue), 0);
 
-            yield return new WaitForSeconds(.06f);
+            yield return new WaitForSeconds(.04f);
 
             pillowPoolOjs[currentIndex].rectTransform.SetAsFirstSibling();
             pillowPoolOjs[currentIndex].gameObject.SetActive(true);
@@ -134,10 +139,48 @@ public class SwitchViewController : SingletonMono<SwitchViewController>
             DOVirtual.DelayedCall(1f, () =>
             {
                 logoGameRectt.DOScale(1, .4f)
-                        .SetEase(titleAnimationCurve);
+                        .SetEase(showAnimCurve);
             });
-        }    
+        }
+
+        yield return new WaitForSeconds(2f);
+        onDone?.Invoke();
+        onShowDone?.Invoke();
     }
+
+    public IEnumerator DoMoveOut(Action onDone = null)
+    {
+        for (int i = 0; i < pillowPoolOjs.Count; i++)
+        {
+            yield return new WaitForSeconds(.04f);
+
+            var currentIndex = i;
+            var startPos = new Vector2(pillowRectts[currentIndex].anchoredPosition.x, pillowRectts[currentIndex].anchoredPosition.y + 100);
+            pillowPoolOjs[currentIndex].rectTransform.DOAnchorPos(startPos, .1f)
+                .OnComplete(() =>
+                {
+                    pillowPoolOjs[currentIndex].rectTransform.DOAnchorPos(bottomPosLs[currentIndex], .8f)
+                        .OnComplete(()=> 
+                        {
+                            pillowPoolOjs[currentIndex].gameObject.SetActive(false);
+                            pillowPoolOjs[currentIndex].rectTransform.DOAnchorPos(topPosLs[currentIndex], 0f);
+
+                        });
+                });
+
+            DOVirtual.DelayedCall(1f, () =>
+            {
+                logoGameRectt.DOScale(0, .4f);
+                        //.SetEase(hideAnimCurve);
+                bg.DOFade(0, 1f);
+            });
+        }
+
+        yield return new WaitForSeconds(1.4f);
+        onDone?.Invoke();
+        onHideDone?.Invoke();
+    }
+
     private void Shuffle<T>(List<T> list)
     {
         int n = list.Count;
