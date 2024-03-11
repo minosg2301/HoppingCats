@@ -10,6 +10,7 @@ public class InGameView : BaseViewExt
     public RectTransform starGroup;
     public RectTransform eggGroup;
     public RectTransform healthGroup;
+    public RectTransform scoreGroup;
 
     public static InGameView Ins;
 
@@ -32,10 +33,12 @@ public class InGameView : BaseViewExt
         lobbyButton.gameObject.SetActive(true);
         shopButton.gameObject.SetActive(true);
         eggGroup.gameObject.SetActive(true);
+        scoreGroup.gameObject.SetActive(false);
     }
 
     public void ShowIngameUI()
     {
+        scoreGroup.gameObject.SetActive(true);
         healthGroup.gameObject.SetActive(true);
         lobbyButton.gameObject.SetActive(false);
         shopButton.gameObject.SetActive(false);

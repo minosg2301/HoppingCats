@@ -60,7 +60,15 @@ PrefabInstance:
       value: NoneJumpStep
       objectReference: {fileID: 0}
     - target: {fileID: 7558050237532842755, guid: 9baaa8b3739d15745abc4f7cf5f8da6c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558050237532842755, guid: 9baaa8b3739d15745abc4f7cf5f8da6c, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558050237532842755, guid: 9baaa8b3739d15745abc4f7cf5f8da6c, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
