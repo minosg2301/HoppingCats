@@ -18,7 +18,7 @@ public class MainView : BaseViewExt
 
     private void OnPlayClick()
     {
-        SwitchViewController.Ins.Show(()=> 
+        TransitionEffectController.Ins.Show(()=> 
         {
             InGameView.Show();
         });
