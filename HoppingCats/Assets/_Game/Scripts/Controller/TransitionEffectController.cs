@@ -8,6 +8,7 @@ using UnityEngine.UI;
 using System.Linq;
 using Random = UnityEngine.Random;
 using Doozy.Engine.UI;
+using Range = System.Range;
 
 public class TransitionEffectController : SingletonMono<TransitionEffectController>
 {
@@ -20,21 +21,27 @@ public class TransitionEffectController : SingletonMono<TransitionEffectControll
     [Header("BackGround")]
     public Image bg;
     public List<Color32> bgColors = new();
-    [Header("Pillow")]
+
+    [Header("Pillow Properties")]
     public List<Sprite> pillowsSprite = new();
     public List<Color32> pillowColors = new();
-    public List<float> pillowScales = new();
-    public List<Image> pillows = new();
+    public float pillowScaleMax = 2;
+    public float pillowScaleMin = 1.4f;
+    public float pillowRotateMax = 20f;
+    public float pillowRotateMin = -20f;
 
+    [Header("Pillow Gen")]
     public UIPillow pillowPrefab;
+    public RectTransform pillowsContainer;
     public RectTransform pillowRecttContainer;
     public List<RectTransform> pillowRectts;
-    private List<UIPillow> pillowPoolOjs = new();
+    public List<UIPillow> pillowPoolOjs = new();
     public RectTransform logoGameRectt;
 
     private List<Vector2> topPosLs = new();
     private List<Vector2> bottomPosLs = new();
 
+    [Header("Anim")]
     public AnimationCurve showAnimCurve;
     public AnimationCurve hideAnimCurve;
 
@@ -46,6 +53,14 @@ public class TransitionEffectController : SingletonMono<TransitionEffectControll
         pillowRectts = pillowRecttContainer.GetComponentsInChildren<RectTransform>().ToList();
         pillowRectts.RemoveAt(0);
         pillowRectts.ForEach(e => e.gameObject.name = $"Pillow - { pillowRectts.IndexOf(e)}");
+    }
+
+    [Sirenix.OdinInspector.Button]
+    private void GetPillowOb()
+    {
+        pillowPoolOjs.Clear();
+        pillowPoolOjs = pillowsContainer.GetComponentsInChildren<UIPillow>(true).ToList();
+        pillowPoolOjs.ForEach(e => e.gameObject.name = $"UIPillow - { pillowPoolOjs.IndexOf(e)}");
     }
 #endif
 
@@ -64,14 +79,16 @@ public class TransitionEffectController : SingletonMono<TransitionEffectControll
             //Set Bottom Pos-----
             bottomPosLs.Add(new Vector3(pillowRectts[i].anchoredPosition.x, pillowRectts[i].anchoredPosition.y - hideValue));
 
-            //Inst Pillows
-            var newPillow = Instantiate(pillowPrefab, pillowPrefab.rectTransform.parent);
-            var pillowName = $"T--- Pillow {i} ---";
+            if(i > pillowPoolOjs.Count -1)
+            {
+                var newPillow = Instantiate(pillowPrefab, pillowPrefab.rectTransform.parent);
+                var pillowName = $"T--- Pillow {i} ---";
+                Debug.Log($"T--- Inst Pillow {i}");
+                pillowPoolOjs.Add(newPillow);
+            }
 
-            newPillow.rectTransform.DOAnchorPos(topPosLs[i], 0);
-
-            pillowPoolOjs.Add(newPillow);
-        }    
+            pillowPoolOjs[i].rectTransform.DOAnchorPos(topPosLs[i], 0);
+        }
     }
 
     public void Show(Action onDone = null)
@@ -112,10 +129,10 @@ public class TransitionEffectController : SingletonMono<TransitionEffectControll
             int spriteIndex = Random.Range(0, pillowsSprite.Count);
             pillowPoolOjs[currentIndex].icon.sprite = pillowsSprite[spriteIndex];
 
-            float scaleValue = Random.Range(.7f, 2f);
+            float scaleValue = Random.Range(pillowScaleMin, pillowScaleMax);
             pillowPoolOjs[currentIndex].icon.rectTransform.DOScale(scaleValue, 0);
 
-            float rotationValue = Random.Range(-25, 25f);
+            float rotationValue = Random.Range(pillowRotateMin, pillowRotateMax);
             pillowPoolOjs[currentIndex].icon.rectTransform.DORotate(new Vector3(0, 0, rotationValue), 0);
 
             yield return new WaitForSeconds(.04f);
@@ -150,7 +167,7 @@ public class TransitionEffectController : SingletonMono<TransitionEffectControll
 
     public IEnumerator DoMoveOut(Action onDone = null)
     {
-        for (int i = 0; i < pillowPoolOjs.Count; i++)
+        for (int i = pillowPoolOjs.Count - 1; i >= 0 ; i--)
         {
             yield return new WaitForSeconds(.04f);
 

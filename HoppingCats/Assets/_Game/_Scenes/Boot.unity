@@ -2248,7 +2248,7 @@ GameObject:
   - component: {fileID: 1644396795}
   - component: {fileID: 1644396796}
   m_Layer: 0
-  m_Name: UI - Pillow
+  m_Name: UIPillow - 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2289,6 +2289,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 1644396795}
   icon: {fileID: 806557636}
+  pillowScaleMax: 2
+  pillowScaleMin: 2
+  pillowRotateMax: -2
+  pillowRotateMin: 2
 --- !u!1 &1694940827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2583,30 +2587,12 @@ MonoBehaviour:
   - {fileID: -395939512, guid: 5d90a72ff5b242c40adcf2f6f4075464, type: 3}
   - {fileID: -1959188323, guid: 5d90a72ff5b242c40adcf2f6f4075464, type: 3}
   pillowColors: []
-  pillowScales: []
-  pillows:
-  - {fileID: 806557636}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  pillowScaleMax: 2
+  pillowScaleMin: 1.4
+  pillowRotateMax: 20
+  pillowRotateMin: -20
   pillowPrefab: {fileID: 1644396796}
+  pillowsContainer: {fileID: 1020401331}
   pillowRecttContainer: {fileID: 1705224799}
   pillowRectts:
   - {fileID: 274042429}
@@ -2644,6 +2630,8 @@ MonoBehaviour:
   - {fileID: 1694940828}
   - {fileID: 1554631840}
   - {fileID: 392357487}
+  pillowPoolOjs:
+  - {fileID: 1644396796}
   logoGameRectt: {fileID: 815365353}
   showAnimCurve:
     serializedVersion: 2
