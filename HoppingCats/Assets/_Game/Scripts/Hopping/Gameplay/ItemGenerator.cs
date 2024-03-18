@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemGenerator : MonoBehaviour
+public class ItemGenerator
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //public static Item GenerateItem()
+    //{
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //}
+
+    //public static Item GenerateRandomItem()
+    //{
+
+    //}
 }
