@@ -13,10 +13,12 @@ public class JumpStep : MonoBehaviour
     {
         this.data = data;
     }
+
     public void SetData(JumpStepData data)
     {
         this.data = data;
     }
+
     private void Start()
     {
         CreateItem();
