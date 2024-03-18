@@ -99,9 +99,9 @@ public class TransitionEffectController : SingletonMono<TransitionEffectControll
         //AssignRandomSpritesToPillows();
         StartCoroutine(DoMoveIn(()=> 
         {
+            onDone?.Invoke();
             StartCoroutine(DoMoveOut(()=>
             {
-                onDone?.Invoke();
                 container.gameObject.SetActive(false);
             }));
         }));
@@ -172,8 +172,8 @@ public class TransitionEffectController : SingletonMono<TransitionEffectControll
             yield return new WaitForSeconds(.04f);
 
             var currentIndex = i;
-            var startPos = new Vector2(pillowRectts[currentIndex].anchoredPosition.x, pillowRectts[currentIndex].anchoredPosition.y + 100);
-            pillowPoolOjs[currentIndex].rectTransform.DOAnchorPos(startPos, .1f)
+            var startPos = new Vector2(pillowRectts[currentIndex].anchoredPosition.x, pillowRectts[currentIndex].anchoredPosition.y + 200);
+            pillowPoolOjs[currentIndex].rectTransform.DOAnchorPos(startPos, .3f)
                 .OnComplete(() =>
                 {
                     pillowPoolOjs[currentIndex].rectTransform.DOAnchorPos(bottomPosLs[currentIndex], .8f)
