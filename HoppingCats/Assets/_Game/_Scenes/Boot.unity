@@ -2254,10 +2254,13 @@ MonoBehaviour:
   - {fileID: -395939512, guid: 5d90a72ff5b242c40adcf2f6f4075464, type: 3}
   - {fileID: -1959188323, guid: 5d90a72ff5b242c40adcf2f6f4075464, type: 3}
   pillowColors: []
-  pillowScaleMax: 2
   pillowScaleMin: 1.4
-  pillowRotateMax: 20
+  pillowScaleMax: 2
   pillowRotateMin: -20
+  pillowRotateMax: 20
+  pillowInterval: 0.04
+  pillowMoveInDuration: 1.1
+  pillowMoveOutDuration: 1.1
   pillowPrefab: {fileID: 1644396796}
   pillowsContainer: {fileID: 1020401331}
   pillowRecttContainer: {fileID: 1705224799}
@@ -2287,7 +2290,6 @@ MonoBehaviour:
   - {fileID: 1997050067}
   - {fileID: 1708615108}
   - {fileID: 1694940828}
-  - {fileID: 0}
   pillowPoolOjs:
   - {fileID: 1644396796}
   logoGameRectt: {fileID: 815365353}
@@ -2304,13 +2306,22 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 0.6398863
+      value: 1.4435244
+      inSlope: 3.2083826
+      outSlope: 3.2083826
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.14778198
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.4328296
+      outSlope: 0.4328296
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.9278896
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -2320,19 +2331,28 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 34
+      value: 0
+      inSlope: 1.98
+      outSlope: 1.98
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.61678463
+    - serializedVersion: 3
+      time: 0.43360603
+      value: -0.19546908
+      inSlope: 1.407787
+      outSlope: 1.407787
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 1
       inSlope: 0
       outSlope: 0
-      tangentMode: 34
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0

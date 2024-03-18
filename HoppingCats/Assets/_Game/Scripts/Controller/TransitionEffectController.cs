@@ -25,10 +25,16 @@ public class TransitionEffectController : SingletonMono<TransitionEffectControll
     [Header("Pillow Properties")]
     public List<Sprite> pillowsSprite = new();
     public List<Color32> pillowColors = new();
-    public float pillowScaleMax = 2;
     public float pillowScaleMin = 1.4f;
-    public float pillowRotateMax = 20f;
+    public float pillowScaleMax = 2;
     public float pillowRotateMin = -20f;
+    public float pillowRotateMax = 20f;
+
+    [Header("Animatiom Properties")]
+    public float pillowInterval = .04f;
+    public float pillowMoveInDuration = 1.1f;
+    public float pillowMoveOutDuration = 1.1f;
+
 
     [Header("Pillow Gen")]
     public UIPillow pillowPrefab;
@@ -69,7 +75,7 @@ public class TransitionEffectController : SingletonMono<TransitionEffectControll
         base.Awake();
         container.gameObject.SetActive(false);
 
-        var hideValue = Screen.height * 4;
+        var hideValue = Screen.height * 3;
         Debug.Log($"T--- screen height {hideValue}"); 
 
         for(int i = 0; i < pillowRectts.Count; i ++)
@@ -122,6 +128,14 @@ public class TransitionEffectController : SingletonMono<TransitionEffectControll
     {
         logoGameRectt.DOScale(0, 0);
         bg.DOFade(1, 1f);
+        yield return new WaitForSeconds(pillowInterval);
+
+        DOVirtual.DelayedCall(pillowMoveInDuration * .8f, () =>
+        {
+            logoGameRectt.DOScale(1, pillowMoveInDuration * .6f)
+                    .SetEase(showAnimCurve);
+        });
+
         for (int i = 0; i < pillowPoolOjs.Count; i++)
         {
             var currentIndex = i;
@@ -135,65 +149,63 @@ public class TransitionEffectController : SingletonMono<TransitionEffectControll
             float rotationValue = Random.Range(pillowRotateMin, pillowRotateMax);
             pillowPoolOjs[currentIndex].icon.rectTransform.DORotate(new Vector3(0, 0, rotationValue), 0);
 
-            yield return new WaitForSeconds(.04f);
 
             pillowPoolOjs[currentIndex].rectTransform.SetAsFirstSibling();
             pillowPoolOjs[currentIndex].gameObject.SetActive(true);
             var targetPos = new Vector2(pillowRectts[currentIndex].anchoredPosition.x, pillowRectts[currentIndex].anchoredPosition.y - 100);
-            pillowPoolOjs[currentIndex].rectTransform.DOAnchorPos(targetPos, .4f)
+            pillowPoolOjs[currentIndex].rectTransform.DOAnchorPos(targetPos, pillowMoveInDuration * .35f)
                 .OnComplete(()=>
                 {
-                    pillowPoolOjs[currentIndex].rectTransform.DOAnchorPos(pillowRectts[currentIndex].anchoredPosition, .7f);
+                    pillowPoolOjs[currentIndex].rectTransform.DOAnchorPos(pillowRectts[currentIndex].anchoredPosition, pillowMoveInDuration * .65f);
                     pillowPoolOjs[currentIndex].rectTransform.DOScale(new Vector2(.9f, 1.2f), .3f)
                         .OnComplete(() => 
                         {
                             pillowPoolOjs[currentIndex].rectTransform.DOScale(new Vector2(1f, 1f), .2f);
                         });
-
-                    
                 });
 
-            DOVirtual.DelayedCall(1f, () =>
-            {
-                logoGameRectt.DOScale(1, .4f)
-                        .SetEase(showAnimCurve);
-            });
+            yield return new WaitForSeconds(pillowInterval);
         }
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(pillowMoveInDuration + pillowInterval);
         onDone?.Invoke();
         onShowDone?.Invoke();
     }
 
     public IEnumerator DoMoveOut(Action onDone = null)
     {
+        DOVirtual.DelayedCall(pillowMoveOutDuration * .8f, () => 
+        {
+            logoGameRectt.DOScale(0, pillowMoveOutDuration * .5f)
+                .SetEase(hideAnimCurve);
+            bg.DOFade(0, 1f);
+        });
+
         for (int i = pillowPoolOjs.Count - 1; i >= 0 ; i--)
         {
-            yield return new WaitForSeconds(.04f);
-
             var currentIndex = i;
             var startPos = new Vector2(pillowRectts[currentIndex].anchoredPosition.x, pillowRectts[currentIndex].anchoredPosition.y + 200);
-            pillowPoolOjs[currentIndex].rectTransform.DOAnchorPos(startPos, .3f)
+            pillowPoolOjs[currentIndex].rectTransform.DOScale(new Vector2(.9f, 1.2f), .3f)
+                        .OnComplete(() =>
+                        {
+                            pillowPoolOjs[currentIndex].rectTransform.DOScale(new Vector2(1f, 1f), .2f);
+                        });
+
+            pillowPoolOjs[currentIndex].rectTransform.DOAnchorPos(startPos, pillowMoveOutDuration * .2f)
                 .OnComplete(() =>
                 {
-                    pillowPoolOjs[currentIndex].rectTransform.DOAnchorPos(bottomPosLs[currentIndex], .8f)
+                    pillowPoolOjs[currentIndex].rectTransform.DOAnchorPos(bottomPosLs[currentIndex], pillowMoveOutDuration * .8f)
                         .OnComplete(()=> 
                         {
                             pillowPoolOjs[currentIndex].gameObject.SetActive(false);
                             pillowPoolOjs[currentIndex].rectTransform.DOAnchorPos(topPosLs[currentIndex], 0f);
-
                         });
                 });
 
-            DOVirtual.DelayedCall(1f, () =>
-            {
-                logoGameRectt.DOScale(0, .4f);
-                        //.SetEase(hideAnimCurve);
-                bg.DOFade(0, 1f);
-            });
+            yield return new WaitForSeconds(pillowInterval);
         }
 
-        yield return new WaitForSeconds(1.4f);
+        yield return new WaitForSeconds(pillowMoveOutDuration + pillowInterval);
         onDone?.Invoke();
         onHideDone?.Invoke();
     }
