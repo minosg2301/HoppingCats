@@ -1,0 +1,729 @@
+fileFormatVersion: 2
+guid: 594f02f2933a3184bbf808714600bde3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Default-Tile_Cracked_1_Default
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 461
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 1.2727273, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22412c7a848cf4b4f8c98be2150e67ae
+      internalID: 471683280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default-Tile_Cracked_2_Default
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 409
+        width: 52
+        height: 50
+      alignment: 9
+      pivot: {x: 0.48076922, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849b88f2f510ed643a0e6b608892f39d
+      internalID: 1436736768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default-Tile_Cracked_3_Default
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 461
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: -0.27272728, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6552fcd13a592df4fb3dcddf0242efa9
+      internalID: -1453644658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default-Tile_Cracked_4_Default
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 374
+        width: 45
+        height: 41
+      alignment: 9
+      pivot: {x: -0.5555556, y: 0.6097561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49882c336631a9c46940e75cc2b4f393
+      internalID: 724879056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default-Tile_Cracked_Full_Default
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 348
+        width: 140
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1fa20c602ae061489174d4b91e824bf
+      internalID: 1105301722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default-Tile_Flicker_Default
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 296
+        width: 140
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bba7bef058c8c84e97943ba96437962
+      internalID: -710012892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default-Tile_Normal_Default
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 244
+        width: 140
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd80627a13d9694bbba54451abca7b4
+      internalID: -883388764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default-Tile_SpikeTrap_Default
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 455
+        width: 140
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86cc2cd0e3a2a094887f668d3c2cd72d
+      internalID: 1778734653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default-Tile_Transparent_Default
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 192
+        width: 140
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53725215d07d1e84286414e0aba1f598
+      internalID: -222024820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emo-Tile_Cracked_1_Emo
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 331
+        width: 39
+        height: 41
+      alignment: 9
+      pivot: {x: 1.7948718, y: 0.6097561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2971e26360e8f6d46a85caf4b7231e8d
+      internalID: 1844724329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emo-Tile_Cracked_2_Emo
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 417
+        width: 55
+        height: 42
+      alignment: 9
+      pivot: {x: 0.8181818, y: 0.5952381}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf6802f5f4fb2b4480e1345dc714edf
+      internalID: 198823292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emo-Tile_Cracked_3_Emo
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 366
+        width: 42
+        height: 41
+      alignment: 9
+      pivot: {x: 0.54761904, y: 0.6097561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361044d9594be14408c70009b1d35427
+      internalID: -1327369095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emo-Tile_Cracked_4_Emo
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 374
+        width: 45
+        height: 41
+      alignment: 9
+      pivot: {x: -0.5555556, y: 0.6097561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749ea4f693c1c4a4b807c1291d99f9da
+      internalID: -1691201748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emo-Tile_Cracked_Full_Emo
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 149
+        width: 140
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6097561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45addcaa5e3e3d1498428bb826a4f43a
+      internalID: -1559093834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emo-Tile_Flicker_Emo
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 106
+        width: 140
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6097561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4c8e39ebcd6e94e970b52d1cdefcde
+      internalID: -310648544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emo-Tile_Normal_Emo
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 63
+        width: 140
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6097561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5df51de4ba5ee84eade61c87bf6fa92
+      internalID: 1646322679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emo-Tile_SpikeTrap_Emo
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 400
+        width: 140
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4eb9f6e544f4df4c8784691749d1667
+      internalID: 1254505458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emo-Tile_Transparent_Emo
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 20
+        width: 140
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6097561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c946b007ba8b4243b5e765a65486725
+      internalID: 486657603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid-Tile_Cracked_1_Emo
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 331
+        width: 39
+        height: 41
+      alignment: 9
+      pivot: {x: 1.7948718, y: 0.6097561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17e3b63ccab53d4596bbcd013b3f394
+      internalID: -73034677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid-Tile_Cracked_2_Emo
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 417
+        width: 55
+        height: 42
+      alignment: 9
+      pivot: {x: 0.8181818, y: 0.5952381}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7cb5b95cf99e74dab9be748dc7a165
+      internalID: 383258402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid-Tile_Cracked_3_Emo
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 366
+        width: 42
+        height: 41
+      alignment: 9
+      pivot: {x: 0.54761904, y: 0.6097561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed66c65cef13f624ea087e1aee101fc8
+      internalID: -1423129456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid-Tile_Cracked_4_Emo
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 374
+        width: 45
+        height: 41
+      alignment: 9
+      pivot: {x: -0.5555556, y: 0.6097561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602eebdd456effd46a5529a9a2ba0703
+      internalID: 559467854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid-Tile_Cracked_Full_Emo
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 149
+        width: 140
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6097561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d1de8fd9d3ff7e45b2abca5bec781cd
+      internalID: -56647898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid-Tile_Flicker_Emo
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 106
+        width: 140
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6097561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908174937bac1194294127f6e988fd1d
+      internalID: 277563318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid-Tile_Normal_Emo
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 63
+        width: 140
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6097561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec6ffb0aeb3a344e9f3dcacfe716672
+      internalID: -587417285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid-Tile_SpikeTrap_Emo
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 400
+        width: 140
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf387065c7763d459e569673a65e688
+      internalID: 1685448773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mermaid-Tile_Transparent_Emo
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 20
+        width: 140
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6097561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03648a7e684c7345b912fbe618664ff
+      internalID: 1686789221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c00287a4daee2d941b8381184c21c9b8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Default-Tile_Cracked_1_Default: 471683280
+      Default-Tile_Cracked_2_Default: 1436736768
+      Default-Tile_Cracked_3_Default: -1453644658
+      Default-Tile_Cracked_4_Default: 724879056
+      Default-Tile_Cracked_Full_Default: 1105301722
+      Default-Tile_Flicker_Default: -710012892
+      Default-Tile_Normal_Default: -883388764
+      Default-Tile_SpikeTrap_Default: 1778734653
+      Default-Tile_Transparent_Default: -222024820
+      Emo-Tile_Cracked_1_Emo: 1844724329
+      Emo-Tile_Cracked_2_Emo: 198823292
+      Emo-Tile_Cracked_3_Emo: -1327369095
+      Emo-Tile_Cracked_4_Emo: -1691201748
+      Emo-Tile_Cracked_Full_Emo: -1559093834
+      Emo-Tile_Flicker_Emo: -310648544
+      Emo-Tile_Normal_Emo: 1646322679
+      Emo-Tile_SpikeTrap_Emo: 1254505458
+      Emo-Tile_Transparent_Emo: 486657603
+      Mermaid-Tile_Cracked_1_Emo: -73034677
+      Mermaid-Tile_Cracked_2_Emo: 383258402
+      Mermaid-Tile_Cracked_3_Emo: -1423129456
+      Mermaid-Tile_Cracked_4_Emo: 559467854
+      Mermaid-Tile_Cracked_Full_Emo: -56647898
+      Mermaid-Tile_Flicker_Emo: 277563318
+      Mermaid-Tile_Normal_Emo: -587417285
+      Mermaid-Tile_SpikeTrap_Emo: 1685448773
+      Mermaid-Tile_Transparent_Emo: 1686789221
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
