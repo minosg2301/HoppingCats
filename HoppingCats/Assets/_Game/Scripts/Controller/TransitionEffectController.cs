@@ -8,7 +8,6 @@ using UnityEngine.UI;
 using System.Linq;
 using Random = UnityEngine.Random;
 using Doozy.Engine.UI;
-using Range = System.Range;
 
 public class TransitionEffectController : SingletonMono<TransitionEffectController>
 {
@@ -76,20 +75,16 @@ public class TransitionEffectController : SingletonMono<TransitionEffectControll
         container.gameObject.SetActive(false);
 
         var hideValue = Screen.height * 3;
-        Debug.Log($"T--- screen height {hideValue}"); 
-
         for(int i = 0; i < pillowRectts.Count; i ++)
         {
-            //Set Top Pos-----
+            //Init Top Pos-----
             topPosLs.Add(new Vector3(pillowRectts[i].anchoredPosition.x, pillowRectts[i].anchoredPosition.y + hideValue));
-            //Set Bottom Pos-----
+            //Init Bottom Pos-----
             bottomPosLs.Add(new Vector3(pillowRectts[i].anchoredPosition.x, pillowRectts[i].anchoredPosition.y - hideValue));
 
             if(i > pillowPoolOjs.Count -1)
             {
                 var newPillow = Instantiate(pillowPrefab, pillowPrefab.rectTransform.parent);
-                var pillowName = $"T--- Pillow {i} ---";
-                Debug.Log($"T--- Inst Pillow {i}");
                 pillowPoolOjs.Add(newPillow);
             }
 
@@ -101,8 +96,6 @@ public class TransitionEffectController : SingletonMono<TransitionEffectControll
     {
         container.gameObject.SetActive(true);
         GetRandomBGColor();
-        //Dat - May cai sprite pillow ko cung size nen goi nhin bi ky`
-        //AssignRandomSpritesToPillows();
         StartCoroutine(DoMoveIn(()=> 
         {
             onDone?.Invoke();
@@ -122,12 +115,13 @@ public class TransitionEffectController : SingletonMono<TransitionEffectControll
         }
         Color32 randomColor = bgColors[UnityEngine.Random.Range(0, bgColors.Count)];
         bg.color = randomColor;
+        bg.DOFade(0, 0);
     }
 
     public IEnumerator DoMoveIn(Action onDone = null)
     {
         logoGameRectt.DOScale(0, 0);
-        bg.DOFade(1, 1f);
+        bg.DOFade(1, .5f);
         yield return new WaitForSeconds(pillowInterval);
 
         DOVirtual.DelayedCall(pillowMoveInDuration * .8f, () =>
@@ -208,18 +202,5 @@ public class TransitionEffectController : SingletonMono<TransitionEffectControll
         yield return new WaitForSeconds(pillowMoveOutDuration + pillowInterval);
         onDone?.Invoke();
         onHideDone?.Invoke();
-    }
-
-    private void Shuffle<T>(List<T> list)
-    {
-        int n = list.Count;
-        while (n > 1)
-        {
-            n--;
-            int k = UnityEngine.Random.Range(0, n + 1);
-            T value = list[k];
-            list[k] = list[n];
-            list[n] = value;
-        }
     }
 }

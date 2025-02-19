@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 380569529584635686}
   - component: {fileID: 380569529584635704}
   - component: {fileID: 380569529584635709}
+  - component: {fileID: 5694903668395305205}
   m_Layer: 5
   m_Name: BootLoader
   m_TagString: Untagged
@@ -291,6 +292,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d0daf0a7ad86c14faef9a9b2416fa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  status: 
+  checkInternet: 0
+  calledOnce: 0
+  onStepEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onStepCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5694903668395305205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380569529584635711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2daecaee72370cc4b9528613472a5f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   status: 
