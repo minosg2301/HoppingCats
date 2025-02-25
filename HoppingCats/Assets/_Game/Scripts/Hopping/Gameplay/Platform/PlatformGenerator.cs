@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlatformGenerator
 {
-    private const int limitIndex = 20;
+    private const int limitIndex = 10;
 
     public static List<Platform> GenerateFirstPlatforms()
     {

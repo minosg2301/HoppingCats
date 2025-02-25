@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlatformManager : MonoBehaviour
 {
-    private const int firstGenerateCount = 10;
+    private const int firstGenerateCount = 5;
 
     private Dictionary<int, List<Platform>> platformsByRow;
 

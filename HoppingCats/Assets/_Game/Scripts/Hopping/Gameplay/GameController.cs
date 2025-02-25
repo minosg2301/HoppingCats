@@ -1,15 +1,10 @@
-using DG.Tweening;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
     public PlatformManager platformManager;
     public CatController cat;
 
-    
-
-    private bool isMoving = false;
     private bool isIngame = false;
 
     private void Awake()
@@ -19,26 +14,50 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (!isIngame) return;
+
+        //Handle cat jump
+        if (!cat.IsJumping)
         {
-            DoMove(MoveType.Left);
+            //Key
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                DoMove(JumpType.Left);
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                DoMove(JumpType.Right);
+            }
+
+            //Mouse
+            if (Input.GetMouseButtonDown(0)) 
+            {
+                Vector2 touchPosition = Input.mousePosition; 
+                CheckScreenTouch(touchPosition);
+            }
+            //Mobile
+            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) 
+            {
+                Vector2 touchPosition = Input.GetTouch(0).position; 
+                CheckScreenTouch(touchPosition);
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            DoMove(MoveType.Right);
-        }
+        
     }
 
 
     public void StartGame()
     {
         if (isIngame) return;
-
         InitPlatforms();
-        //InGameView.Ins.ShowIngameUI();
-        //UIScoreHandler.Ins.SetUpScore();
-        isMoving = false;
         isIngame = true;
+    }
+
+    public void EndGame()
+    {
+        //if (!isIngame) return;
+        //isIngame = false;
+        StartGame();
     }
 
     private void InitPlatforms()
@@ -47,20 +66,31 @@ public class GameController : MonoBehaviour
         platformManager.InitPlatforms();
     }
 
-    private void DoMove(MoveType moveType)
+    private void CheckScreenTouch(Vector2 position)
     {
-        if (cat.IsMoving) return;
+        float screenWidth = Screen.width;
 
-        if(moveType == MoveType.Left)
+        if (position.x < screenWidth / 2) 
         {
-            cat.MoveLeft();
+            DoMove(JumpType.Left);
         }
-        else
+        else 
         {
-            cat.MoveRight();
+            DoMove(JumpType.Right);
         }
+    }
 
-        GenerateNextJumpStep(moveType == MoveType.Left);
+    private void DoMove(JumpType moveType)
+    {
+        if (cat.IsJumping) return;
+        cat.DoJump(moveType, 
+            ()=> { 
+                //start jump
+            },
+            ()=> {
+                //end jump
+                GenerateNextJumpStep(moveType == JumpType.Left);
+            });
     }
 
     private void GenerateNextJumpStep(bool moveLeft)
@@ -68,7 +98,4 @@ public class GameController : MonoBehaviour
         platformManager.RemoveFirstPlatform();
         platformManager.SpawnNextPlatforms(moveLeft);
     }
-
-    
-    
 }
