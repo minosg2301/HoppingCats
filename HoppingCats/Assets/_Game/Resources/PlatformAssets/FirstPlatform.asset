@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc2e4fe40afed4e47bc60f0c98e902bb, type: 3}
-  m_Name: SpikeJumpStep
+  m_Name: FirstPlatform
   m_EditorClassIdentifier: 
-  jumpType: 4
-  jumpStep: {fileID: 5058513718683120631, guid: 5fe00f03e7cfc6340bafaf1bae417281, type: 3}
-  safeJumpType: 0
+  platformType: 6
+  platformPrefab: {fileID: 3777409526900253707, guid: 50653a601c0ace84abd804d35e085c58, type: 3}
+  isSafe: 1
+  platformImage: {fileID: 0}

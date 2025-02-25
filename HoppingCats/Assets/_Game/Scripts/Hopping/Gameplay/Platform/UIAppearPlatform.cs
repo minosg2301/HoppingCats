@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AppearJumpStep : JumpStep
+public class UIAppearPlatform : UIPlatform
 {
-    public AppearJumpStep(JumpStepData data) : base(data)
+    public UIAppearPlatform(Platform data) : base(data)
     {
 
     }

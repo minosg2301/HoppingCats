@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc2e4fe40afed4e47bc60f0c98e902bb, type: 3}
-  m_Name: NoneJumpStep
+  m_Name: CloudPlatform
   m_EditorClassIdentifier: 
-  jumpType: 1
-  jumpStep: {fileID: 416802887497921237, guid: d2db9b4fbfa38b84a866f7ed483ebfbc, type: 3}
-  safeJumpType: 0
+  platformType: 2
+  platformPrefab: {fileID: 1521236475324458702, guid: f742ee950dde6f2488eefae0a38f426c, type: 3}
+  isSafe: 0
+  platformImage: {fileID: 0}

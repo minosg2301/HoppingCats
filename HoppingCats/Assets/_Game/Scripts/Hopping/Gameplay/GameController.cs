@@ -4,124 +4,71 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public JumpManager jumpManager;
-    public GameObject cat;
+    public PlatformManager platformManager;
+    public CatController cat;
 
-    public float jumpPower = 1f;
-    public float jumpDuration = 0.2f;
+    
 
-    private List<MoveType> listMove = new();
-    private bool moving = false;
+    private bool isMoving = false;
+    private bool isIngame = false;
 
-    private bool started = false;
-    public void Prepare()
+    private void Awake()
     {
-        InitJumpSteps();
-        InGameView.Ins.ShowIngameUI();
-        UIScoreHandler.Ins.SetUpScore();
-        listMove = new();
-        moving = false;
-        started = true;
-    }
-
-    private void InitJumpSteps()
-    {
-        jumpManager.Clear();
-        jumpManager.InitJumpSteps();
-    }
-
-    private void GenerateNextJumpStep(bool moveLeft)
-    {
-        jumpManager.RemoveFirstJumpStep();
-        jumpManager.SpawnNextJumpSteps(moveLeft);
+        StartGame();
     }
 
     private void Update()
     {
-        if (!started)
+        if (Input.GetKeyDown(KeyCode.A))
         {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                Prepare();
-            }
+            DoMove(MoveType.Left);
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            DoMove(MoveType.Right);
+        }
+    }
+
+
+    public void StartGame()
+    {
+        if (isIngame) return;
+
+        InitPlatforms();
+        //InGameView.Ins.ShowIngameUI();
+        //UIScoreHandler.Ins.SetUpScore();
+        isMoving = false;
+        isIngame = true;
+    }
+
+    private void InitPlatforms()
+    {
+        platformManager.Clear();
+        platformManager.InitPlatforms();
+    }
+
+    private void DoMove(MoveType moveType)
+    {
+        if (cat.IsMoving) return;
+
+        if(moveType == MoveType.Left)
+        {
+            cat.MoveLeft();
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                AddMove(MoveType.Left);
-            }
-            else if (Input.GetKeyDown(KeyCode.D))
-            {
-                AddMove(MoveType.Right);
-            }
-
-            DoMove();
+            cat.MoveRight();
         }
+
+        GenerateNextJumpStep(moveType == MoveType.Left);
     }
 
-    private void AddMove(MoveType type)
+    private void GenerateNextJumpStep(bool moveLeft)
     {
-        listMove.Add(type);
+        platformManager.RemoveFirstPlatform();
+        platformManager.SpawnNextPlatforms(moveLeft);
     }
 
-    private void DoMove()
-    {
-        if (!moving && listMove.Count > 0)
-        {
-            moving = true;
-            var type = listMove.Shift();
-
-            // Check status of cat
-
-            // Cat do animation jump
-
-            // Jump container do move
-            switch (type)
-            {
-                case MoveType.Left:
-                    MoveLeft();
-                    break;
-                case MoveType.Right:
-                    MoveRight();
-                    break;
-            }
-
-            //AddScore
-            UIScoreHandler.Ins.AddScore();
-
-            // Process Jump Manager (Add - remove step, Gen new jump steps, ...)
-            GenerateNextJumpStep(type == MoveType.Left);
-        }
-    }
-
-    private void MoveRight()
-    {
-        Turn(true);
-        Vector3 targetPos = jumpManager.container.position;
-        targetPos.x -= 1;
-        targetPos.y -= 2;
-        jumpManager.container.DOJump3D(targetPos, -jumpPower, jumpDuration).OnComplete(() => moving = false);
-    }
-
-    private void MoveLeft()
-    {
-        Turn(false);
-        Vector3 targetPos = jumpManager.container.position;
-        targetPos.x += 1;
-        targetPos.y -= 2;
-        jumpManager.container.DOJump3D(targetPos, -jumpPower, jumpDuration).OnComplete(() => moving = false);
-    }
-    private void Turn(bool faceRight)
-    {
-        Vector3 scale = cat.transform.localScale;
-        if (faceRight) scale.x = -Mathf.Abs(scale.x);
-        else scale.x = Mathf.Abs(scale.x);
-        cat.transform.localScale = scale;
-    }
-    private enum MoveType
-    {
-        Left,
-        Right
-    }
+    
+    
 }

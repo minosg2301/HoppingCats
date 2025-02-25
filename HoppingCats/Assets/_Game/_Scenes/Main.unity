@@ -132,8 +132,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 127148097}
+  - component: {fileID: 127148098}
   m_Layer: 0
-  m_Name: MainCharacter
+  m_Name: CatController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,14 +156,30 @@ Transform:
   m_Father: {fileID: 749286472}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &419243187 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5994255979223325677, guid: 58f782ff32588b547890bb21b7978f47, type: 3}
-  m_PrefabInstance: {fileID: 5994255978825203550}
+--- !u!114 &127148098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127148096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9936b7a841f49364494f496e56337d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  catCollider: {fileID: 419243191}
+  catUITransform: {fileID: 419243188}
+  jumpPower: 1
+  jumpDuration: 0.2
 --- !u!4 &419243188 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5994255979223325674, guid: 58f782ff32588b547890bb21b7978f47, type: 3}
+  m_PrefabInstance: {fileID: 5994255978825203550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &419243191 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 8389474556165191847, guid: 58f782ff32588b547890bb21b7978f47, type: 3}
   m_PrefabInstance: {fileID: 5994255978825203550}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &652714206
@@ -176,7 +193,7 @@ GameObject:
   - component: {fileID: 652714207}
   - component: {fileID: 652714208}
   m_Layer: 0
-  m_Name: JumpContainer
+  m_Name: PlatformContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,7 +224,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 652714206}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cf32bd7f5338164b9df28722eb4263d, type: 3}
+  m_Script: {fileID: 11500000, guid: 235eeb7c8033a244585248b8e2c0839e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   container: {fileID: 1468733029}
@@ -258,6 +275,7 @@ GameObject:
   - component: {fileID: 1275025591}
   - component: {fileID: 1275025590}
   - component: {fileID: 1275025593}
+  - component: {fileID: 1275025594}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -364,6 +382,22 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1275025594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275025589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f36e274d5c4d06844ab4141d58fd6f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 127148097}
+  smoothSpeed: 0.125
+  offset: {x: 0, y: -1, z: 0}
+  bottomLimit: 0
 --- !u!1 &1371897438
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,10 +442,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6660e3677d1861941952d87d1deaac02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpManager: {fileID: 652714208}
-  cat: {fileID: 419243187}
-  jumpPower: 1
-  jumpDuration: 0.2
+  platformManager: {fileID: 652714208}
+  cat: {fileID: 127148098}
 --- !u!1 &1468733028
 GameObject:
   m_ObjectHideFlags: 0

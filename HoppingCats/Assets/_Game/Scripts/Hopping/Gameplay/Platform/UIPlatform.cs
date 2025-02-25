@@ -1,20 +1,17 @@
 using UnityEngine;
 
-public class JumpStep : MonoBehaviour
+public class UIPlatform : MonoBehaviour
 {
-    public JumpStepData data;
-
-    private bool deadJump;
-    public bool DeadJump => deadJump;
+    public Platform data;
 
     public Item item;
 
-    public JumpStep(JumpStepData data)
+    public UIPlatform(Platform data)
     {
         this.data = data;
     }
 
-    public void SetData(JumpStepData data)
+    public void SetData(Platform data)
     {
         this.data = data;
     }
@@ -26,7 +23,7 @@ public class JumpStep : MonoBehaviour
 
     private void CreateItem()
     {
-        if (data.config.safeJumpType && ShouldExecuteRandomly(.1f))
+        if (data.config.isSafe && ShouldExecuteRandomly(.1f))
         {
             item.gameObject.SetActive(true);
         }

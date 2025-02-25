@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc2e4fe40afed4e47bc60f0c98e902bb, type: 3}
-  m_Name: NormalJumpStep
+  m_Name: AppearPlatform
   m_EditorClassIdentifier: 
-  jumpType: 0
-  jumpStep: {fileID: 592600109893633870, guid: f98d1f1b94ca26f43bc53be06762eee0, type: 3}
-  safeJumpType: 1
+  platformType: 5
+  platformPrefab: {fileID: 6940255903130397594, guid: 97c8b09976fac8d41bc38e3fc72202cc, type: 3}
+  isSafe: 0
+  platformImage: {fileID: 0}
