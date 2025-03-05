@@ -4,6 +4,7 @@ using UnityEngine;
 public class UIGroupByGameState : MonoBehaviour
 {
     public Transform container;
+    public CanvasGroup canvasGroup;
     public List<GameState> availableStates;
 
     private void OnEnable()
