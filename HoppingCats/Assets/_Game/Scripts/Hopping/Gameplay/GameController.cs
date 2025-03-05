@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class GameController : MonoBehaviour
 {
+    public static GameController Ins;
+
     public PlatformManager platformManager;
     public CatController cat;
 
@@ -20,21 +21,21 @@ public class GameController : MonoBehaviour
         get
         {
             return GameStateManager.Ins.CurrentGameState != GameState.LOBBY &&
-                GameStateManager.Ins.CurrentGameState != GameState.LOSE;
+                GameStateManager.Ins.CurrentGameState != GameState.LOSEGAWE;
         }
     }
 
     private void Awake()
     {
-        GameEventManager.Ins.OnSetupLevel += OnSetupLevel;
+        if (!Ins) Ins = this;
 
+        GameEventManager.Ins.OnSetupLevel += OnSetupLevel;
         if (!isInitstialized)
         {
             OnSetupLevel();
             isInitstialized = true;
         }
     }
-    
 
     private void Update()
     {
@@ -71,7 +72,8 @@ public class GameController : MonoBehaviour
     #region puplic methods
     public void LoseHandle()
     {
-        GameStateManager.Ins.ChangeGameState(GameState.LOSE);
+        GameStateManager.Ins.ChangeGameState(GameState.LOSEGAWE);
+        GameEventManager.Ins.OnGameLose();
         LosePopup.Show();
     }
 
@@ -100,9 +102,9 @@ public class GameController : MonoBehaviour
 
     private void DoMove(JumpType moveType)
     {
-        if (GameStateManager.Ins.CurrentGameState != GameState.INGAME)
+        if (GameStateManager.Ins.CurrentGameState != GameState.STARTGAME)
         {
-            GameStateManager.Ins.ChangeGameState(GameState.INGAME);
+            GameStateManager.Ins.ChangeGameState(GameState.STARTGAME);
             GameEventManager.Ins.OnStartGame();
         }
 

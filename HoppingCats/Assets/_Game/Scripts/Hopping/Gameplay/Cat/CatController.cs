@@ -11,7 +11,6 @@ public enum JumpType
 public class CatController : MonoBehaviour
 {
     [Header("Components")]
-    public GameController gameController;
     public CatAnimationController animationController;
 
     [Header("Properties")]
@@ -53,8 +52,12 @@ public class CatController : MonoBehaviour
                 platFormGrounding = nextPlatform;
                 if (!platFormGrounding.Status.isSafe)
                 {
-                    gameController.LoseHandle();
+                    GameController.Ins.LoseHandle();
                     return;
+                }
+                else
+                {
+                    GameEventManager.Ins.OnAddScore();
                 }
                 platFormGrounding.onUpdateStatus = OnPlatFormUpdate;
             }
@@ -65,7 +68,7 @@ public class CatController : MonoBehaviour
     {
         if (!uiPlatformStatus.isSafe)
         {
-            gameController.LoseHandle();
+            GameController.Ins.LoseHandle();
         }
     }
 

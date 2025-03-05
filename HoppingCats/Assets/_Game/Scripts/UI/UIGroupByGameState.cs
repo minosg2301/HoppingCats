@@ -7,19 +7,28 @@ public class UIGroupByGameState : MonoBehaviour
     public CanvasGroup canvasGroup;
     public List<GameState> availableStates;
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         GameEventManager.Ins.OnGameStateChanged += Set;
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
         GameEventManager.Ins.OnGameStateChanged -= Set;
     }
 
-    public void Set(GameState state)
+    public virtual void Set(GameState state)
     {
         var available = availableStates != null && availableStates.Exists(e => e == state);
         if(container) container.gameObject.SetActive(available);
+        if (available)
+        {
+            OnShow();
+        }
+    }
+
+    protected virtual void OnShow()
+    {
+
     }
 }

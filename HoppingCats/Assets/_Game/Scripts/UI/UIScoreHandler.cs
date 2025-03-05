@@ -1,14 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using moonNest;
 using TMPro;
-public class UIScoreHandler : SingletonMono<UIScoreHandler>
+using System;
+
+public class UIScoreHandler : UIGroupByGameState
 {
     public TextMeshProUGUI scoreTxt;
     public TextMeshProUGUI topScoreTxt;
 
     public int score;
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        GameEventManager.Ins.OnAddScore += AddScore;
+        GameEventManager.Ins.OnEndGame += OnEndGame;
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        GameEventManager.Ins.OnAddScore -= AddScore;
+        GameEventManager.Ins.OnEndGame -= OnEndGame;
+    }
+
+    protected override void OnShow()
+    {
+        base.OnShow();
+        SetUpScore();
+    }
 
     public void SetUpScore()
     {
@@ -28,7 +48,7 @@ public class UIScoreHandler : SingletonMono<UIScoreHandler>
         topScoreTxt.text = ("Top Score: " + UserSaveData.Ins.topScore);
     }
 
-    public void OnRunEnd()
+    private void OnEndGame()
     {
         CheckIfScoreIsHigherThanHighScore();
     }

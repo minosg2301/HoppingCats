@@ -1,38 +1,52 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using moonNest;
 using Doozy.Engine.Progress;
 
-public class UIHealthController : SingletonMono<UIHealthController>
+public class UIHealthController : UIGroupByGameState
 {
-    [HideInInspector] public float currentCatHP;
-    [SerializeField] private float decreaseHP;
-    [SerializeField] private float catInitialHP = 100f;
+    public Progressor progressor;
 
-    public Progressor  healthProgressor;
+    private float countdownTime = 13f;
+    private float timer;
 
-    protected override void Start()
+    private bool isCountDown;
+
+    protected override void OnEnable()
     {
-        base.Start();
-        currentCatHP = catInitialHP;
-
+        base.OnEnable();
+        GameEventManager.Ins.OnGameLose += OnGameLose;
     }
 
-    private void Update()
+    protected override void OnDisable()
     {
-        DecreaseHP();
+        base.OnDisable();
+        GameEventManager.Ins.OnGameLose -= OnGameLose;
     }
 
-    void DecreaseHP()
+    protected override void OnShow()
     {
-        currentCatHP -= decreaseHP * Time.deltaTime;
-        healthProgressor.SetValue(currentCatHP/catInitialHP);
-        if (currentCatHP <= 0f)
+        base.OnShow();
+        timer = countdownTime;
+        progressor.SetValue(1);
+        isCountDown = true;
+    }
+    private void OnGameLose()
+    {
+        isCountDown = false;
+    }
+
+    void Update()
+    {
+        if (!isCountDown) return;
+
+        if (timer > 0)
         {
-            Debug.Log("Dat - Game Lost");
+            timer -= Time.deltaTime; 
+            progressor.SetValue(timer / countdownTime); 
+        }
+        else
+        {
+            progressor.SetValue(0);
+            GameController.Ins.LoseHandle();
         }
     }
-
-    
 }
