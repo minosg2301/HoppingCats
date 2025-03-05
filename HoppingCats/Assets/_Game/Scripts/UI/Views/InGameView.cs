@@ -27,6 +27,12 @@ public class InGameView : BaseViewExt
         ShowReadyUI();
     }
 
+    protected override void OnShow()
+    {
+        base.OnShow();
+        GameEventManager.Ins.OnSetupLevel();
+    }
+
     public void ShowReadyUI()
     {
         healthGroup.gameObject.SetActive(false);

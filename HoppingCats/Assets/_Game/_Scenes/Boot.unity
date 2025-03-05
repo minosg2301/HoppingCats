@@ -565,6 +565,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: View - Splash
       objectReference: {fileID: 0}
+    - target: {fileID: 380569530336805276, guid: c46d450ed1a7b20409d2b538c535d1be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c46d450ed1a7b20409d2b538c535d1be, type: 3}
 --- !u!224 &581176463 stripped

@@ -1,10 +1,22 @@
+using System;
 using UnityEngine;
+
+public class UIPlatformStatus
+{
+    public bool isSafe;
+}
 
 public class UIPlatform : MonoBehaviour
 {
     public Platform data;
 
     public Item item;
+
+    public Action<UIPlatformStatus> onUpdateStatus = delegate {};
+
+    private UIPlatformStatus status;
+
+    public UIPlatformStatus Status => status;
 
     public UIPlatform(Platform data)
     {
@@ -14,42 +26,17 @@ public class UIPlatform : MonoBehaviour
     public void SetData(Platform data)
     {
         this.data = data;
-    }
-
-    private void Start()
-    {
-        CreateItem();
-    }
-
-    private void CreateItem()
-    {
-        if (data.config.isSafe && ShouldExecuteRandomly(.1f))
-        {
-            item.gameObject.SetActive(true);
-        }
+        status = new();
+        status.isSafe = data.config.isSafe;
     }
 
     protected virtual void Active()
     {
-        // Change Type of Jump step (sprite, data)
+        onUpdateStatus(status);
     }
 
     protected virtual void Deactive()
     {
-
+        onUpdateStatus(status);
     }
-
-    protected virtual void ApplyJumpStep()
-    {
-        // Temp jump
-        // Apply item
-        // Apply dead jump
-    }
-
-    bool ShouldExecuteRandomly(float percentage)
-    {
-        float randomNumber = Random.value;
-        return randomNumber <= percentage;
-    }
-
 }

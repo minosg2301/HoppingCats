@@ -1,75 +1,92 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
     public PlatformManager platformManager;
     public CatController cat;
 
-    private bool isIngame = false;
+    [Header("Properties")]
+    public Vector3 startCatPos;
+
+    private int maxTempJump = 1;
+    private List<JumpType> tempJumps = new();
+
+    private bool isInitstialized = false;
+
+    public bool IsIngame
+    {
+        get
+        {
+            return GameStateManager.Ins.CurrentGameState != GameState.LOBBY &&
+                GameStateManager.Ins.CurrentGameState != GameState.LOSE;
+        }
+    }
 
     private void Awake()
     {
-        StartGame();
+        GameEventManager.Ins.OnSetupLevel += OnSetupLevel;
+
+        if (!isInitstialized)
+        {
+            OnSetupLevel();
+            isInitstialized = true;
+        }
     }
+    
 
     private void Update()
     {
-        if (!isIngame) return;
+        if (!IsIngame) return;
 
-        //Handle cat jump
-        if (!cat.IsJumping)
+        if (Input.GetKeyDown(KeyCode.A))
         {
-            //Key
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                DoMove(JumpType.Left);
-            }
-            else if (Input.GetKeyDown(KeyCode.D))
-            {
-                DoMove(JumpType.Right);
-            }
-
-            //Mouse
-            if (Input.GetMouseButtonDown(0)) 
-            {
-                Vector2 touchPosition = Input.mousePosition; 
-                CheckScreenTouch(touchPosition);
-            }
-            //Mobile
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) 
-            {
-                Vector2 touchPosition = Input.GetTouch(0).position; 
-                CheckScreenTouch(touchPosition);
-            }
+            DoMove(JumpType.Left);
         }
-        
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            DoMove(JumpType.Right);
+        }
+
+        //Mouse
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector2 touchPosition = Input.mousePosition;
+            CheckScreenTouch(touchPosition);
+        }
+        //Mobile
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            Vector2 touchPosition = Input.GetTouch(0).position;
+            CheckScreenTouch(touchPosition);
+        }
+
+        if (!cat.IsJumping && tempJumps.Count > 0)
+        {
+            DoMove(tempJumps[0]);
+        }
     }
 
-
-    public void StartGame()
+    #region puplic methods
+    public void LoseHandle()
     {
-        if (isIngame) return;
-        InitPlatforms();
-        isIngame = true;
+        GameStateManager.Ins.ChangeGameState(GameState.LOSE);
+        LosePopup.Show();
     }
 
-    public void EndGame()
-    {
-        //if (!isIngame) return;
-        //isIngame = false;
-        StartGame();
-    }
+    #endregion
 
-    private void InitPlatforms()
+    private void OnSetupLevel()
     {
+        GameStateManager.Ins.ChangeGameState(GameState.WAITING);
         platformManager.Clear();
         platformManager.InitPlatforms();
+        cat.transform.position = startCatPos;
     }
 
     private void CheckScreenTouch(Vector2 position)
     {
         float screenWidth = Screen.width;
-
         if (position.x < screenWidth / 2) 
         {
             DoMove(JumpType.Left);
@@ -82,7 +99,28 @@ public class GameController : MonoBehaviour
 
     private void DoMove(JumpType moveType)
     {
-        if (cat.IsJumping) return;
+        if (GameStateManager.Ins.CurrentGameState != GameState.INGAME)
+        {
+            GameStateManager.Ins.ChangeGameState(GameState.INGAME);
+            GameEventManager.Ins.OnStartGame();
+        }
+
+        if (cat.IsJumping)
+        {
+            if (tempJumps.Count < maxTempJump)
+            {
+                tempJumps.Add(moveType);
+            }
+            return;
+        }
+        else 
+        {
+            if (tempJumps.Count > 0)
+            {
+                tempJumps.RemoveAt(0);
+            }
+        };
+
         cat.DoJump(moveType, 
             ()=> { 
                 //start jump
@@ -98,4 +136,6 @@ public class GameController : MonoBehaviour
         platformManager.RemoveFirstPlatform();
         platformManager.SpawnNextPlatforms(moveLeft);
     }
+
+    
 }

@@ -4,13 +4,13 @@ public class FisrtLoadingHandler : MonoBehaviour
 {
     private void Awake()
     {
-        GameBootComplete.onComplete += OnFisrtOpenGame;
+        GameEventManager.Ins.OnFirstLoadingComplete += OnFisrtOpenGame;
     }
 
     private void OnFisrtOpenGame()
     {
         //Call transition eff
         TransitionEffectController.Ins.Show();
-        GameBootComplete.onComplete -= OnFisrtOpenGame;
+        GameEventManager.Ins.OnFirstLoadingComplete -= OnFisrtOpenGame;
     }
 }

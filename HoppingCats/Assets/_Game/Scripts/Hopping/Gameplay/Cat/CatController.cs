@@ -12,6 +12,7 @@ public class CatController : MonoBehaviour
 {
     [Header("Components")]
     public Transform catUITransform;
+    public GameController gameController;
 
     [Header("Properties")]
     public float jumpForce = 1f;
@@ -21,11 +22,15 @@ public class CatController : MonoBehaviour
     public AnimationCurve startJumpCurve;
 
     private bool isJumping = false;
+
+    private UIPlatform platFormGrounding;
+
     public bool IsJumping => isJumping;
 
     public void DoJump(JumpType type, Action onStartJump = null, Action onEndJump = null)
     {
         isJumping = true;
+        ClearPlatform();
         onStartJump?.Invoke();
 
         DoFlip(type == JumpType.Right);
@@ -46,6 +51,41 @@ public class CatController : MonoBehaviour
             });
 
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!platFormGrounding)
+        {
+            var nextPlatform = other.gameObject.GetComponent<UIPlatform>();
+            if (nextPlatform)
+            {
+                platFormGrounding = nextPlatform;
+                if (!platFormGrounding.Status.isSafe)
+                {
+                    gameController.LoseHandle();
+                    return;
+                }
+                platFormGrounding.onUpdateStatus = OnPlatFormUpdate;
+            }
+        }
+    }
+
+    private void OnPlatFormUpdate(UIPlatformStatus uiPlatformStatus)
+    {
+        if (!uiPlatformStatus.isSafe)
+        {
+            gameController.LoseHandle();
+        }
+    }
+
+    private void ClearPlatform()
+    {
+        if (platFormGrounding)
+        {
+            platFormGrounding.onUpdateStatus = null;
+        }
+    }
+
 
     public void DoAfterFallAnim(float duration, float delay = 0, Action onComplete = null)
     {
@@ -82,20 +122,7 @@ public class CatController : MonoBehaviour
         catUITransform.localScale = scale;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log(other.gameObject.name);
-    }
-
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        Debug.Log( other.gameObject.name);
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        Debug.Log(other.gameObject.name);
-    }
+    
 }
 
 

@@ -23,9 +23,9 @@ public class PlatformManager : MonoBehaviour
     public void InitPlatforms()
     {
         AddInitPlatform();
-        foreach (var step in platformsByRow)
+        foreach (var platform in platformsByRow)
         {
-            InstantiatePlatform(step.Value, step.Key * 2);
+            InstantiatePlatform(platform.Value, platform.Key * 2);
         }
     }
 
