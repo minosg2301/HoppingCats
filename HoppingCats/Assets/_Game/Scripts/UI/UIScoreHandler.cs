@@ -8,7 +8,7 @@ public class UIScoreHandler : UIGroupByGameState
     public TextMeshProUGUI scoreTxt;
     public TextMeshProUGUI topScoreTxt;
 
-    public int score;
+    private int score;
 
     protected override void OnEnable()
     {
@@ -26,8 +26,8 @@ public class UIScoreHandler : UIGroupByGameState
 
     protected override void OnShow()
     {
-        base.OnShow();
         SetUpScore();
+        base.OnShow();
     }
 
     public void SetUpScore()

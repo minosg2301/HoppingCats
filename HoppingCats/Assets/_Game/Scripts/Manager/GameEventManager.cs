@@ -5,9 +5,7 @@ public class GameEventManager : SingletonMono<GameEventManager>
 {
     public Action OnFirstLoadingComplete = delegate { };
 
-    //
     public Action<GameState> OnGameStateChanged = delegate { };
-
 
     //game play
     public Action OnSetupLevel = delegate { };

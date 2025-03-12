@@ -2667,7 +2667,6 @@ MonoBehaviour:
   availableStates: 01000000
   scoreTxt: {fileID: 4396528637146200143}
   topScoreTxt: {fileID: 4424385127548035876}
-  score: 0
 --- !u!1 &2369254351180238379
 GameObject:
   m_ObjectHideFlags: 0
@@ -3690,6 +3689,7 @@ GameObject:
   - component: {fileID: 5289846121332226046}
   - component: {fileID: 7432994668263302030}
   - component: {fileID: 3350409775580235668}
+  - component: {fileID: 1896379465114334031}
   m_Layer: 0
   m_Name: UICountDownTime
   m_TagString: Untagged
@@ -3742,6 +3742,20 @@ MonoBehaviour:
   canvasGroup: {fileID: 2203931705073303856}
   availableStates: 01000000
   progressor: {fileID: 4603340323732406481}
+  tickInterval: {fileID: 1896379465114334031}
+--- !u!114 &1896379465114334031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754831189021818251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc838747aae6c944b55a58f7781adf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interval: 0.001
 --- !u!1 &5871562231113876914
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,20 +8,21 @@ public class GameController : MonoBehaviour
     public PlatformManager platformManager;
     public CatController cat;
 
+    [HideInInspector] public bool isHoverUI;
+
     [Header("Properties")]
     public Vector3 startCatPos;
 
     private int maxTempJump = 1;
     private List<JumpType> tempJumps = new();
-
     private bool isInitstialized = false;
 
     public bool IsIngame
     {
         get
         {
-            return GameStateManager.Ins.CurrentGameState != GameState.LOBBY &&
-                GameStateManager.Ins.CurrentGameState != GameState.LOSEGAWE;
+            return GameStateManager.Ins.CurrentGameState == GameState.INGAME ||
+                GameStateManager.Ins.CurrentGameState == GameState.WAITING;
         }
     }
 
@@ -39,7 +40,7 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if (!IsIngame) return;
+        if (!IsIngame || isHoverUI) return;
 
         if (Input.GetKeyDown(KeyCode.A))
         {
@@ -72,11 +73,10 @@ public class GameController : MonoBehaviour
     #region puplic methods
     public void LoseHandle()
     {
-        GameStateManager.Ins.ChangeGameState(GameState.LOSEGAWE);
+        GameStateManager.Ins.ChangeGameState(GameState.LOSEGAME);
         GameEventManager.Ins.OnGameLose();
         LosePopup.Show();
     }
-
     #endregion
 
     private void OnSetupLevel()
@@ -102,9 +102,9 @@ public class GameController : MonoBehaviour
 
     private void DoMove(JumpType moveType)
     {
-        if (GameStateManager.Ins.CurrentGameState != GameState.STARTGAME)
+        if (GameStateManager.Ins.CurrentGameState != GameState.INGAME)
         {
-            GameStateManager.Ins.ChangeGameState(GameState.STARTGAME);
+            GameStateManager.Ins.ChangeGameState(GameState.INGAME);
             GameEventManager.Ins.OnStartGame();
         }
 

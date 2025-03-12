@@ -1,50 +1,58 @@
 using UnityEngine;
 using Doozy.Engine.Progress;
+using moonNest;
 
+[RequireComponent(typeof(TickInterval))]
 public class UIHealthController : UIGroupByGameState
 {
     public Progressor progressor;
+    public TickInterval tickInterval;
 
-    private float countdownTime = 13f;
-    private float timer;
+    private float countdownSeconds = 13f;
+    private float seconds;
 
-    private bool isCountDown;
+    private bool counting;
 
     protected override void OnEnable()
     {
         base.OnEnable();
+        tickInterval.onTick += OnTick;
         GameEventManager.Ins.OnGameLose += OnGameLose;
     }
 
     protected override void OnDisable()
     {
         base.OnDisable();
+        tickInterval.onTick -= OnTick;
         GameEventManager.Ins.OnGameLose -= OnGameLose;
     }
 
     protected override void OnShow()
     {
         base.OnShow();
-        timer = countdownTime;
         progressor.SetValue(1);
-        isCountDown = true;
+
+        seconds = Mathf.Max(0, countdownSeconds);
+        counting = true;
+        tickInterval.Restart();
     }
     private void OnGameLose()
     {
-        isCountDown = false;
+        counting = false;
+        tickInterval.Pause();
     }
 
-    void Update()
+    private void OnTick()
     {
-        if (!isCountDown) return;
+        if (seconds > 0)
+        {
+            seconds = Mathf.Max(0, seconds - tickInterval.TimeEslaped);
+            progressor.SetValue(seconds / countdownSeconds);
 
-        if (timer > 0)
-        {
-            timer -= Time.deltaTime; 
-            progressor.SetValue(timer / countdownTime); 
         }
-        else
+        else if (counting)
         {
+            counting = false;
             progressor.SetValue(0);
             GameController.Ins.LoseHandle();
         }
