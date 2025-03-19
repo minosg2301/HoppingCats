@@ -19,12 +19,18 @@ public class UIAppearPlatform : UIPlatform
         base.SetData(data, rowIndex);
         isActive = true;
         isAppear = isSafe;
-        //platformSprite.DOFade(0, 0);
-        //DoAppearAnimation();
+        platformSprite.DOFade(0, 0);
+        DoAppearAnimation();
     }
 
     private void OnDestroy()
     {
+        Deactive();
+    }
+
+    public override void Deactive()
+    {
+        base.Deactive();
         isActive = false;
         if (fadeTween != null) fadeTween.Kill();
         if (delayTween != null) fadeTween.Kill();

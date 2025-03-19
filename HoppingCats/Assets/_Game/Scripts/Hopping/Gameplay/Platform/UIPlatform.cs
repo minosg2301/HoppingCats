@@ -13,7 +13,6 @@ public class UIPlatform : MonoBehaviour
 
     public int RowIndex => rowIndex;
     public bool IsSafe => isSafe;
-    public bool IsEmpty => data == null;
 
     public Action<UIPlatform> onUpdateStatus = delegate { };
 
@@ -25,11 +24,18 @@ public class UIPlatform : MonoBehaviour
         gameObject.name = $"---- row {rowIndex} " + gameObject.name + " ----";
     }
 
-    public virtual void ResetData()
+    public virtual void Trigger()
     {
-        data = null;
-        rowIndex = -1;
-        isSafe = false;
+
     }
 
+    public virtual void Active()
+    {
+        
+    }
+
+    public virtual void Deactive()
+    {
+
+    }
 }

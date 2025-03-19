@@ -75,9 +75,9 @@ public class PlatformGenerator
 
     private static Platform GenerateSafePlatform(int index)
     {
-        var safeJumpSteps = PlatformConfigManager.Ins.platformConfigs.FindAll(e => e.isSafe && e.platformType != PlatformType.First);
-        Platform step = new(index, safeJumpSteps.Random());
-        return step;
+        var safePlatforms = PlatformConfigManager.Ins.platformConfigs.FindAll(e => e.platformType == PlatformType.Normal);
+        Platform platform = new(index, safePlatforms.Random());
+        return platform;
     }
 
     private static Platform GenerateRandomPlatform(int index)

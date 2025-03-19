@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformType: 5
   platformPrefab: {fileID: 2659638964940355888, guid: 97c8b09976fac8d41bc38e3fc72202cc, type: 3}
-  isSafe: 0
+  isSafe: 1
   platformImage: {fileID: 0}

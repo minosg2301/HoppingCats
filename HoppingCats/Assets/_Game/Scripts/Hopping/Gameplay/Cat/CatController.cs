@@ -50,6 +50,7 @@ public class CatController : MonoBehaviour
             if (nextPlatform)
             {
                 platFormGrounding = nextPlatform;
+                platFormGrounding.Trigger();
                 if (!platFormGrounding.IsSafe)
                 {
                     DoLose();
@@ -59,7 +60,7 @@ public class CatController : MonoBehaviour
                 {
                     GameEventManager.Ins.OnAddScore();
                 }
-                platFormGrounding.onUpdateStatus = OnPlatFormUpdate;
+                platFormGrounding.onUpdateStatus += OnPlatFormUpdate;
             }
         }
     }
@@ -74,7 +75,8 @@ public class CatController : MonoBehaviour
 
     private void DoLose()
     {
-        platFormGrounding.onUpdateStatus = null;
+        platFormGrounding.Deactive();
+        platFormGrounding.onUpdateStatus -= OnPlatFormUpdate;
         platFormGrounding = null;
         GameController.Ins.LoseHandle();
     }
@@ -83,7 +85,7 @@ public class CatController : MonoBehaviour
     {
         if (platFormGrounding)
         {
-            platFormGrounding.onUpdateStatus = null;
+            platFormGrounding.onUpdateStatus -= OnPlatFormUpdate;
             platFormGrounding = null;
         }
     }

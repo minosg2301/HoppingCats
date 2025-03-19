@@ -86,8 +86,8 @@ MonoBehaviour:
   item: {fileID: 7776195616086259182}
   platformSprite: {fileID: 2023028521394860083}
   interval: 1
-  appearDuration: 0.3
-  hideDuration: 0.5
+  appearDuration: 0.2
+  hideDuration: 0.3
 --- !u!212 &2023028521394860083 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 7558050237532842755, guid: 9baaa8b3739d15745abc4f7cf5f8da6c, type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2e4fe40afed4e47bc60f0c98e902bb, type: 3}
   m_Name: SpikePlatform
   m_EditorClassIdentifier: 
-  platformType: 0
+  platformType: 4
   platformPrefab: {fileID: 5058513718683120631, guid: 5fe00f03e7cfc6340bafaf1bae417281, type: 3}
   isSafe: 0
   platformImage: {fileID: 0}

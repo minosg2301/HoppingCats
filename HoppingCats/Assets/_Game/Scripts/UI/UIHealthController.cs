@@ -8,7 +8,7 @@ public class UIHealthController : UIGroupByGameState
     public Progressor progressor;
     public TickInterval tickInterval;
 
-    private float countdownSeconds = 13f;
+    private float countdownSeconds = 30f;
     private float seconds;
 
     private bool counting;

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TempPlatform
   m_EditorClassIdentifier: 
   platformType: 3
-  platformPrefab: {fileID: 8213622858896834878, guid: 9254ec250b89b5c41a4e119c19ecba86, type: 3}
-  isSafe: 0
+  platformPrefab: {fileID: -7743787437280154783, guid: 9254ec250b89b5c41a4e119c19ecba86, type: 3}
+  isSafe: 1
   platformImage: {fileID: 0}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2e4fe40afed4e47bc60f0c98e902bb, type: 3}
   m_Name: NormalPlatform
   m_EditorClassIdentifier: 
-  platformType: 4
+  platformType: 0
   platformPrefab: {fileID: 1486213047066292394, guid: 9baaa8b3739d15745abc4f7cf5f8da6c, type: 3}
   isSafe: 1
   platformImage: {fileID: 0}

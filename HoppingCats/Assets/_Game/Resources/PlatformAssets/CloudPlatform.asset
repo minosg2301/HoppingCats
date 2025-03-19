@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: CloudPlatform
   m_EditorClassIdentifier: 
   platformType: 2
-  platformPrefab: {fileID: 1521236475324458702, guid: f742ee950dde6f2488eefae0a38f426c, type: 3}
+  platformPrefab: {fileID: 587836615295733857, guid: f742ee950dde6f2488eefae0a38f426c, type: 3}
   isSafe: 0
   platformImage: {fileID: 0}

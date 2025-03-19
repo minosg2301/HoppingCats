@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using DG.Tweening;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -75,7 +76,9 @@ public class GameController : MonoBehaviour
     {
         GameStateManager.Ins.ChangeGameState(GameState.LOSEGAME);
         GameEventManager.Ins.OnGameLose();
-        LosePopup.Show();
+        DOVirtual.DelayedCall(.3f, () => {
+            LosePopup.Show();
+        });
     }
     #endregion
 
