@@ -1,21 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class UIAppearPlatform : UIPlatform
 {
-    public UIAppearPlatform(Platform data) : base(data)
-    {
+    [Header("Appear Properties")]
+    public float interval = 1f;
+    public float appearDuration = .25f;
+    public float hideDuration = .4f;
 
+    private bool isAppear = false;
+    private bool isActive = true;
+
+    private Tween delayTween;
+    private Tween fadeTween;
+
+    public override void SetData(Platform data, int rowIndex)
+    {
+        base.SetData(data, rowIndex);
+        isActive = true;
+        isAppear = isSafe;
+        //platformSprite.DOFade(0, 0);
+        //DoAppearAnimation();
     }
 
-    protected override void Active()
+    private void OnDestroy()
     {
-        base.Active();
+        isActive = false;
+        if (fadeTween != null) fadeTween.Kill();
+        if (delayTween != null) fadeTween.Kill();
     }
 
-    protected override void Deactive()
+    private void DoAppearAnimation()
     {
-        base.Deactive();
+        if (!isActive) return;
+        isAppear = !isAppear;
+        var targetVal = isAppear ? 1 : 0;
+        var duration = isAppear ? appearDuration : hideDuration;
+        var ease = isAppear ? Ease.OutBounce : Ease.InOutSine;
+
+        fadeTween = platformSprite.DOFade(targetVal, duration)
+            .SetEase(ease)
+            .OnComplete(()=> { 
+                isSafe = isAppear;
+                onUpdateStatus(this);
+            });
+
+        delayTween = DOVirtual.DelayedCall(interval + duration, () => 
+        {
+            DoAppearAnimation();
+        });
     }
 }

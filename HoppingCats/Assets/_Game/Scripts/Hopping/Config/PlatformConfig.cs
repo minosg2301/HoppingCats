@@ -1,6 +1,7 @@
 using moonNest;
 using UnityEditor;
 using UnityEngine;
+using System;
 
 public class PlatformConfig : BaseScriptableObject
 {
@@ -18,6 +19,13 @@ public class PlatformConfig : BaseScriptableObject
     public Sprite platformImage;
 }
 
+[Serializable]
+public class PlatformRatioConfig 
+{
+    public PlatformType platformType;
+    public float ratio;
+}
+
 public enum PlatformType
 {
     Normal,
@@ -28,4 +36,3 @@ public enum PlatformType
     Appear,
     First
 }
-

@@ -1,42 +1,35 @@
 using System;
 using UnityEngine;
 
-public class UIPlatformStatus
-{
-    public bool isSafe;
-}
-
 public class UIPlatform : MonoBehaviour
 {
-    public Platform data;
-
+    [Header("Components")]
     public Item item;
+    public SpriteRenderer platformSprite;
 
-    public Action<UIPlatformStatus> onUpdateStatus = delegate {};
+    protected Platform data;
+    protected int rowIndex = -1;
+    protected bool isSafe = false;
 
-    private UIPlatformStatus status;
+    public int RowIndex => rowIndex;
+    public bool IsSafe => isSafe;
+    public bool IsEmpty => data == null;
 
-    public UIPlatformStatus Status => status;
+    public Action<UIPlatform> onUpdateStatus = delegate { };
 
-    public UIPlatform(Platform data)
+    public virtual void SetData(Platform data, int rowIndex)
     {
         this.data = data;
+        this.rowIndex = rowIndex;
+        isSafe = data.config.isSafe;
+        gameObject.name = $"---- row {rowIndex} " + gameObject.name + " ----";
     }
 
-    public void SetData(Platform data)
+    public virtual void ResetData()
     {
-        this.data = data;
-        status = new();
-        status.isSafe = data.config.isSafe;
+        data = null;
+        rowIndex = -1;
+        isSafe = false;
     }
 
-    protected virtual void Active()
-    {
-        onUpdateStatus(status);
-    }
-
-    protected virtual void Deactive()
-    {
-        onUpdateStatus(status);
-    }
 }

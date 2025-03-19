@@ -2560,6 +2560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7781798282759279593}
   - component: {fileID: 6911031865032849486}
+  - component: {fileID: 4067161593556721041}
   m_Layer: 0
   m_Name: UIGroup - Store
   m_TagString: Untagged
@@ -2603,6 +2604,18 @@ MonoBehaviour:
   container: {fileID: 7877240670632799315}
   canvasGroup: {fileID: 5595471635939000838}
   availableStates: 00000000
+--- !u!114 &4067161593556721041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087314781354031090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3a78acfbe486d4cbcf7ab0b3167516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2325866145191838251
 GameObject:
   m_ObjectHideFlags: 0
@@ -2614,6 +2627,7 @@ GameObject:
   - component: {fileID: 4123006880038450982}
   - component: {fileID: 3632127768624607627}
   - component: {fileID: 3451602551763844815}
+  - component: {fileID: 1252480307960259887}
   m_Layer: 0
   m_Name: UIGroup - Score
   m_TagString: Untagged
@@ -2667,6 +2681,18 @@ MonoBehaviour:
   availableStates: 01000000
   scoreTxt: {fileID: 4396528637146200143}
   topScoreTxt: {fileID: 4424385127548035876}
+--- !u!114 &1252480307960259887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2325866145191838251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3a78acfbe486d4cbcf7ab0b3167516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2369254351180238379
 GameObject:
   m_ObjectHideFlags: 0
@@ -3690,6 +3716,7 @@ GameObject:
   - component: {fileID: 7432994668263302030}
   - component: {fileID: 3350409775580235668}
   - component: {fileID: 1896379465114334031}
+  - component: {fileID: 7878439487776239691}
   m_Layer: 0
   m_Name: UICountDownTime
   m_TagString: Untagged
@@ -3756,6 +3783,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interval: 0.001
+--- !u!114 &7878439487776239691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754831189021818251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3a78acfbe486d4cbcf7ab0b3167516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5871562231113876914
 GameObject:
   m_ObjectHideFlags: 0
@@ -3767,6 +3806,7 @@ GameObject:
   - component: {fileID: 727040279973843565}
   - component: {fileID: 6313314290979206065}
   - component: {fileID: 4713882218146137823}
+  - component: {fileID: 4823345905397511076}
   m_Layer: 0
   m_Name: UIGroup - Egg
   m_TagString: Untagged
@@ -3818,6 +3858,18 @@ MonoBehaviour:
   container: {fileID: 4965379905943045078}
   canvasGroup: {fileID: 2835530332018395377}
   availableStates: 00000000
+--- !u!114 &4823345905397511076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5871562231113876914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3a78acfbe486d4cbcf7ab0b3167516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5972427797284019224
 GameObject:
   m_ObjectHideFlags: 0
@@ -6257,6 +6309,7 @@ GameObject:
   - component: {fileID: 6669991537980034131}
   - component: {fileID: 4736606061640621400}
   - component: {fileID: 5317099343272978192}
+  - component: {fileID: 6736291219125616886}
   m_Layer: 0
   m_Name: UIGroup - Lobby
   m_TagString: Untagged
@@ -6308,6 +6361,18 @@ MonoBehaviour:
   container: {fileID: 6562714679953135339}
   canvasGroup: {fileID: 3560854181911894305}
   availableStates: 00000000
+--- !u!114 &6736291219125616886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6069765375456468300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3a78acfbe486d4cbcf7ab0b3167516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6249094452944721491
 GameObject:
   m_ObjectHideFlags: 0
@@ -7319,6 +7384,7 @@ GameObject:
   - component: {fileID: 4715272344458780769}
   - component: {fileID: 4290732124471262069}
   - component: {fileID: 239219165190556300}
+  - component: {fileID: 4131829885381856689}
   m_Layer: 0
   m_Name: UIGroup - Star
   m_TagString: Untagged
@@ -7370,6 +7436,18 @@ MonoBehaviour:
   container: {fileID: 2015229429998610059}
   canvasGroup: {fileID: 3998749013271112480}
   availableStates: 0000000001000000
+--- !u!114 &4131829885381856689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7126657964520055060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3a78acfbe486d4cbcf7ab0b3167516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7405801114377985828
 GameObject:
   m_ObjectHideFlags: 0

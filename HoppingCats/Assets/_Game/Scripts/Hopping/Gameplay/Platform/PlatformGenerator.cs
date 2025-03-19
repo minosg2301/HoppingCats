@@ -29,10 +29,10 @@ public class PlatformGenerator
         var limitRightIndex = prevPlatform.MaxBy(e => e.index).index + (spawnLeft ? -1 : 1);
 
 
-        foreach (var step in prevCanSpawnPlatforms)
+        foreach (var platform in prevCanSpawnPlatforms)
         {
-            var leftIndex = step.index - 1;
-            var rightIndex = step.index + 1;
+            var leftIndex = platform.index - 1;
+            var rightIndex = platform.index + 1;
 
             bool canSpawnLeft = !platforms.Exists(e => e.index == leftIndex) && leftIndex >= limitLeftIndex;
             bool canSpawnRight = !platforms.Exists(e => e.index == rightIndex) && rightIndex <= limitRightIndex;
@@ -82,8 +82,18 @@ public class PlatformGenerator
 
     private static Platform GenerateRandomPlatform(int index)
     {
-        var exceptFirstStep = PlatformConfigManager.Ins.platformConfigs.FindAll(e => e.platformType != PlatformType.First);
-        return new Platform(index, exceptFirstStep.Random());
+        var randomValue = Random.Range(0f, 1f);
+        var randomPlatformType = PlatformType.None;
+        foreach (var platformRatio in PlatformConfigManager.Ins.platformRatioConfigs)
+        {
+            if (randomValue > platformRatio.ratio)
+            {
+                randomPlatformType = platformRatio.platformType;
+                break;
+            }
+        }
+        var randomPlatformConfig = PlatformConfigManager.Ins.platformConfigs.Find(e => e.platformType == randomPlatformType);
+        return new Platform(index, randomPlatformConfig);
     }
 
     private static Platform GenerateNonePlatform(int index)

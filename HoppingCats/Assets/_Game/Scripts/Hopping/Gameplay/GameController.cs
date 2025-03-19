@@ -136,7 +136,7 @@ public class GameController : MonoBehaviour
 
     private void GenerateNextJumpStep(bool moveLeft)
     {
-        platformManager.RemoveFirstPlatform();
+        platformManager.RemovePlatforms();
         platformManager.SpawnNextPlatforms(moveLeft);
     }
 

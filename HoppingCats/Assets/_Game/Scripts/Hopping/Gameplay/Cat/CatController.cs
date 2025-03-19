@@ -50,9 +50,9 @@ public class CatController : MonoBehaviour
             if (nextPlatform)
             {
                 platFormGrounding = nextPlatform;
-                if (!platFormGrounding.Status.isSafe)
+                if (!platFormGrounding.IsSafe)
                 {
-                    GameController.Ins.LoseHandle();
+                    DoLose();
                     return;
                 }
                 else
@@ -64,12 +64,19 @@ public class CatController : MonoBehaviour
         }
     }
 
-    private void OnPlatFormUpdate(UIPlatformStatus uiPlatformStatus)
+    private void OnPlatFormUpdate(UIPlatform uiPlatform)
     {
-        if (!uiPlatformStatus.isSafe)
+        if (!uiPlatform.IsSafe)
         {
-            GameController.Ins.LoseHandle();
+            DoLose();
         }
+    }
+
+    private void DoLose()
+    {
+        platFormGrounding.onUpdateStatus = null;
+        platFormGrounding = null;
+        GameController.Ins.LoseHandle();
     }
 
     private void ClearPlatform()
@@ -77,6 +84,7 @@ public class CatController : MonoBehaviour
         if (platFormGrounding)
         {
             platFormGrounding.onUpdateStatus = null;
+            platFormGrounding = null;
         }
     }
 }

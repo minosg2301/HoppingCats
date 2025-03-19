@@ -6,7 +6,8 @@ public class PlatformManager : MonoBehaviour
 {
     private const int firstGenerateCount = 5;
 
-    private Dictionary<int, List<Platform>> platformsByRow;
+    private Dictionary<int, List<Platform>> platformsByRow = new();
+    private List<UIPlatform> uiPlatforms = new();
 
     private int rowIndex;
 
@@ -15,17 +16,29 @@ public class PlatformManager : MonoBehaviour
 
     public void Clear()
     {
-        container.RemoveAllChildren();
-        platformsByRow = new();
+        foreach(var uiPlatform in uiPlatforms)
+        {
+            Destroy(uiPlatform.gameObject);
+        }
+        uiPlatforms.Clear();
+
         rowIndex = 0;
+        platformsByRow.Clear();
     }
 
     public void InitPlatforms()
     {
-        AddInitPlatform();
+        platformsByRow.Add(rowIndex, PlatformGenerator.GenerateFirstPlatforms());
+
+        for (int i = 0; i < firstGenerateCount; i++)
+        {
+            rowIndex++;
+            platformsByRow.Add(rowIndex, PlatformGenerator.GeneratePlatforms(platformsByRow[i], i % 2 == 0));
+        }
+
         foreach (var platform in platformsByRow)
         {
-            InstantiatePlatform(platform.Value, platform.Key * 2);
+            InstantiatePlatform(platform.Value, platform.Key);
         }
     }
 
@@ -34,18 +47,11 @@ public class PlatformManager : MonoBehaviour
         foreach (var platform in platforms)
         {
             var platformIns = Instantiate(platform.config.platformPrefab, container);
-            platformIns.SetData(platform);
-            var pos = new Vector2(platform.index, row - 4);
-            platformIns.transform.SetLocalPositionAndRotation(pos, Quaternion.identity);
-        }
-    }
+            uiPlatforms.Add(platformIns);
+            platformIns.SetData(platform, row);
 
-    private void AddInitPlatform()
-    {
-        platformsByRow.Add(rowIndex++, PlatformGenerator.GenerateFirstPlatforms());
-        for (int i = 0; i < firstGenerateCount; i++)
-        {
-            platformsByRow.Add(rowIndex++, PlatformGenerator.GeneratePlatforms(platformsByRow[i], i % 2 == 0));
+            var pos = new Vector2(platform.index, row * 2 - 4);
+            platformIns.transform.SetLocalPositionAndRotation(pos, Quaternion.identity);
         }
     }
 
@@ -53,25 +59,34 @@ public class PlatformManager : MonoBehaviour
     {
         var listKeys = platformsByRow.Keys;
         var lastRow = listKeys.MaxBy(e => e);
-        var lastJumpStepsByRow = platformsByRow[lastRow];
-        platformsByRow.Add(rowIndex++, PlatformGenerator.GeneratePlatforms(lastJumpStepsByRow, moveLeft));
-        platformsByRow = platformsByRow.OrderBy(e => e.Key).ToDictionary(obj => obj.Key, obj => obj.Value);
-        container.RemoveAllChildren();
+        var lastPlatformsByRow = platformsByRow[lastRow];
 
-        foreach (var step in platformsByRow)
+        var nextPlatfoms = PlatformGenerator.GeneratePlatforms(lastPlatformsByRow, moveLeft);
+
+        rowIndex++;
+        platformsByRow.Add(rowIndex, nextPlatfoms);
+
+        platformsByRow = platformsByRow.OrderBy(e => e.Key).ToDictionary(obj => obj.Key, obj => obj.Value);
+
+        InstantiatePlatform(nextPlatfoms, rowIndex);
+    }
+
+    public void RemovePlatforms()
+    {
+        if (platformsByRow.Count < 8) return;
+
+        var listPlatformRow = platformsByRow.Keys.ToList();
+        var platformRowRemoved = listPlatformRow.Shift();
+        platformsByRow.Remove(platformRowRemoved);
+        var platformRemoveds = uiPlatforms.FindAll(e => e.RowIndex == platformRowRemoved);
+        uiPlatforms.RemoveAll(platformRemoveds);
+
+        foreach (var uiPlatform in platformRemoveds)
         {
-            InstantiatePlatform(step.Value, step.Key * 2);
+            Destroy(uiPlatform.gameObject);
         }
     }
-
-    public void RemoveFirstPlatform()
-    {
-        var listSteps = platformsByRow.Keys.ToList();
-        var fistStepIdx = listSteps.Shift();
-        platformsByRow.Remove(fistStepIdx);
-    }
 }
-
 public class Platform
 {
     public PlatformConfig config;
