@@ -1,6 +1,4 @@
 using moonNest;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -14,5 +12,6 @@ public class ItemConfig : BaseScriptableObject
     }
 #endif
 
-    public Sprite itemImage;
+    public UIItem prefab;
+    public int amount;
 }

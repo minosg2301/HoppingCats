@@ -82,17 +82,7 @@ public class PlatformGenerator
 
     private static Platform GenerateRandomPlatform(int index)
     {
-        var randomValue = Random.Range(0f, 1f);
-        var randomPlatformType = PlatformType.None;
-        foreach (var platformRatio in PlatformConfigManager.Ins.platformRatioConfigs)
-        {
-            if (randomValue > platformRatio.ratio)
-            {
-                randomPlatformType = platformRatio.platformType;
-                break;
-            }
-        }
-        var randomPlatformConfig = PlatformConfigManager.Ins.platformConfigs.Find(e => e.platformType == randomPlatformType);
+        var randomPlatformConfig = PlatformConfigManager.Ins.platformRandomConfigs.Random();
         return new Platform(index, randomPlatformConfig);
     }
 

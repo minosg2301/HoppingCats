@@ -19,13 +19,6 @@ public class PlatformConfig : BaseScriptableObject
     public Sprite platformImage;
 }
 
-[Serializable]
-public class PlatformRatioConfig 
-{
-    public PlatformType platformType;
-    public float ratio;
-}
-
 public enum PlatformType
 {
     Normal,

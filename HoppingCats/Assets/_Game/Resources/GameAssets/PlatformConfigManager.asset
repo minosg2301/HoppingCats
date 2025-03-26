@@ -20,16 +20,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a2a38f739c0e981479deca19b897fd49, type: 2}
   - {fileID: 11400000, guid: 91e9a6ddb2299b94f825afbbcda1b998, type: 2}
   - {fileID: 11400000, guid: d7f37e80ff2789a4aa28e58fd5577a99, type: 2}
-  platformRatioConfigs:
-  - platformType: 1
-    ratio: 0.7
-  - platformType: 0
-    ratio: 0.6
-  - platformType: 2
-    ratio: 0.45
-  - platformType: 3
-    ratio: 0.3
-  - platformType: 4
-    ratio: 0.1
-  - platformType: 5
-    ratio: 0
+  platformRandomConfigs:
+  - {fileID: 11400000, guid: c3c0d22fb45624b4384a1d413b90b69a, type: 2}
+  - {fileID: 11400000, guid: 28bd6255ea00b664db3257c319bae294, type: 2}
+  - {fileID: 11400000, guid: 28bd6255ea00b664db3257c319bae294, type: 2}
+  - {fileID: 11400000, guid: 28bd6255ea00b664db3257c319bae294, type: 2}
+  - {fileID: 11400000, guid: 28bd6255ea00b664db3257c319bae294, type: 2}
+  - {fileID: 11400000, guid: 647f6700ba47d294abf4b0b85c482695, type: 2}
+  - {fileID: 11400000, guid: afc838e2b342f89429210c67ec019ef7, type: 2}
+  - {fileID: 11400000, guid: afc838e2b342f89429210c67ec019ef7, type: 2}
+  - {fileID: 11400000, guid: afc838e2b342f89429210c67ec019ef7, type: 2}
+  - {fileID: 11400000, guid: afc838e2b342f89429210c67ec019ef7, type: 2}
+  - {fileID: 11400000, guid: afc838e2b342f89429210c67ec019ef7, type: 2}
+  - {fileID: 11400000, guid: afc838e2b342f89429210c67ec019ef7, type: 2}
+  - {fileID: 11400000, guid: a2a38f739c0e981479deca19b897fd49, type: 2}
+  - {fileID: 11400000, guid: 91e9a6ddb2299b94f825afbbcda1b998, type: 2}
+  - {fileID: 11400000, guid: d7f37e80ff2789a4aa28e58fd5577a99, type: 2}
+  - {fileID: 11400000, guid: d7f37e80ff2789a4aa28e58fd5577a99, type: 2}
