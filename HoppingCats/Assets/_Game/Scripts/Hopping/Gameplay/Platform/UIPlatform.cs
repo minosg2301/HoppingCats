@@ -47,6 +47,7 @@ public class UIPlatform : MonoBehaviour
         if (itemConfig != null && itemConfig.amount > 0)
         {
             item = Instantiate(itemConfig.prefab, transform);
+            item.SetData(itemConfig);
             item.transform.localScale = Vector3.one;
         }
     } 

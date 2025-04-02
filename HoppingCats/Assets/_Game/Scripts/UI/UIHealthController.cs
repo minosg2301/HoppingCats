@@ -1,6 +1,7 @@
 using UnityEngine;
 using Doozy.Engine.Progress;
 using moonNest;
+using System;
 
 [RequireComponent(typeof(TickInterval))]
 public class UIHealthController : UIGroupByGameState
@@ -18,6 +19,7 @@ public class UIHealthController : UIGroupByGameState
         base.OnEnable();
         tickInterval.onTick += OnTick;
         GameEventManager.Ins.OnGameLose += OnGameLose;
+        GameEventManager.Ins.OnAddHealth += OnAddHealth;
     }
 
     protected override void OnDisable()
@@ -25,6 +27,7 @@ public class UIHealthController : UIGroupByGameState
         base.OnDisable();
         tickInterval.onTick -= OnTick;
         GameEventManager.Ins.OnGameLose -= OnGameLose;
+        GameEventManager.Ins.OnAddHealth -= OnAddHealth;
     }
 
     protected override void OnShow()
@@ -34,6 +37,13 @@ public class UIHealthController : UIGroupByGameState
 
         seconds = Mathf.Max(0, countdownSeconds);
         counting = true;
+        tickInterval.Restart();
+    }
+
+    private void OnAddHealth(int value)
+    {
+        if (value < 0) return;
+        seconds = Mathf.Max(0, seconds + value);
         tickInterval.Restart();
     }
     private void OnGameLose()

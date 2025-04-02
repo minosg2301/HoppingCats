@@ -13,4 +13,7 @@ public class GameEventManager : SingletonMono<GameEventManager>
     public Action OnStartGame = delegate { };
     public Action OnEndGame = delegate { };
     public Action OnAddScore = delegate { };
+
+    public Action<int> OnAddHealth = delegate { };
+    public Action<int> OnAddStar = delegate { };
 }
