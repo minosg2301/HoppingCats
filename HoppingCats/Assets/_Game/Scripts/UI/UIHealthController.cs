@@ -43,7 +43,8 @@ public class UIHealthController : UIGroupByGameState
     private void OnAddHealth(int value)
     {
         if (value < 0) return;
-        seconds = Mathf.Max(0, seconds + value);
+        var newSeconds = seconds + value;
+        seconds = Mathf.Max(0, newSeconds <= countdownSeconds ? newSeconds : countdownSeconds);
         tickInterval.Restart();
     }
     private void OnGameLose()

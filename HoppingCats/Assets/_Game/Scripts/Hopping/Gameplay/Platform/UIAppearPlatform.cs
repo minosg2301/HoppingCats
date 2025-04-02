@@ -40,16 +40,25 @@ public class UIAppearPlatform : UIPlatform
     {
         if (!isActive) return;
         isAppear = !isAppear;
-        var targetVal = isAppear ? 1 : 0;
         var duration = isAppear ? appearDuration : hideDuration;
-        var ease = isAppear ? Ease.OutBounce : Ease.InOutSine;
 
-        fadeTween = platformSprite.DOFade(targetVal, duration)
-            .SetEase(ease)
-            .OnComplete(()=> { 
-                isSafe = isAppear;
-                onUpdateStatus(this);
-            });
+        if (isAppear)
+        {
+            fadeTween = platformSprite.DOFade(1, duration)
+                .OnComplete(() => {
+                    isSafe = isAppear;
+                    onUpdateStatus(this);
+                });
+        }
+        else
+        {
+            fadeTween = platformSprite.DOFade(0, duration)
+                .OnStart(() => {
+                    isSafe = isAppear;
+                    onUpdateStatus(this);
+                });
+        }
+        
 
         delayTween = DOVirtual.DelayedCall(interval + duration, () => 
         {
