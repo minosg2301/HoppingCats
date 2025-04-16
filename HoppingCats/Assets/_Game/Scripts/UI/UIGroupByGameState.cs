@@ -1,11 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class UIGroupByGameState : MonoBehaviour
 {
     public Transform container;
     public CanvasGroup canvasGroup;
     public List<GameState> availableStates;
+
+    public float animDuration = .3f;
 
     protected virtual void OnEnable()
     {
@@ -20,10 +23,28 @@ public class UIGroupByGameState : MonoBehaviour
     public virtual void Set(GameState state)
     {
         var available = availableStates != null && availableStates.Exists(e => e == state);
-        if(container) container.gameObject.SetActive(available);
         if (available)
         {
+            if (container)
+            {
+                container.transform.localScale = Vector2.zero;
+                container.gameObject.SetActive(true);
+                container.transform.DOScale(1, animDuration)
+                    .SetEase(Ease.InBounce);
+            }
+            
             OnShow();
+        }
+        else
+        {
+            if (container)
+            {
+                container.transform.DOScale(0, animDuration)
+                .SetEase(Ease.OutBounce)
+                .OnComplete(() => {
+                    container.gameObject.SetActive(false);
+                });
+            }
         }
     }
 

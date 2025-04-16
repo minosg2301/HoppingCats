@@ -52,9 +52,36 @@ MonoBehaviour:
           m_SubObjectName: 
           m_SubObjectType: 
           m_EditorAssetChanged: 0
-    - id: 783572810
-      name: New Tile Type
-      type: New Tile Type
+  - id: 1307643868
+    name: New Theme
+    tiles:
+    - id: 885132319
+      name: Default
+      type: Default
+      sprite:
+        id: 0
+        name: 
+        type: 0
+        assetReference:
+          m_AssetGUID: 
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_EditorAssetChanged: 0
+    - id: 198079704
+      name: Spike
+      type: Spike
+      sprite:
+        id: 0
+        name: 
+        type: 0
+        assetReference:
+          m_AssetGUID: 
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_EditorAssetChanged: 0
+    - id: 491529199
+      name: Ghost
+      type: Ghost
       sprite:
         id: 0
         name: 

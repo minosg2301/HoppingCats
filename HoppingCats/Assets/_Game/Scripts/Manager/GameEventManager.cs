@@ -16,4 +16,7 @@ public class GameEventManager : SingletonMono<GameEventManager>
 
     public Action<int> OnAddHealth = delegate { };
     public Action<int> OnAddStar = delegate { };
+
+    public Action<SkinConfig> OnSkinUpdate = delegate { };
+
 }

@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 {
     public static GameController Ins;
 
+    public CameraFollow cameraFollow;
     public PlatformManager platformManager;
     public CatController cat;
 
@@ -76,7 +77,9 @@ public class GameController : MonoBehaviour
     {
         GameStateManager.Ins.ChangeGameState(GameState.LOSEGAME);
         GameEventManager.Ins.OnGameLose();
-        DOVirtual.DelayedCall(.3f, () => {
+        cat.animationController.DoDie();
+
+        DOVirtual.DelayedCall(1f, () => {
             LosePopup.Show();
         });
     }
@@ -85,9 +88,22 @@ public class GameController : MonoBehaviour
     private void OnSetupLevel()
     {
         GameStateManager.Ins.ChangeGameState(GameState.WAITING);
+        LevelManager.Ins.InitLevel();
         platformManager.Clear();
         platformManager.InitPlatforms();
+
+        if (cat)
+        {
+            Destroy(cat.gameObject);
+            cat = null;
+        }
+
+        var catInst = Instantiate(SkinManager.Ins.CurrentSkinConfig.catPrefab, transform);
+        cat = catInst;
+
+        cameraFollow.DoFollow(cat.transform);
         cat.transform.position = startCatPos;
+        cat.animationController.DoIdle();
     }
 
     private void CheckScreenTouch(Vector2 position)
@@ -134,6 +150,7 @@ public class GameController : MonoBehaviour
             ()=> {
                 //end jump
                 GenerateNextJumpStep(moveType == JumpType.Left);
+                LevelManager.Ins.UpdateLevel();
             });
     }
 

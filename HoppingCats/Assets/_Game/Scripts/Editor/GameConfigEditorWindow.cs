@@ -52,11 +52,9 @@ public class GameConfigEditorWindow : BaseEditorWindow
     {
         // create view here
         tabContainer = new TabContainer();
-        tabContainer.AddTab("Global", new GlobalTab());
-        tabContainer.AddTab("Body Parts", new BodyTab());
-        tabContainer.AddTab("Cats", new CatTab());
-        tabContainer.AddTab("Tiles", new TileTab());
-        tabContainer.AddTab("Themes", new ThemeTab());
+        //tabContainer.AddTab("Global", new GlobalTab());
+        tabContainer.AddTab("Level", new LevelTab());
+        tabContainer.AddTab("Skin", new SkinTab());
     }
 
     private void _OnDraw()

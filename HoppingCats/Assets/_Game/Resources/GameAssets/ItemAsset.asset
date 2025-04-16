@@ -39,4 +39,21 @@ MonoBehaviour:
     scriptableCastName: JumpConfig
     showExtended: 1
   items: []
-  itemRandoms: []
+  itemRandoms:
+  - id: 2128658867
+    name: New Item Random
+    displayName: New Item Random
+    icon: {fileID: 0}
+    randoms:
+    - itemDefinitionId: -1
+      contentId: -1
+      type: 0
+      stats: []
+      weight: 1319
+      probability: 0.18304192
+    - itemDefinitionId: -1
+      contentId: -1
+      type: 0
+      stats: []
+      weight: 5887
+      probability: 0.81695807

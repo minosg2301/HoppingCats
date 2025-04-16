@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cebba4b528bd92146b0d81c27c1c883a, type: 3}
+  m_Name: LevelConfigs
+  m_EditorClassIdentifier: 
+  levelConfigs:
+  - id: 0
+    name: 
+    level: 1
+    fromFloor: 0
+    toFloor: 10
+    platformRandomDatas:
+    - id: 0
+      name: 
+      type: 4
+      isSafe: 0
+      weight: 0
+      probability: 0
+    - id: 0
+      name: 
+      type: 5
+      isSafe: 1
+      weight: 0
+      probability: 0
+    - id: 0
+      name: 
+      type: 3
+      isSafe: 1
+      weight: 2057
+      probability: 0.09742813
+    - id: 0
+      name: 
+      type: 0
+      isSafe: 1
+      weight: 6309
+      probability: 0.29882064
+    - id: 0
+      name: 
+      type: 1
+      isSafe: 0
+      weight: 6343
+      probability: 0.300431
+    - id: 0
+      name: 
+      type: 2
+      isSafe: 0
+      weight: 6404
+      probability: 0.30332023
+  - id: 1462861014
+    name: 
+    level: 2
+    fromFloor: 11
+    toFloor: 20
+    platformRandomDatas:
+    - id: 0
+      name: 
+      type: 4
+      isSafe: 0
+      weight: 370
+      probability: 0.018139923
+    - id: 0
+      name: 
+      type: 5
+      isSafe: 1
+      weight: 1961
+      probability: 0.09614159
+    - id: 0
+      name: 
+      type: 3
+      isSafe: 0
+      weight: 2057
+      probability: 0.10084816
+    - id: 0
+      name: 
+      type: 1
+      isSafe: 1
+      weight: 4086
+      probability: 0.20032358
+    - id: 0
+      name: 
+      type: 2
+      isSafe: 0
+      weight: 4100
+      probability: 0.20100996
+    - id: 0
+      name: 
+      type: 0
+      isSafe: 1
+      weight: 7823
+      probability: 0.3835368
+  - id: 1024077199
+    name: 
+    level: 3
+    fromFloor: 21
+    toFloor: 40
+    platformRandomDatas:
+    - id: 0
+      name: 
+      type: 4
+      isSafe: 0
+      weight: 3267
+      probability: 0.12786192
+    - id: 0
+      name: 
+      type: 3
+      isSafe: 0
+      weight: 3300
+      probability: 0.12915346
+    - id: 0
+      name: 
+      type: 5
+      isSafe: 1
+      weight: 3548
+      probability: 0.13885954
+    - id: 0
+      name: 
+      type: 2
+      isSafe: 0
+      weight: 4054
+      probability: 0.15866306
+    - id: 0
+      name: 
+      type: 1
+      isSafe: 1
+      weight: 4777
+      probability: 0.18695942
+    - id: 0
+      name: 
+      type: 0
+      isSafe: 1
+      weight: 6605
+      probability: 0.2585026
+  - id: 725082202
+    name: 
+    level: 4
+    fromFloor: 41
+    toFloor: 999
+    platformRandomDatas:
+    - id: 0
+      name: 
+      type: 0
+      isSafe: 1
+      weight: 2935
+      probability: 0.10379093
+    - id: 0
+      name: 
+      type: 1
+      isSafe: 1
+      weight: 3210
+      probability: 0.11351581
+    - id: 0
+      name: 
+      type: 4
+      isSafe: 0
+      weight: 4977
+      probability: 0.17600255
+    - id: 0
+      name: 
+      type: 2
+      isSafe: 0
+      weight: 5344
+      probability: 0.18898083
+    - id: 0
+      name: 
+      type: 5
+      isSafe: 1
+      weight: 5345
+      probability: 0.1890162
+    - id: 0
+      name: 
+      type: 3
+      isSafe: 0
+      weight: 6467
+      probability: 0.22869368

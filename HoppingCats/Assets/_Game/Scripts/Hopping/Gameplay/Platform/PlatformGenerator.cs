@@ -75,24 +75,24 @@ public class PlatformGenerator
 
     private static Platform GenerateSafePlatform(int index)
     {
-        var safePlatforms = PlatformConfigManager.Ins.platformConfigs.FindAll(e => e.platformType == PlatformType.Normal);
-        Platform platform = new(index, safePlatforms.Random());
+        var safePlatform = LevelManager.Ins.GetPlatformConfig(PlatformType.Normal);
+        Platform platform = new(index, safePlatform);
         return platform;
     }
 
     private static Platform GenerateRandomPlatform(int index)
     {
-        var randomPlatformConfig = PlatformConfigManager.Ins.platformRandomConfigs.Random();
+        var randomPlatformConfig = LevelManager.Ins.RandomPlatform();
         return new Platform(index, randomPlatformConfig);
     }
 
     private static Platform GenerateNonePlatform(int index)
     {
-        return new Platform(index, PlatformConfigManager.Ins.platformConfigs.Find(e => e.platformType == PlatformType.None));
+        return new Platform(index, LevelManager.Ins.GetPlatformConfig(PlatformType.None));
     }
 
     private static Platform GenerateFirstPlatform(int index)
     {
-        return new Platform(index, PlatformConfigManager.Ins.platformConfigs.Find(e => e.platformType == PlatformType.First));
+        return new Platform(index, LevelManager.Ins.GetPlatformConfig(PlatformType.First));
     }
 }

@@ -1,11 +1,11 @@
 using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UICloudPlatform : UIPlatform
 {
     [Header("Temp Properties")]
+    public ParticleSystem particle;
+    public SpriteRenderer image;
     public float hideDuration = .3f;
 
     public override void Trigger()
@@ -16,6 +16,7 @@ public class UICloudPlatform : UIPlatform
 
     public void DoBreak()
     {
-        transform.DOScale(0, hideDuration);
+        image.transform.DOScale(0, hideDuration);
+        if (particle) particle.Play();
     }
 }
