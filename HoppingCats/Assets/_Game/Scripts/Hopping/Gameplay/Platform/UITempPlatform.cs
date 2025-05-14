@@ -7,7 +7,14 @@ public class UITempPlatform : UIPlatform
     public float delayDuration = .7f;
     public float hideDuration = .3f;
 
+    public Transform iconTransform;
+    public DOTweenAnimation shakeAnimation;
+
+    public ParticleSystem particle;
+    public AnimationCurve breakCurve;
+
     private Tween breakTween;
+    private Tween vfxTween;
 
     public override void Trigger()
     {
@@ -15,14 +22,31 @@ public class UITempPlatform : UIPlatform
         DoBreak();
     }
 
+    public override void Deactive()
+    {
+        base.Deactive();
+        if (breakTween != null) breakTween.Kill();
+        if (vfxTween != null) vfxTween.Kill();
+    }
+
     public void DoBreak()
     {
-        breakTween = transform.DOScale(0, hideDuration)
-            .OnStart(()=> {
+        shakeAnimation.duration = delayDuration + hideDuration;
+        shakeAnimation.DOPlay();
+        breakTween = DOVirtual.DelayedCall(delayDuration, () => {
+            vfxTween = DOVirtual.DelayedCall(delayDuration, ()=> {
+                particle.Play();
                 isSafe = false;
                 onUpdateStatus(this);
-            })
-            .SetDelay(delayDuration);
+            });
+
+            breakTween = iconTransform.transform.DOScale(0f, hideDuration)
+                .SetEase(breakCurve)
+                .OnComplete(() =>
+                {
+                    
+                });
+        });
     }
 }
     

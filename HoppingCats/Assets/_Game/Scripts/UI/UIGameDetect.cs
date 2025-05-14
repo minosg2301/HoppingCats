@@ -5,11 +5,17 @@ public class UIGameDetect : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 {
     public void OnPointerEnter(PointerEventData eventData)
     {
-        GameController.Ins.isHoverUI = true;
+        if (GameController.Ins)
+        {
+            GameController.Ins.Pause(true);
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        GameController.Ins.isHoverUI = false;
+        if (GameController.Ins)
+        {
+            GameController.Ins.Pause(false);
+        }
     }
 }

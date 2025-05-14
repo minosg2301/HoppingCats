@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ public class GameController : MonoBehaviour
     public CameraFollow cameraFollow;
     public PlatformManager platformManager;
     public CatController cat;
+    public GameInputEvent gameInputEvent;
 
     [HideInInspector] public bool isHoverUI;
 
@@ -18,6 +20,8 @@ public class GameController : MonoBehaviour
     private int maxTempJump = 1;
     private List<JumpType> tempJumps = new();
     private bool isInitstialized = false;
+
+    public bool pausing { get; private set; } = false;
 
     public bool IsIngame
     {
@@ -31,7 +35,8 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         if (!Ins) Ins = this;
-
+        //gameInputEvent.DoActive(false);
+        gameInputEvent.onUpdate += OnUpdate;
         GameEventManager.Ins.OnSetupLevel += OnSetupLevel;
         if (!isInitstialized)
         {
@@ -40,9 +45,9 @@ public class GameController : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void OnUpdate()
     {
-        if (!IsIngame || isHoverUI) return;
+        if (!IsIngame) return;
 
         if (Input.GetKeyDown(KeyCode.A))
         {
@@ -56,12 +61,14 @@ public class GameController : MonoBehaviour
         //Mouse
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log("----- click ");
             Vector2 touchPosition = Input.mousePosition;
             CheckScreenTouch(touchPosition);
         }
         //Mobile
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
+            Debug.Log("----- click ");
             Vector2 touchPosition = Input.GetTouch(0).position;
             CheckScreenTouch(touchPosition);
         }
@@ -73,8 +80,15 @@ public class GameController : MonoBehaviour
     }
 
     #region puplic methods
+    public void Pause(bool pause)
+    {
+        pausing = pause;
+        gameInputEvent.DoActive(!pause);
+    }
+
     public void LoseHandle()
     {
+        gameInputEvent.DoActive(false);
         GameStateManager.Ins.ChangeGameState(GameState.LOSEGAME);
         GameEventManager.Ins.OnGameLose();
         cat.animationController.DoDie();
@@ -104,6 +118,8 @@ public class GameController : MonoBehaviour
         cameraFollow.DoFollow(cat.transform);
         cat.transform.position = startCatPos;
         cat.animationController.DoIdle();
+        pausing = false;
+        gameInputEvent.DoActive(true);
     }
 
     private void CheckScreenTouch(Vector2 position)
@@ -159,6 +175,4 @@ public class GameController : MonoBehaviour
         platformManager.RemovePlatforms();
         platformManager.SpawnNextPlatforms(moveLeft);
     }
-
-    
 }

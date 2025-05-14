@@ -348,6 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1371897439}
   - component: {fileID: 1371897440}
+  - component: {fileID: 1371897441}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -385,8 +386,21 @@ MonoBehaviour:
   cameraFollow: {fileID: 1275025594}
   platformManager: {fileID: 652714208}
   cat: {fileID: 0}
+  gameInputEvent: {fileID: 1371897441}
   isHoverUI: 0
   startCatPos: {x: 0, y: -3.51, z: 0}
+--- !u!114 &1371897441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371897438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87d777ed845688d4baa19068a9849e1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1468733028
 GameObject:
   m_ObjectHideFlags: 0
