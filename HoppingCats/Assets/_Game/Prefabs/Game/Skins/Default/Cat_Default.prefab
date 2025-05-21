@@ -148,14 +148,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5994255979223325674, guid: 58f782ff32588b547890bb21b7978f47, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5994255979223325674, guid: 58f782ff32588b547890bb21b7978f47, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5994255979223325674, guid: 58f782ff32588b547890bb21b7978f47, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -199,12 +191,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cat
       objectReference: {fileID: 0}
-    - target: {fileID: 5994255979223325677, guid: 58f782ff32588b547890bb21b7978f47, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4769816591015724243, guid: 58f782ff32588b547890bb21b7978f47, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58f782ff32588b547890bb21b7978f47, type: 3}
 --- !u!95 &1530749441492662791 stripped
 Animator:

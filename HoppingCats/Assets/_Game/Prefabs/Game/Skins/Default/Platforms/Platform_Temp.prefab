@@ -5060,13 +5060,13 @@ MonoBehaviour:
   isActive: 1
   isValid: 1
   target: {fileID: 604892636313132473}
-  animationType: 13
+  animationType: 12
   targetType: 11
   forcedTargetType: 0
   autoPlay: 0
   useTargetAsV3: 0
   endValueFloat: 0
-  endValueV3: {x: 0, y: 35, z: 35}
+  endValueV3: {x: 0.15, y: 0.05, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -5078,8 +5078,8 @@ MonoBehaviour:
     height: 0
   endValueTransform: {fileID: 0}
   optionalBool0: 0
-  optionalFloat0: 15
-  optionalInt0: 50
+  optionalFloat0: 90
+  optionalInt0: 26
   optionalRotationMode: 0
   optionalScrambleMode: 0
   optionalString: 
@@ -5208,7 +5208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformSprite: {fileID: 990552470370343575}
-  delayDuration: 0.2
+  delayDuration: 0.25
   hideDuration: 0.2
   iconTransform: {fileID: 6529511894379475572}
   shakeAnimation: {fileID: 3272765779554152291}
@@ -5226,22 +5226,22 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.3881195
-      value: -0.22629324
-      inSlope: 0.7178854
-      outSlope: 0.7178854
+      time: 0.6089457
+      value: -0.052675158
+      inSlope: 2.9178085
+      outSlope: 2.9178085
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0.16340744
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 2
-      outSlope: 2
+      inSlope: 1.035035
+      outSlope: 1.035035
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33367077
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

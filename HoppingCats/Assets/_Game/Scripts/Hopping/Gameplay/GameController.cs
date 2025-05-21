@@ -1,7 +1,7 @@
 ﻿using DG.Tweening;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GameController : MonoBehaviour
 {
@@ -11,8 +11,6 @@ public class GameController : MonoBehaviour
     public PlatformManager platformManager;
     public CatController cat;
     public GameInputEvent gameInputEvent;
-
-    [HideInInspector] public bool isHoverUI;
 
     [Header("Properties")]
     public Vector3 startCatPos;
@@ -35,7 +33,7 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         if (!Ins) Ins = this;
-        //gameInputEvent.DoActive(false);
+        gameInputEvent.DoActive(false);
         gameInputEvent.onUpdate += OnUpdate;
         GameEventManager.Ins.OnSetupLevel += OnSetupLevel;
         if (!isInitstialized)
@@ -47,8 +45,6 @@ public class GameController : MonoBehaviour
 
     private void OnUpdate()
     {
-        if (!IsIngame) return;
-
         if (Input.GetKeyDown(KeyCode.A))
         {
             DoMove(JumpType.Left);
@@ -61,14 +57,24 @@ public class GameController : MonoBehaviour
         //Mouse
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("----- click ");
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return; 
+            }
+
+            //Debug.Log("----- click ");
             Vector2 touchPosition = Input.mousePosition;
             CheckScreenTouch(touchPosition);
         }
+
         //Mobile
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
-            Debug.Log("----- click ");
+            if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
+            {
+                return;
+            }
+
             Vector2 touchPosition = Input.GetTouch(0).position;
             CheckScreenTouch(touchPosition);
         }

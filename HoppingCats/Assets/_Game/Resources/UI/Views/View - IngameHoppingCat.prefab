@@ -2604,6 +2604,7 @@ MonoBehaviour:
   container: {fileID: 7877240670632799315}
   canvasGroup: {fileID: 5595471635939000838}
   availableStates: 00000000
+  animDuration: 0.3
 --- !u!114 &4067161593556721041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2679,6 +2680,7 @@ MonoBehaviour:
   container: {fileID: 6138043775845392899}
   canvasGroup: {fileID: 2844737204911460199}
   availableStates: 01000000
+  animDuration: 0.3
   scoreTxt: {fileID: 4396528637146200143}
   topScoreTxt: {fileID: 4424385127548035876}
 --- !u!114 &1252480307960259887
@@ -3718,7 +3720,7 @@ GameObject:
   - component: {fileID: 1896379465114334031}
   - component: {fileID: 7878439487776239691}
   m_Layer: 0
-  m_Name: UICountDownTime
+  m_Name: UIGroup - Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3768,6 +3770,7 @@ MonoBehaviour:
   container: {fileID: 4081009465800173873}
   canvasGroup: {fileID: 2203931705073303856}
   availableStates: 01000000
+  animDuration: 0.3
   progressor: {fileID: 4603340323732406481}
   tickInterval: {fileID: 1896379465114334031}
 --- !u!114 &1896379465114334031
@@ -3858,6 +3861,7 @@ MonoBehaviour:
   container: {fileID: 4965379905943045078}
   canvasGroup: {fileID: 2835530332018395377}
   availableStates: 00000000
+  animDuration: 0.3
 --- !u!114 &4823345905397511076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6361,6 +6365,7 @@ MonoBehaviour:
   container: {fileID: 6562714679953135339}
   canvasGroup: {fileID: 3560854181911894305}
   availableStates: 00000000
+  animDuration: 0.3
 --- !u!114 &6736291219125616886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7448,6 +7453,7 @@ MonoBehaviour:
   container: {fileID: 2015229429998610059}
   canvasGroup: {fileID: 3998749013271112480}
   availableStates: 0000000001000000
+  animDuration: 0.3
   starText: {fileID: 7947463107665610371}
 --- !u!1 &7405801114377985828
 GameObject:

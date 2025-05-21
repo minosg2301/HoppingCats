@@ -53,7 +53,7 @@ public class UIAppearPlatform : UIPlatform
         else
         {
             fadeTween = platformSprite.DOFade(0, duration)
-                .OnStart(() => {
+                .OnComplete(() => {
                     isSafe = isAppear;
                     onUpdateStatus(this);
                 });

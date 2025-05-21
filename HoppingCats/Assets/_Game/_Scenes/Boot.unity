@@ -205,7 +205,6 @@ GameObject:
   m_Component:
   - component: {fileID: 167283284}
   - component: {fileID: 167283285}
-  - component: {fileID: 167283286}
   m_Layer: 0
   m_Name: Container
   m_TagString: Untagged
@@ -249,18 +248,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &167283286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167283283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf3a78acfbe486d4cbcf7ab0b3167516, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &187873780
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,7 +484,6 @@ GameObject:
   - component: {fileID: 607627294}
   - component: {fileID: 607627293}
   - component: {fileID: 607627298}
-  - component: {fileID: 607627299}
   m_Layer: 0
   m_Name: Canvas - PopupCanvas
   m_TagString: Untagged
@@ -620,18 +606,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraName: Main Camera
---- !u!114 &607627299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 607627292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf3a78acfbe486d4cbcf7ab0b3167516, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &806557634
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

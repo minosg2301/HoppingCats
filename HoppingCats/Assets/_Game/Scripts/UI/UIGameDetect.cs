@@ -5,17 +5,12 @@ public class UIGameDetect : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 {
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (GameController.Ins)
-        {
-            GameController.Ins.Pause(true);
-        }
+        
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (GameController.Ins)
-        {
-            GameController.Ins.Pause(false);
-        }
+        
     }
+
 }
