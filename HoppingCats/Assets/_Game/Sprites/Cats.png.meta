@@ -120,8 +120,8 @@ TextureImporter:
       name: Cat_Body_Default
       rect:
         serializedVersion: 2
-        x: 1617
-        y: 851
+        x: 474
+        y: 755
         width: 403
         height: 385
       alignment: 0
@@ -142,7 +142,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1680
-        y: 1818
+        y: 1711
         width: 277
         height: 94
       alignment: 0
@@ -205,7 +205,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1627
-        y: 1238
+        y: 1098
         width: 403
         height: 386
       alignment: 0
@@ -267,8 +267,8 @@ TextureImporter:
       name: Cat_Body_Minion
       rect:
         serializedVersion: 2
-        x: 1048
-        y: 864
+        x: 1488
+        y: 710
         width: 403
         height: 386
       alignment: 0
@@ -330,8 +330,8 @@ TextureImporter:
       name: Cat_Face_Astronaut
       rect:
         serializedVersion: 2
-        x: 1680
-        y: 1722
+        x: 778
+        y: 532
         width: 253
         height: 94
       alignment: 0
@@ -351,8 +351,8 @@ TextureImporter:
       name: Cat_Face_Default_2
       rect:
         serializedVersion: 2
-        x: 1680
-        y: 1626
+        x: 1
+        y: 495
         width: 248
         height: 94
       alignment: 0
@@ -372,8 +372,8 @@ TextureImporter:
       name: Cat_Face_Emo
       rect:
         serializedVersion: 2
-        x: 724
-        y: 1022
+        x: 722
+        y: 459
         width: 218
         height: 71
       alignment: 9
@@ -393,8 +393,8 @@ TextureImporter:
       name: Cat_Face_Halloween
       rect:
         serializedVersion: 2
-        x: 474
-        y: 1046
+        x: 251
+        y: 462
         width: 248
         height: 94
       alignment: 0
@@ -435,8 +435,8 @@ TextureImporter:
       name: Cat_Face_StrawHat
       rect:
         serializedVersion: 2
-        x: 724
-        y: 1095
+        x: 501
+        y: 511
         width: 219
         height: 45
       alignment: 0
@@ -456,8 +456,8 @@ TextureImporter:
       name: Cat_Hair_Emo
       rect:
         serializedVersion: 2
-        x: 164
-        y: 745
+        x: 1893
+        y: 912
         width: 149
         height: 184
       alignment: 0
@@ -477,8 +477,8 @@ TextureImporter:
       name: Cat_Tail_Astronaut
       rect:
         serializedVersion: 2
-        x: 1
-        y: 931
+        x: 242
+        y: 335
         width: 161
         height: 125
       alignment: 0
@@ -498,8 +498,8 @@ TextureImporter:
       name: Cat_Tail_Donut
       rect:
         serializedVersion: 2
-        x: 327
-        y: 919
+        x: 164
+        y: 179
         width: 161
         height: 125
       alignment: 0
@@ -519,8 +519,8 @@ TextureImporter:
       name: Cat_Tail_Emo
       rect:
         serializedVersion: 2
-        x: 1453
-        y: 993
+        x: 879
+        y: 757
         width: 162
         height: 127
       alignment: 0
@@ -540,8 +540,8 @@ TextureImporter:
       name: Cat_Tail_Halloween
       rect:
         serializedVersion: 2
-        x: 490
-        y: 919
+        x: 164
+        y: 52
         width: 161
         height: 125
       alignment: 0
@@ -561,8 +561,8 @@ TextureImporter:
       name: Cat_Tail_Minion
       rect:
         serializedVersion: 2
-        x: 1453
-        y: 864
+        x: 879
+        y: 628
         width: 161
         height: 127
       alignment: 0
@@ -582,8 +582,8 @@ TextureImporter:
       name: Cat_Tail_StrawHat
       rect:
         serializedVersion: 2
-        x: 1
-        y: 804
+        x: 327
+        y: 208
         width: 161
         height: 125
       alignment: 0
@@ -603,8 +603,8 @@ TextureImporter:
       name: Cat_Tail_Taiyaki
       rect:
         serializedVersion: 2
-        x: 1453
-        y: 1122
+        x: 879
+        y: 886
         width: 162
         height: 128
       alignment: 0
@@ -624,8 +624,8 @@ TextureImporter:
       name: Cat_Tail_Default
       rect:
         serializedVersion: 2
-        x: 164
-        y: 931
+        x: 1
+        y: 52
         width: 161
         height: 125
       alignment: 0
@@ -637,6 +637,258 @@ TextureImporter:
       bones: []
       spriteID: 027f4851ca9b5704f948ac86e3bca230
       internalID: -1295932263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Body_Conan
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 473
+        width: 402
+        height: 385
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329ca64201ef0324392ff5459a4a4332
+      internalID: -502497359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Body_Ekko
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 687
+        width: 400
+        height: 369
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96673397cecfb8e4e9113a3c4737fdf7
+      internalID: -1427741365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Body_Minato
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 860
+        width: 438
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22488b6791bd7544291286e1cbfcc16a
+      internalID: 1129169517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Face_Conan
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1807
+        width: 278
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68def661861ab404dabab81ca69f282d
+      internalID: 696856077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Face_Ekko
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 591
+        width: 252
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733cb7a5980ddd9498a58f281588e2d7
+      internalID: -1795603738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Face_Minato
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 425
+        width: 205
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb21aa2174fe5446ad4de996dc05499
+      internalID: -538580473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Hair_Conan
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 558
+        width: 373
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec476b3ca04cc647b4785ad88e9d9f4
+      internalID: 407308637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Hair_Ekko
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 306
+        width: 239
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b98dcd9ccd437a842974e32f37613471
+      internalID: 990256834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Hair_Minato
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1486
+        width: 274
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e59d9ed96f0d3045842b7998b398e03
+      internalID: -1856690739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Tail_Conan
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 179
+        width: 161
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b3478c544cd0045b5c25c8a41559e0
+      internalID: -705090001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Tail_Ekko
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 86
+        width: 155
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee1fe95791b82f4ba8eab2f26fe55a5
+      internalID: -996215181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Tail_Minato
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 1016
+        width: 165
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aba638257737284eadf315a0dc2769b
+      internalID: 829096178
       vertices: []
       indices: 
       edges: []
@@ -653,27 +905,39 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Cat_Body_Astronaut: 410406933
+      Cat_Body_Conan: -502497359
       Cat_Body_Default: -1190831133
       Cat_Body_Donut: -1609051230
+      Cat_Body_Ekko: -1427741365
       Cat_Body_Emo: -1048743214
       Cat_Body_Halloween: -2109594985
       Cat_Body_Mermaid: 1588972286
+      Cat_Body_Minato: 1129169517
       Cat_Body_Minion: -101679774
       Cat_Body_StrawHat: -1039040641
       Cat_Body_Taiyaki: 459676005
       Cat_Face_Astronaut: -254238557
+      Cat_Face_Conan: 696856077
       Cat_Face_Default_1: -145287463
       Cat_Face_Default_2: -646289703
+      Cat_Face_Ekko: -1795603738
       Cat_Face_Emo: -905387288
       Cat_Face_Halloween: -1823106470
+      Cat_Face_Minato: -538580473
       Cat_Face_Minion: -1325687527
       Cat_Face_StrawHat: -1222676995
+      Cat_Hair_Conan: 407308637
+      Cat_Hair_Ekko: 990256834
       Cat_Hair_Emo: -1236751118
+      Cat_Hair_Minato: -1856690739
       Cat_Tail_Astronaut: 366764700
+      Cat_Tail_Conan: -705090001
       Cat_Tail_Default: -1295932263
       Cat_Tail_Donut: 964086654
+      Cat_Tail_Ekko: -996215181
       Cat_Tail_Emo: -417249411
       Cat_Tail_Halloween: -675013250
+      Cat_Tail_Minato: 829096178
       Cat_Tail_Minion: 1588055423
       Cat_Tail_StrawHat: -445346143
       Cat_Tail_Taiyaki: -1459818976

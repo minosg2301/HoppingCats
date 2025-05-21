@@ -15,7 +15,7 @@ MonoBehaviour:
   skinConfigs:
   - id: 1210133870
     name: default
-    bgSprite: {fileID: 21300000, guid: 5c7f108146f1ce54987c78c19bf0c659, type: 3}
+    bgSprite: {fileID: 21300000, guid: dca303c3a246bd34c8c4c20921a44608, type: 3}
     catPrefab: {fileID: 7824786067517202302, guid: 53660934c9cf0e14faf65f7c49c698c7, type: 3}
     platforms:
     - id: 0
