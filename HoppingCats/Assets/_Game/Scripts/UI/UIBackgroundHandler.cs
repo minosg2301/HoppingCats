@@ -19,5 +19,6 @@ public class UIBackgroundHandler : MonoBehaviour
     private void OnSkinUpdated(SkinConfig skinConfig)
     {
         backgroundImage.sprite = skinConfig.bgSprite;
+        backgroundImage.color = skinConfig.bgColor;
     }
 }

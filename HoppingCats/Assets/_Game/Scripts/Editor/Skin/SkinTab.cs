@@ -45,6 +45,7 @@ public class SkinTabDrawer : ListTabDrawer<SkinConfig>
         var lastWidth = Draw.kLabelWidth;
         Draw.kLabelWidth = 120;
         element.name = Draw.TextField("Name", element.name, 100);
+        element.displayName = Draw.TextField("Display name", element.displayName, 100);
         element.isFree = Draw.ToggleField("Free", element.isFree, 100);
         if (!element.isFree)
         {
@@ -52,6 +53,7 @@ public class SkinTabDrawer : ListTabDrawer<SkinConfig>
         }
 
         element.bgSprite = Draw.SpriteField("Background", element.bgSprite, false, 200, 200);
+        element.bgColor = Draw.ColorField("Background Color", element.bgColor, 200);
         element.catPrefab = Draw.ObjectField("Cat Prefab", element.catPrefab, 200);
 
         platformTable.DoDraw(element.platforms);

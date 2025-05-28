@@ -15,7 +15,9 @@ MonoBehaviour:
   skinConfigs:
   - id: 1210133870
     name: default
-    bgSprite: {fileID: 21300000, guid: dca303c3a246bd34c8c4c20921a44608, type: 3}
+    displayName: Default
+    bgSprite: {fileID: 21300000, guid: 8ba9e25658447c14381cc970ea46ae84, type: 3}
+    bgColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
     catPrefab: {fileID: 7824786067517202302, guid: 53660934c9cf0e14faf65f7c49c698c7, type: 3}
     platforms:
     - id: 0
@@ -53,5 +55,489 @@ MonoBehaviour:
       platformType: 6
       platformPrefab: {fileID: 3777409526900253707, guid: 50653a601c0ace84abd804d35e085c58, type: 3}
       isSafe: 1
-    isFree: 1
+    isFree: 0
     price: 0
+  - id: 1723719747
+    name: emo
+    displayName: Emo
+    bgSprite: {fileID: 21300000, guid: 737b981745ef22b4b9eb265ac2361f7f, type: 3}
+    bgColor: {r: 1, g: 1, b: 1, a: 1}
+    catPrefab: {fileID: 1883636704925312524, guid: f4c0be54bdc118344803ff1945b1aa0f, type: 3}
+    platforms:
+    - id: 0
+      name: 
+      platformType: 0
+      platformPrefab: {fileID: 1486213047066292394, guid: 9baaa8b3739d15745abc4f7cf5f8da6c, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 1
+      platformPrefab: {fileID: 416802887497921237, guid: d2db9b4fbfa38b84a866f7ed483ebfbc, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 2
+      platformPrefab: {fileID: 587836615295733857, guid: f742ee950dde6f2488eefae0a38f426c, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 3
+      platformPrefab: {fileID: -7743787437280154783, guid: 9254ec250b89b5c41a4e119c19ecba86, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 4
+      platformPrefab: {fileID: 5058513718683120631, guid: 5fe00f03e7cfc6340bafaf1bae417281, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 5
+      platformPrefab: {fileID: 2659638964940355888, guid: 97c8b09976fac8d41bc38e3fc72202cc, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 6
+      platformPrefab: {fileID: 3777409526900253707, guid: 50653a601c0ace84abd804d35e085c58, type: 3}
+      isSafe: 1
+    isFree: 0
+    price: 10
+  - id: 1715684641
+    name: astronaut
+    displayName: Astronaut
+    bgSprite: {fileID: 21300000, guid: 02d92ffb696227444828f7c210a73477, type: 3}
+    bgColor: {r: 1, g: 1, b: 1, a: 1}
+    catPrefab: {fileID: 715251947779667159, guid: 9208bf72ab7aaee4aad18cf94fa5a7cf, type: 3}
+    platforms:
+    - id: 0
+      name: 
+      platformType: 0
+      platformPrefab: {fileID: 1486213047066292394, guid: 9baaa8b3739d15745abc4f7cf5f8da6c, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 1
+      platformPrefab: {fileID: 416802887497921237, guid: d2db9b4fbfa38b84a866f7ed483ebfbc, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 2
+      platformPrefab: {fileID: 587836615295733857, guid: f742ee950dde6f2488eefae0a38f426c, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 3
+      platformPrefab: {fileID: -7743787437280154783, guid: 9254ec250b89b5c41a4e119c19ecba86, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 4
+      platformPrefab: {fileID: 5058513718683120631, guid: 5fe00f03e7cfc6340bafaf1bae417281, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 5
+      platformPrefab: {fileID: 2659638964940355888, guid: 97c8b09976fac8d41bc38e3fc72202cc, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 6
+      platformPrefab: {fileID: 3777409526900253707, guid: 50653a601c0ace84abd804d35e085c58, type: 3}
+      isSafe: 1
+    isFree: 0
+    price: 10
+  - id: 1602114970
+    name: conan
+    displayName: Conan
+    bgSprite: {fileID: 21300000, guid: 737b981745ef22b4b9eb265ac2361f7f, type: 3}
+    bgColor: {r: 1, g: 1, b: 1, a: 1}
+    catPrefab: {fileID: 4658290620135502432, guid: f72488e29b3edff45b149e6d66836d53, type: 3}
+    platforms:
+    - id: 0
+      name: 
+      platformType: 0
+      platformPrefab: {fileID: 1486213047066292394, guid: 9baaa8b3739d15745abc4f7cf5f8da6c, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 1
+      platformPrefab: {fileID: 416802887497921237, guid: d2db9b4fbfa38b84a866f7ed483ebfbc, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 2
+      platformPrefab: {fileID: 587836615295733857, guid: f742ee950dde6f2488eefae0a38f426c, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 3
+      platformPrefab: {fileID: -7743787437280154783, guid: 9254ec250b89b5c41a4e119c19ecba86, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 4
+      platformPrefab: {fileID: 5058513718683120631, guid: 5fe00f03e7cfc6340bafaf1bae417281, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 5
+      platformPrefab: {fileID: 2659638964940355888, guid: 97c8b09976fac8d41bc38e3fc72202cc, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 6
+      platformPrefab: {fileID: 3777409526900253707, guid: 50653a601c0ace84abd804d35e085c58, type: 3}
+      isSafe: 1
+    isFree: 0
+    price: 10
+  - id: 465875665
+    name: ekko
+    displayName: Da den
+    bgSprite: {fileID: 21300000, guid: 737b981745ef22b4b9eb265ac2361f7f, type: 3}
+    bgColor: {r: 1, g: 1, b: 1, a: 1}
+    catPrefab: {fileID: 1436743439381349423, guid: bae0631013a817449bc5b6d35bc03bc2, type: 3}
+    platforms:
+    - id: 0
+      name: 
+      platformType: 0
+      platformPrefab: {fileID: 1486213047066292394, guid: 9baaa8b3739d15745abc4f7cf5f8da6c, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 1
+      platformPrefab: {fileID: 416802887497921237, guid: d2db9b4fbfa38b84a866f7ed483ebfbc, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 2
+      platformPrefab: {fileID: 587836615295733857, guid: f742ee950dde6f2488eefae0a38f426c, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 3
+      platformPrefab: {fileID: -7743787437280154783, guid: 9254ec250b89b5c41a4e119c19ecba86, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 4
+      platformPrefab: {fileID: 5058513718683120631, guid: 5fe00f03e7cfc6340bafaf1bae417281, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 5
+      platformPrefab: {fileID: 2659638964940355888, guid: 97c8b09976fac8d41bc38e3fc72202cc, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 6
+      platformPrefab: {fileID: 3777409526900253707, guid: 50653a601c0ace84abd804d35e085c58, type: 3}
+      isSafe: 1
+    isFree: 0
+    price: 10
+  - id: 179972183
+    name: halloween
+    displayName: Halloween
+    bgSprite: {fileID: 21300000, guid: 3ab4f566b07574f4e9b113bcbd2f0b34, type: 3}
+    bgColor: {r: 1, g: 1, b: 1, a: 1}
+    catPrefab: {fileID: 8461123582755299660, guid: 298ef1f78ae890841858c318e7620183, type: 3}
+    platforms:
+    - id: 0
+      name: 
+      platformType: 0
+      platformPrefab: {fileID: 1486213047066292394, guid: 9baaa8b3739d15745abc4f7cf5f8da6c, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 1
+      platformPrefab: {fileID: 416802887497921237, guid: d2db9b4fbfa38b84a866f7ed483ebfbc, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 2
+      platformPrefab: {fileID: 587836615295733857, guid: f742ee950dde6f2488eefae0a38f426c, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 3
+      platformPrefab: {fileID: -7743787437280154783, guid: 9254ec250b89b5c41a4e119c19ecba86, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 4
+      platformPrefab: {fileID: 5058513718683120631, guid: 5fe00f03e7cfc6340bafaf1bae417281, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 5
+      platformPrefab: {fileID: 2659638964940355888, guid: 97c8b09976fac8d41bc38e3fc72202cc, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 6
+      platformPrefab: {fileID: 3777409526900253707, guid: 50653a601c0ace84abd804d35e085c58, type: 3}
+      isSafe: 1
+    isFree: 0
+    price: 10
+  - id: 1397465331
+    name: pirate
+    displayName: Pirate
+    bgSprite: {fileID: 21300000, guid: 5d3d306216bd637498e0f109cbd081a6, type: 3}
+    bgColor: {r: 1, g: 1, b: 1, a: 1}
+    catPrefab: {fileID: 4091912351382253108, guid: 7d4241919d84403449edabc3ed99e49f, type: 3}
+    platforms:
+    - id: 0
+      name: 
+      platformType: 0
+      platformPrefab: {fileID: 1486213047066292394, guid: 9baaa8b3739d15745abc4f7cf5f8da6c, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 1
+      platformPrefab: {fileID: 416802887497921237, guid: d2db9b4fbfa38b84a866f7ed483ebfbc, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 2
+      platformPrefab: {fileID: 587836615295733857, guid: f742ee950dde6f2488eefae0a38f426c, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 3
+      platformPrefab: {fileID: -7743787437280154783, guid: 9254ec250b89b5c41a4e119c19ecba86, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 4
+      platformPrefab: {fileID: 5058513718683120631, guid: 5fe00f03e7cfc6340bafaf1bae417281, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 5
+      platformPrefab: {fileID: 2659638964940355888, guid: 97c8b09976fac8d41bc38e3fc72202cc, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 6
+      platformPrefab: {fileID: 3777409526900253707, guid: 50653a601c0ace84abd804d35e085c58, type: 3}
+      isSafe: 1
+    isFree: 0
+    price: 10
+  - id: 1780769516
+    name: mermaid
+    displayName: Mermaid
+    bgSprite: {fileID: 21300000, guid: 5d3d306216bd637498e0f109cbd081a6, type: 3}
+    bgColor: {r: 1, g: 1, b: 1, a: 1}
+    catPrefab: {fileID: 7661008221432411316, guid: ab552e1e90ec4f943b62cf233fb35028, type: 3}
+    platforms:
+    - id: 0
+      name: 
+      platformType: 0
+      platformPrefab: {fileID: 1486213047066292394, guid: 9baaa8b3739d15745abc4f7cf5f8da6c, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 1
+      platformPrefab: {fileID: 416802887497921237, guid: d2db9b4fbfa38b84a866f7ed483ebfbc, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 2
+      platformPrefab: {fileID: 587836615295733857, guid: f742ee950dde6f2488eefae0a38f426c, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 3
+      platformPrefab: {fileID: -7743787437280154783, guid: 9254ec250b89b5c41a4e119c19ecba86, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 4
+      platformPrefab: {fileID: 5058513718683120631, guid: 5fe00f03e7cfc6340bafaf1bae417281, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 5
+      platformPrefab: {fileID: 2659638964940355888, guid: 97c8b09976fac8d41bc38e3fc72202cc, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 6
+      platformPrefab: {fileID: 3777409526900253707, guid: 50653a601c0ace84abd804d35e085c58, type: 3}
+      isSafe: 1
+    isFree: 0
+    price: 10
+  - id: 286541943
+    name: minion
+    displayName: Minion
+    bgSprite: {fileID: 21300000, guid: 3416b8db14061744bae8cfe32cb28e96, type: 3}
+    bgColor: {r: 1, g: 1, b: 1, a: 1}
+    catPrefab: {fileID: 3660708965220419270, guid: 2756e3583b272d24d96c467211dd77e7, type: 3}
+    platforms:
+    - id: 0
+      name: 
+      platformType: 0
+      platformPrefab: {fileID: 1486213047066292394, guid: 9baaa8b3739d15745abc4f7cf5f8da6c, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 1
+      platformPrefab: {fileID: 416802887497921237, guid: d2db9b4fbfa38b84a866f7ed483ebfbc, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 2
+      platformPrefab: {fileID: 587836615295733857, guid: f742ee950dde6f2488eefae0a38f426c, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 3
+      platformPrefab: {fileID: -7743787437280154783, guid: 9254ec250b89b5c41a4e119c19ecba86, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 4
+      platformPrefab: {fileID: 5058513718683120631, guid: 5fe00f03e7cfc6340bafaf1bae417281, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 5
+      platformPrefab: {fileID: 2659638964940355888, guid: 97c8b09976fac8d41bc38e3fc72202cc, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 6
+      platformPrefab: {fileID: 3777409526900253707, guid: 50653a601c0ace84abd804d35e085c58, type: 3}
+      isSafe: 1
+    isFree: 1
+    price: 10
+  - id: 2026795995
+    name: ninja
+    displayName: Ninja
+    bgSprite: {fileID: 21300000, guid: 8ba9e25658447c14381cc970ea46ae84, type: 3}
+    bgColor: {r: 1, g: 1, b: 1, a: 1}
+    catPrefab: {fileID: 1753381894566684794, guid: d57cbf5f04436c6428a5fbafa99515ad, type: 3}
+    platforms:
+    - id: 0
+      name: 
+      platformType: 0
+      platformPrefab: {fileID: 1486213047066292394, guid: 9baaa8b3739d15745abc4f7cf5f8da6c, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 1
+      platformPrefab: {fileID: 416802887497921237, guid: d2db9b4fbfa38b84a866f7ed483ebfbc, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 2
+      platformPrefab: {fileID: 587836615295733857, guid: f742ee950dde6f2488eefae0a38f426c, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 3
+      platformPrefab: {fileID: -7743787437280154783, guid: 9254ec250b89b5c41a4e119c19ecba86, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 4
+      platformPrefab: {fileID: 5058513718683120631, guid: 5fe00f03e7cfc6340bafaf1bae417281, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 5
+      platformPrefab: {fileID: 2659638964940355888, guid: 97c8b09976fac8d41bc38e3fc72202cc, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 6
+      platformPrefab: {fileID: 3777409526900253707, guid: 50653a601c0ace84abd804d35e085c58, type: 3}
+      isSafe: 1
+    isFree: 0
+    price: 10
+  - id: 173359037
+    name: taiyaki
+    displayName: Taiyaki
+    bgSprite: {fileID: 21300000, guid: dca303c3a246bd34c8c4c20921a44608, type: 3}
+    bgColor: {r: 1, g: 1, b: 1, a: 1}
+    catPrefab: {fileID: 5192707118531580218, guid: 81f93ccfcb984144b80f9af5d27695a5, type: 3}
+    platforms:
+    - id: 0
+      name: 
+      platformType: 0
+      platformPrefab: {fileID: 1486213047066292394, guid: 9baaa8b3739d15745abc4f7cf5f8da6c, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 1
+      platformPrefab: {fileID: 416802887497921237, guid: d2db9b4fbfa38b84a866f7ed483ebfbc, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 2
+      platformPrefab: {fileID: 587836615295733857, guid: f742ee950dde6f2488eefae0a38f426c, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 3
+      platformPrefab: {fileID: -7743787437280154783, guid: 9254ec250b89b5c41a4e119c19ecba86, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 4
+      platformPrefab: {fileID: 5058513718683120631, guid: 5fe00f03e7cfc6340bafaf1bae417281, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 5
+      platformPrefab: {fileID: 2659638964940355888, guid: 97c8b09976fac8d41bc38e3fc72202cc, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 6
+      platformPrefab: {fileID: 3777409526900253707, guid: 50653a601c0ace84abd804d35e085c58, type: 3}
+      isSafe: 1
+    isFree: 0
+    price: 10
+  - id: 1967873005
+    name: donut
+    displayName: Donut
+    bgSprite: {fileID: 21300000, guid: 8ba9e25658447c14381cc970ea46ae84, type: 3}
+    bgColor: {r: 1, g: 1, b: 1, a: 1}
+    catPrefab: {fileID: 8489297497257365997, guid: 17a94ad9913f0ec4c9cbd19528f26ea0, type: 3}
+    platforms:
+    - id: 0
+      name: 
+      platformType: 0
+      platformPrefab: {fileID: 1486213047066292394, guid: 9baaa8b3739d15745abc4f7cf5f8da6c, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 1
+      platformPrefab: {fileID: 416802887497921237, guid: d2db9b4fbfa38b84a866f7ed483ebfbc, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 2
+      platformPrefab: {fileID: 587836615295733857, guid: f742ee950dde6f2488eefae0a38f426c, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 3
+      platformPrefab: {fileID: -7743787437280154783, guid: 9254ec250b89b5c41a4e119c19ecba86, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 4
+      platformPrefab: {fileID: 5058513718683120631, guid: 5fe00f03e7cfc6340bafaf1bae417281, type: 3}
+      isSafe: 0
+    - id: 0
+      name: 
+      platformType: 5
+      platformPrefab: {fileID: 2659638964940355888, guid: 97c8b09976fac8d41bc38e3fc72202cc, type: 3}
+      isSafe: 1
+    - id: 0
+      name: 
+      platformType: 6
+      platformPrefab: {fileID: 3777409526900253707, guid: 50653a601c0ace84abd804d35e085c58, type: 3}
+      isSafe: 1
+    isFree: 0
+    price: 10
